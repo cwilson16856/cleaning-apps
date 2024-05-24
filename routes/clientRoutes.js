@@ -32,6 +32,10 @@ async function getClient(req, res, next) {
     next();
 }
 
+router.get('/new', (req, res) => {
+    // render the new client form
+});
+
 // Get one client
 router.get('/:id', getClient, (req, res) => {
     res.render('clientDetails', { client: res.client });

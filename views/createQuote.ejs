@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <%- include('partials/_head') %>
-    <title>Create Quote</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
 <body>
     <%- include('partials/_header') %>
     <div class="container mt-5">
@@ -62,6 +58,7 @@
         </form>
     </div>
     <%- include('partials/_footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         document.getElementById('serviceType').addEventListener('change', function() {
             var selectedServiceType = this.value;

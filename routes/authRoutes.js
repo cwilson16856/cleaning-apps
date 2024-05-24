@@ -3,11 +3,11 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 
-router.get('/auth/register', (req, res) => {
+router.get('/register', (req, res) => {
   res.render('register');
 });
 
-router.post('/auth/register', async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
     const { username, password } = req.body;
     // User model will automatically hash the password using bcrypt
@@ -19,11 +19,11 @@ router.post('/auth/register', async (req, res) => {
   }
 });
 
-router.get('/auth/login', (req, res) => {
+router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.post('/auth/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
@@ -43,7 +43,7 @@ router.post('/auth/login', async (req, res) => {
   }
 });
 
-router.get('/auth/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
       console.error('Error during session destruction:', err); // gpt_pilot_debugging_log

@@ -40,6 +40,11 @@ router.post('/', async (req, res) => { // Adjusted path
   }
 });
 
+router.get('/new', (req, res) => {
+  //render the new quote form
+  res.render('createQuote');
+});
+
 // GET route for retrieving a single quote by ID
 router.get('/:id', async (req, res) => {
   try {

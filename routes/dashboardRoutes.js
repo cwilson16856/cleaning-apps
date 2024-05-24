@@ -6,6 +6,7 @@ const Quote = require('../models/quoteModel');
 router.get('/', async (req, res) => {
   try {
     const quotes = await Quote.find().populate('clientId');
+    console.log('Fetched all quotes successfully.');
     res.render('dashboard', { quotes });
   } catch (error) {
     console.error(`Error rendering dashboard: ${error.message}`, error.stack);
