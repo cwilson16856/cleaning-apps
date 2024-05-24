@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/_head') %>
+    <title>Create Quote</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <%- include('partials/_header') %>
+    <div class="container mt-5">
+        <h1>Create New Quote</h1>
+        <form id="quoteForm">
+            <div class="mb-3">
+                <label for="clientSelect" class="form-label">Select Client</label>
+                <select class="form-select" id="clientSelect" required>
+                    <option selected>Choose...</option>
+                    <!-- Client options will be populated here -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="quoteTitle" class="form-label">Quote Title</label>
+                <input type="text" class="form-control" id="quoteTitle" required>
+            </div>
+            <div class="mb-3">
+                <label for="scopeOfWork" class="form-label">Scope of Work</label>
+                <textarea class="form-control" id="scopeOfWork" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="serviceType" class="form-label">Type of Service</label>
+                <select class="form-select" id="serviceType" required>
+                    <option selected>Choose...</option>
+                    <option value="Recurring">Recurring</option>
+                    <option value="One-Time Deep Clean">One-Time Deep Clean</option>
+                    <option value="Move In/Move Out">Move In/Move Out</option>
+                </select>
+            </div>
+            <div class="mb-3 d-none" id="frequencyDiv">
+                <label for="frequency" class="form-label">Frequency</label>
+                <select class="form-select" id="frequency">
+                    <option selected>Choose...</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Bi-Weekly">Bi-Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                </select>
+            </div>
+            <div class="mb-3 d-none" id="initialCleaningDiv">
+                <label>Initial Cleaning Options</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Walls" id="walls">
+                    <label class="form-check-label" for="walls">Walls</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Windows" id="windows">
+                    <label class="form-check-label" for="windows">Windows</label>
+                </div>
+                <!-- Add more checkboxes for other initial cleaning options as needed -->
+            </div>
+            <div id="validationErrors" class="alert alert-danger d-none" role="alert">
+                <!-- Validation error messages will be inserted here -->
+            </div>
+            <button type="submit" class="btn btn-primary">Create Quote</button>
+        </form>
+    </div>
+    <%- include('partials/_footer') %>
+    <script>
+        document.getElementById('serviceType').addEventListener('change', function() {
+            var selectedServiceType = this.value;
+            var frequencyDiv = document.getElementById('frequencyDiv');
+            var initialCleaningDiv = document.getElementById('initialCleaningDiv');
+
+            // Hide both initially
+            frequencyDiv.classList.add('d-none');
+            initialCleaningDiv.classList.add('d-none');
+
+            if (selectedServiceType === 'Recurring') {
+                frequencyDiv.classList.remove('d-none');
+            } else if (selectedServiceType === 'One-Time Deep Clean' || selectedServiceType === 'Move In/Move Out') {
+                initialCleaningDiv.classList.remove('d-none');
+            }
+        });
+
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const clientSelect = document.getElementById('clientSelect');
+            const quoteTitle = document.getElementById('quoteTitle');
+            const scopeOfWork = document.getElementById('scopeOfWork');
+            const serviceType = document.getElementById('serviceType').value;
+            const frequency = document.getElementById('frequency').value;
+            let initialCleaningOptions = [];
+            document.querySelectorAll('#initialCleaningDiv input[type=checkbox]:checked').forEach(function(checkbox) {
+                initialCleaningOptions.push(checkbox.value);
+            });
+
+            let validationErrors = [];
+
+            if (!clientSelect.value) {
+                validationErrors.push('Client selection is required.');
+            }
+            if (!quoteTitle.value.trim()) {
+                validationErrors.push('Quote title is required.');
+            }
+            if (!scopeOfWork.value.trim()) {
+                validationErrors.push('Scope of work is required.');
+            }
+
+            if (validationErrors.length > 0) {
+                const validationErrorsElement = document.getElementById('validationErrors');
+                validationErrorsElement.innerHTML = validationErrors.join('<br>');
+                validationErrorsElement.classList.remove('d-none');
+                return;
+            }
+
+            const data = {
+                clientId: clientSelect.value,
+                title: quoteTitle.value,
+                scopeOfWork: scopeOfWork.value,
+                serviceType: serviceType,
+                frequency: frequency,
+                initialCleaningOptions: initialCleaningOptions
+            };
+
+            axios.post('/quotes', data)
+                .then(function(response) {
+                    console.log('Quote created successfully', response.data);
+                    window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
+                })
+                .catch(function(error) {
+                    console.error('Error creating quote', error.response.data);
+                    alert('Failed to create quote. Please try again.');
+                });
+        });
+    </script>
+</body>
+</html>

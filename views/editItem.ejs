@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/_head.ejs %>
+    <title>Edit Item</title>
+</head>
+<body>
+    <% include ../partials/_header.ejs %>
+
+    <div class="container mt-5">
+        <h1>Edit Item</h1>
+        <form action="/quotes/<%= quote._id %>/items/<%= item._id %>" method="POST">
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description" value="<%= item.description %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" value="<%= item.quantity %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control" id="price" name="price" value="<%= item.price %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="isService" class="form-label">Is this a service?</label>
+                <select class="form-select" id="isService" name="isService" required>
+                    <option value="true" <%= item.isService ? 'selected' : '' %>>Yes</option>
+                    <option value="false" <%= !item.isService ? 'selected' : '' %>>No</option>
+                </select>
+            </div>
+            <input type="hidden" name="_method" value="PUT">
+            <button type="submit" class="btn btn-primary">Update Item</button>
+        </form>
+    </div>
+
+    <% include ../partials/_footer.ejs %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

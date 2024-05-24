@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/_head') %>
+    <title>Edit Quote</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <%- include('partials/_header') %>
+    <div class="container mt-5">
+        <h1>Edit Quote</h1>
+        <form id="editQuoteForm">
+            <div class="mb-3">
+                <label for="clientId" class="form-label">Client ID</label>
+                <input type="text" class="form-control" id="clientId" name="clientId" value="<%= quote.clientId %>" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="quoteId" class="form-label">Quote ID</label>
+                <input type="text" class="form-control" id="quoteId" name="quoteId" value="<%= quote.quoteId %>" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%= quote.title %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="scopeOfWork" class="form-label">Scope of Work</label>
+                <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required><%= quote.scopeOfWork %></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" name="status" required>
+                    <option value="sent" <%= quote.status === 'sent' ? 'selected' : '' %>>Sent</option>
+                    <option value="opened" <%= quote.status === 'opened' ? 'selected' : '' %>>Opened</option>
+                    <option value="clicked" <%= quote.status === 'clicked' ? 'selected' : '' %>>Clicked</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="items" class="form-label">Items</label>
+                <textarea class="form-control" id="items" name="items" rows="5" required><%= JSON.stringify(quote.items) %></textarea>
+                <div id="itemsHelp" class="form-text">Enter items as JSON array.</div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="submitEditForm()">Update Quote</button>
+        </form>
+    </div>
+    <%- include('partials/_footer') %>
+    <script>
+        function submitEditForm() {
+            const quoteId = document.getElementById('quoteId').value;
+            const data = {
+                clientId: document.getElementById('clientId').value,
+                title: document.getElementById('title').value,
+                scopeOfWork: document.getElementById('scopeOfWork').value,
+                status: document.getElementById('status').value,
+                items: JSON.parse(document.getElementById('items').value)
+            };
+
+            axios.put('/quotes/' + quoteId, data)
+                .then(function (response) {
+                    console.log('Quote updated successfully', response.data);
+                    window.location.href = '/dashboard';
+                })
+                .catch(function (error) {
+                    console.error('Error updating quote', error.response.data);
+                    alert('Failed to update quote. Please check the form for errors.');
+                });
+        }
+    </script>
+</body>
+</html>

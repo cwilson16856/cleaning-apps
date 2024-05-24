@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/_head') %>
+    <title>Quotes</title>
+</head>
+<body>
+    <%- include('partials/_header') %>
+    <div class="container mt-5">
+        <h1>Quotes</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Client ID</th>
+                    <th>Scope of Work</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% quotes.forEach(quote => { %>
+                    <tr>
+                        <td><%= quote.title %></td>
+                        <td><%= quote.clientId %></td>
+                        <td><%= quote.scopeOfWork %></td>
+                        <td><%= quote.status %></td>
+                        <td>
+                            <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
+                            <a href="/quotes/<%= quote._id %>/edit" class="btn btn-warning">Edit</a>
+                            <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/quotes/new" class="btn btn-primary">Add New Quote</a>
+    </div>
+    <%- include('partials/_footer') %>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/_head.ejs') %>
+    <title>Dashboard - Cleaning Tools</head>
+<body>
+    <%- include('partials/_header.ejs') %>
+    <div class="container mt-5">
+        <h1>Quotes Dashboard</h1>
+        <div class="mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Client Name</th>
+                        <th scope="col">Quote ID</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Total Price</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quotes.forEach(function(quote, index) { %>
+                        <tr>
+                            <th scope="row"><%= index + 1 %></th>
+                            <td><%= quote.clientName %></td>
+                            <td><%= quote.quoteId %></td>
+                            <td><%= quote.status %></td>
+                            <td>$<%= quote.totalPrice.toFixed(2) %></td>
+                            <td>
+                                <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
+                                <a href="/quotes/<%= quote._id %>/edit" class="btn btn-warning">Edit</a>
+                                <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-4">
+            <a href="/quotes/new" class="btn btn-success">Create New Quote</a>
+        </div>
+    </div>
+    <%- include('partials/_footer.ejs') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

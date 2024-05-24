@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/_head.ejs %>
+    <title>Create Item</title>
+</head>
+<body>
+    <% include ../partials/_header.ejs %>
+
+    <div class="container mt-5">
+        <h1>Create New Item</h1>
+        <form action="/items" method="POST">
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+            </div>
+            <div class="mb-3">
+                <label for="isService" class="form-label">Is this a service?</label>
+                <select class="form-select" id="isService" name="isService" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Item</button>
+        </form>
+    </div>
+
+    <% include ../partials/_footer.ejs %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
