@@ -1,0 +1,3 @@
+[submodule "clean-apps"]
+	path = clean-apps
+	url = https://github.com/cwilson16856/clean-apps.git
