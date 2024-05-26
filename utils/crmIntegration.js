@@ -25,6 +25,7 @@ const sendClientDataToCRM = async (clientData) => {
     log(`Client data sent to CRM successfully. Client ID: ${response.data.id}`);
   } catch (error) {
     logError(error, 'Failed to send client data to CRM.');
+    console.error(`Error details: ${error.message}\n${error.stack}`);
     throw error;
   }
 };
@@ -41,6 +42,7 @@ const sendQuoteDataToCRM = async (quoteData) => {
     log(`Quote data sent to CRM successfully. Quote ID: ${response.data.id}`);
   } catch (error) {
     logError(error, 'Failed to send quote data to CRM.');
+    console.error(`Error details: ${error.message}\n${error.stack}`);
     throw error;
   }
 };

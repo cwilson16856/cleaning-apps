@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/_head') %>
+    <%- include('partials/_head.ejs') %>
     <title>Clients</title>
 </head>
 <body>
-    <%- include('partials/_header') %>
+    <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Clients</h1>
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
@@ -20,6 +21,7 @@
             <tbody>
                 <% clients.forEach(client => { %>
                     <tr>
+                        <td><%= client._id %></td>
                         <td><%= client.name %></td>
                         <td><%= client.email %></td>
                         <td><%= client.phoneNumber %></td>
@@ -35,6 +37,6 @@
         </table>
         <a href="/clients/new" class="btn btn-primary">Add New Client</a>
     </div>
-    <%- include('partials/_footer') %>
+    <%- include('partials/_footer.ejs') %>
 </body>
 </html>

@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
 const clientSchema = new mongoose.Schema({
+  clientId: { type: String, required: true, unique: true },
+  companyName: { type: String, required: true },
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   phoneNumber: { type: String, required: false },
-  clientId: { type: String, required: true, unique: true }
+  streetAddress: { type: String, required: false },
+  city: { type: String, required: false },
+  state: { type: String, required: false },
+  zip: { type: String, required: false }
 });
 
 clientSchema.pre('save', function(next) {

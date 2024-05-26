@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/_head') %>
+    <%- include('partials/_head.ejs') %>
 <body>
-    <%- include('partials/_header') %>
+    <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Create New Quote</h1>
-        <form id="quoteForm">
+        <form id="quoteForm" method="POST">
+            <input type="hidden" name="csrfToken" value="<%= csrfToken %>">
             <div class="mb-3">
                 <label for="clientSelect" class="form-label">Select Client</label>
-                <select class="form-select" id="clientSelect" required>
+                <select class="form-select" id="clientSelect" name="clientId" required>
                     <option selected>Choose...</option>
-                    <!-- Client options will be populated here -->
+                    <% clients.forEach(function(client) { %>
+                        <option value="<%= client._id %>"><%= client.name %></option>
+                    <% }); %>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="quoteTitle" class="form-label">Quote Title</label>
-                <input type="text" class="form-control" id="quoteTitle" required>
+                <input type="text" class="form-control" id="quoteTitle" name="title" required>
             </div>
             <div class="mb-3">
                 <label for="scopeOfWork" class="form-label">Scope of Work</label>
-                <textarea class="form-control" id="scopeOfWork" rows="3" required></textarea>
+                <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="serviceType" class="form-label">Type of Service</label>
-                <select class="form-select" id="serviceType" required>
+                <select class="form-select" id="serviceType" name="serviceType" required>
                     <option selected>Choose...</option>
                     <option value="Recurring">Recurring</option>
                     <option value="One-Time Deep Clean">One-Time Deep Clean</option>
@@ -32,7 +35,7 @@
             </div>
             <div class="mb-3 d-none" id="frequencyDiv">
                 <label for="frequency" class="form-label">Frequency</label>
-                <select class="form-select" id="frequency">
+                <select class="form-select" id="frequency" name="frequency">
                     <option selected>Choose...</option>
                     <option value="Weekly">Weekly</option>
                     <option value="Bi-Weekly">Bi-Weekly</option>
@@ -42,11 +45,11 @@
             <div class="mb-3 d-none" id="initialCleaningDiv">
                 <label>Initial Cleaning Options</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Walls" id="walls">
+                    <input class="form-check-input" type="checkbox" value="Walls" id="walls" name="initialCleaningOptions[]">
                     <label class="form-check-label" for="walls">Walls</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Windows" id="windows">
+                    <input class="form-check-input" type="checkbox" value="Windows" id="windows" name="initialCleaningOptions[]">
                     <label class="form-check-label" for="windows">Windows</label>
                 </div>
                 <!-- Add more checkboxes for other initial cleaning options as needed -->
@@ -57,7 +60,7 @@
             <button type="submit" class="btn btn-primary">Create Quote</button>
         </form>
     </div>
-    <%- include('partials/_footer') %>
+    <%- include('partials/_footer.ejs') %>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         document.getElementById('serviceType').addEventListener('change', function() {
@@ -78,53 +81,26 @@
 
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const clientSelect = document.getElementById('clientSelect');
-            const quoteTitle = document.getElementById('quoteTitle');
-            const scopeOfWork = document.getElementById('scopeOfWork');
-            const serviceType = document.getElementById('serviceType').value;
-            const frequency = document.getElementById('frequency').value;
-            let initialCleaningOptions = [];
-            document.querySelectorAll('#initialCleaningDiv input[type=checkbox]:checked').forEach(function(checkbox) {
-                initialCleaningOptions.push(checkbox.value);
-            });
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            data.initialCleaningOptions = formData.getAll('initialCleaningOptions[]');
 
-            let validationErrors = [];
-
-            if (!clientSelect.value) {
-                validationErrors.push('Client selection is required.');
-            }
-            if (!quoteTitle.value.trim()) {
-                validationErrors.push('Quote title is required.');
-            }
-            if (!scopeOfWork.value.trim()) {
-                validationErrors.push('Scope of work is required.');
-            }
-
-            if (validationErrors.length > 0) {
+            axios.post('/quotes', data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'CSRF-Token': formData.get('csrfToken') // Ensure CSRF token is sent in the request header
+                }
+            })
+            .then(function(response) {
+                console.log('Quote created successfully', response.data);
+                window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
+            })
+            .catch(function(error) {
+                console.error('Error creating quote', error.response.data);
                 const validationErrorsElement = document.getElementById('validationErrors');
-                validationErrorsElement.innerHTML = validationErrors.join('<br>');
+                validationErrorsElement.innerHTML = 'Failed to create quote. Please try again.';
                 validationErrorsElement.classList.remove('d-none');
-                return;
-            }
-
-            const data = {
-                clientId: clientSelect.value,
-                title: quoteTitle.value,
-                scopeOfWork: scopeOfWork.value,
-                serviceType: serviceType,
-                frequency: frequency,
-                initialCleaningOptions: initialCleaningOptions
-            };
-
-            axios.post('/quotes', data)
-                .then(function(response) {
-                    console.log('Quote created successfully', response.data);
-                    window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
-                })
-                .catch(function(error) {
-                    console.error('Error creating quote', error.response.data);
-                    alert('Failed to create quote. Please try again.');
-                });
+            });
         });
     </script>
 </body>

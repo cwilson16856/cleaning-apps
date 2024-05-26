@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/_head') %>
+    <%- include('partials/_head.ejs') %>
     <title>Edit Quote</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <%- include('partials/_header') %>
+    <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Edit Quote</h1>
         <form id="editQuoteForm">
@@ -42,7 +42,7 @@
             <button type="button" class="btn btn-primary" onclick="submitEditForm()">Update Quote</button>
         </form>
     </div>
-    <%- include('partials/_footer') %>
+    <%- include('partials/_footer.ejs') %>
     <script>
         function submitEditForm() {
             const quoteId = document.getElementById('quoteId').value;

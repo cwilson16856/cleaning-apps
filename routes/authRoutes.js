@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 
 router.get('/register', (req, res) => {
-  res.render('register');
+  res.render('register', { csrfToken: req.session.csrfToken });
 });
 
 router.post('/register', async (req, res) => {
@@ -15,12 +15,13 @@ router.post('/register', async (req, res) => {
     res.redirect('/auth/login');
   } catch (error) {
     console.error('Registration error:', error);
+    console.error(error.stack);
     res.status(500).send(error.message);
   }
 });
 
 router.get('/login', (req, res) => {
-  res.render('login');
+  res.render('login', { csrfToken: req.session.csrfToken });
 });
 
 router.post('/login', async (req, res) => {
@@ -39,6 +40,7 @@ router.post('/login', async (req, res) => {
     }
   } catch (error) {
     console.error('Login error:', error);
+    console.error(error.stack);
     return res.status(500).send(error.message);
   }
 });
@@ -46,7 +48,8 @@ router.post('/login', async (req, res) => {
 router.get('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
-      console.error('Error during session destruction:', err); // gpt_pilot_debugging_log
+      console.error('Error during session destruction:', err);
+      console.error(err.stack);
       return res.status(500).send('Error logging out');
     }
     res.redirect('/auth/login');

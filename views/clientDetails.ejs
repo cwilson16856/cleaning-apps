@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include ../partials/_head.ejs %>
+    <%- include ../partials/_head.ejs %>
     <title>Client Details</title>
 </head>
 <body>
-    <% include ../partials/_header.ejs %>
+    <%- include ../partials/_header.ejs %>
 
     <div class="container mt-5">
         <h1>Client Details</h1>
@@ -18,8 +18,8 @@
             <p>Client ID: <span id="clientId"><%= client._id %></span></p>
         </div>
 
-        <a href="/clients/edit/<%= client._id %>" class="btn btn-primary mt-3">Edit Client</a>
-        <a href="/quotes/new/<%= client._id %>" class="btn btn-success mt-3">Create Quote for Client</a>
+        <a href="/clients/<%= client._id %>/edit" class="btn btn-primary mt-3">Edit Client</a>
+        <a href="clients//<%= client._id %>/new" class="btn btn-success mt-3">Create Quote for Client</a>
     </div>
 
     <% include ../partials/_footer.ejs %>

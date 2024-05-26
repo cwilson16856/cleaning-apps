@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Quote = require('../models/quoteModel');
+const Client = require('../models/clientModel'); // Ensure Client model is imported for client data fetching
 const { sendQuoteDataToCRM } = require('../utils/crmIntegration');
 
 // GET route for retrieving and rendering all quotes
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST route for creating a new quote
-router.post('/', async (req, res) => { // Adjusted path
+router.post('/', async (req, res) => {
   try {
     const { serviceType, frequency, initialCleaningOptions, ...rest } = req.body;
     const newQuote = new Quote({
@@ -40,9 +41,14 @@ router.post('/', async (req, res) => { // Adjusted path
   }
 });
 
-router.get('/new', (req, res) => {
-  //render the new quote form
-  res.render('createQuote');
+router.get('/new', async (req, res) => {
+  try {
+    const clients = await Client.find(); // Fetch all clients to populate the dropdown
+    res.render('createQuote', { clients }); // Pass clients to the view for dropdown population
+  } catch (error) {
+    console.error(`Error fetching clients for quote creation: ${error.message}`, error.stack);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 // GET route for retrieving a single quote by ID

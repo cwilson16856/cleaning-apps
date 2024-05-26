@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/_head') %>
+    <%- include('partials/_head.ejs') %>
     <title>Quote Details</title>
 </head>
 <body>
-    <%- include('partials/_header') %>
+    <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Quote Details</h1>
         <div class="quote-details">
@@ -28,6 +28,6 @@
         <a href="/quotes/<%= quote._id %>/edit" class="btn btn-primary">Edit Quote</a>
         <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
     </div>
-    <%- include('partials/_footer') %>
+    <%- include('partials/_footer.ejs') %>
 </body>
 </html>

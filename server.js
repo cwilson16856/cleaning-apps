@@ -4,10 +4,14 @@ const mongoose = require("mongoose");
 const express = require("express");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
+const methodOverride = require('method-override');
+const path = require('path');  // Ensure path is required
+// const csurf = require('csurf'); // Removed csurf middleware
 const authRoutes = require("./routes/authRoutes");
 const clientRoutes = require('./routes/clientRoutes');
 const quoteRoutes = require('./routes/quoteRoutes');
-const dashboardRoutes = require('./routes/dashboardRoutes'); // Make sure this file exists
+const dashboardRoutes = require('./routes/dashboardRoutes');
+const customCsrfMiddleware = require('./middleware/customCsrfMiddleware'); // Added custom CSRF middleware
 
 if (!process.env.DATABASE_URL || !process.env.SESSION_SECRET) {
   console.error("Error: config environment variables not set. Please create/edit .env configuration file.");
@@ -24,8 +28,11 @@ app.use(express.json());
 // Setting the templating engine to EJS
 app.set("view engine", "ejs");
 
+// Set the views directory
+app.set('views', path.join(__dirname, 'views'));
+
 // Serve static files
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Database connection
 mongoose
@@ -49,6 +56,12 @@ app.use(
   }),
 );
 
+// Method Override Middleware
+app.use(methodOverride('_method'));
+
+// Custom CSRF Protection Middleware
+app.use(customCsrfMiddleware);
+
 app.on("error", (error) => {
   console.error(`Server error: ${error.message}`);
   console.error(error.stack);
@@ -57,7 +70,6 @@ app.on("error", (error) => {
 // Logging session creation and destruction
 app.use((req, res, next) => {
   const sess = req.session;
-  // Make session available to all views
   res.locals.session = sess;
   if (!sess.views) {
     sess.views = 1;
@@ -75,13 +87,13 @@ app.use((req, res, next) => {
 app.use('/auth', authRoutes);
 
 // Client Routes
-app.use('/clients', clientRoutes); // Prefix clientRoutes
+app.use('/clients', clientRoutes);
 
 // Quote Routes
-app.use('/quotes', quoteRoutes); // Prefix quoteRoutes with '/quotes'
+app.use('/quotes', quoteRoutes);
 
 // Dashboard Routes
-app.use('/dashboard', dashboardRoutes); // Prefix dashboardRoutes with '/dashboard'
+app.use('/dashboard', dashboardRoutes);
 
 // Root path response
 app.get("/", (req, res) => {
