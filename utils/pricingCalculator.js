@@ -1,56 +1,60 @@
-const calculatePrice = (serviceType, frequency, rooms, squareFootage, extras, distance) => {
-  console.log(`Calculating price for serviceType: ${serviceType}, frequency: ${frequency}, squareFootage: ${squareFootage}, distance: ${distance}`);
-  let basePrice = 0;
-  let extraCharges = 0;
-  const pricePerSquareFoot = 0.01;
-  const mileageCharge = 0.55;
-  const mileageThreshold = 20;
+const ServiceItem = require('../models/serviceItem');
 
-  // Base price calculation based on square footage
-  basePrice += squareFootage * pricePerSquareFoot;
+const calculateItemizedPrice = async (serviceItems, taxRateInput) => {
+  let subtotal = 0;
+  let breakdown = [];
 
-  // Adding extra charges
-  extras.forEach(extra => {
-    console.log(`Adding extra charge for: ${extra}`);
-    extraCharges += extra.price;
-  });
+  for (const item of serviceItems) {
+    try {
+      const serviceItem = await ServiceItem.findById(item.serviceItemId);
+      if (!serviceItem) throw new Error(`Service item not found with ID: ${item.serviceItemId}`);
+      
+      const price = item.customPrice !== undefined ? item.customPrice : serviceItem.price;
+      const itemTotal = price * item.quantity;
+      subtotal += itemTotal;
 
-  // Adding room charges
-  rooms.forEach(room => {
-    console.log(`Adding charge for room: ${room.name}`);
-    basePrice += room.price;
-  });
-
-  // Adding mileage charge if applicable
-  if (distance > mileageThreshold) {
-    const extraMileage = distance - mileageThreshold;
-    console.log(`Adding mileage charge for extra ${extraMileage} miles.`);
-    extraCharges += extraMileage * mileageCharge;
-  }
-
-  // Adjusting price based on service frequency for recurring services
-  if (serviceType === 'Recurring') {
-    console.log(`Adjusting price for recurring service with frequency: ${frequency}`);
-    switch (frequency) {
-      case 'Weekly':
-        basePrice *= 0.9; // 10% discount for weekly
-        break;
-      case 'Bi-Weekly':
-        basePrice *= 0.95; // 5% discount for bi-weekly
-        break;
-      case 'Monthly':
-        basePrice *= 0.97; // 3% discount for monthly
-        break;
-      default:
-        console.log(`No frequency discount applied.`);
+      breakdown.push({
+        name: serviceItem.name,
+        quantity: item.quantity,
+        price: price,
+        total: itemTotal
+      });
+    } catch (error) {
+      console.error(`Error calculating itemized price: ${error.message}`, error);
+      throw error;
     }
   }
 
-  const totalPrice = basePrice + extraCharges;
-  console.log(`Total calculated price: $${totalPrice}`);
-  return totalPrice;
+  const taxRate = taxRateInput || 0; // Allow tax rate to be dynamically input, defaulting to 0 if not provided
+  const taxAmount = subtotal * taxRate;
+  const totalPrice = subtotal + taxAmount;
+
+  return { subtotal, taxAmount, totalPrice, breakdown };
 };
 
-module.exports = {
-  calculatePrice
+const calculateBundledPrice = async (serviceItems, taxRateInput) => {
+  try {
+    const { subtotal, taxAmount, totalPrice, breakdown } = await calculateItemizedPrice(serviceItems, taxRateInput);
+    return { subtotal, taxAmount, totalPrice, breakdown: [{ name: 'Bundled Service', total: totalPrice }] };
+  } catch (error) {
+    console.error(`Error calculating bundled price: ${error.message}`, error);
+    throw error;
+  }
 };
+
+const calculateQuotePrice = async (quote, option = 'itemized', taxRateInput) => {
+  try {
+    switch (option) {
+      case 'bundled':
+        return await calculateBundledPrice(quote.serviceItems, taxRateInput);
+      case 'itemized':
+      default:
+        return await calculateItemizedPrice(quote.serviceItems, taxRateInput);
+    }
+  } catch (error) {
+    console.error(`Error calculating quote price: ${error.message}`, error);
+    throw error;
+  }
+};
+
+module.exports = { calculateQuotePrice };

@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const { createClient, searchClients } = require('../controllers/clientController');
+const csrf = require('csurf');
 const Client = require('../models/clientModel');
-const { v4: uuidv4 } = require('uuid'); // Ensure correct import
-const { sendClientDataToCRM } = require('../utils/crmIntegration');
+
+// CSRF Protection Middleware using csurf
+const csrfProtection = csrf({ cookie: true });
 
 // Middleware to get client by ID
 async function getClient(req, res, next) {
@@ -23,10 +26,10 @@ async function getClient(req, res, next) {
 }
 
 // Get all clients and render the clients.ejs template
-router.get('/', async (req, res) => {
+router.get('/', csrfProtection, async (req, res) => {
     try {
         const clients = await Client.find();
-        res.render('clients', { clients });
+        res.render('clients', { clients, csrfToken: req.csrfToken() });
         console.log("Fetched all clients successfully.");
     } catch (err) {
         console.error(`Error fetching clients: ${err.message}`, err.stack);
@@ -34,22 +37,25 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/new', (req, res) => {
+router.get('/new', csrfProtection, (req, res) => {
     console.log("Rendering createClient.ejs");
-    res.render('createClient');
+    res.render('createClient', { csrfToken: req.csrfToken() });
 });
 
+// Search for clients
+router.get('/search', searchClients);
+
 // Get one client
-router.get('/:id', getClient, (req, res) => {
+router.get('/:id', getClient, csrfProtection, (req, res) => {
     console.log(`Rendering clientDetails.ejs for client ID: ${req.params.id}`);
-    res.render('clientDetails');
+    res.render('clientDetails', { client: res.client, csrfToken: req.csrfToken() });
 });
 
 // Route to render the form to edit a client
-router.get('/:id/edit', getClient, (req, res) => {
+router.get('/:id/edit', getClient, csrfProtection, (req, res) => {
     console.log(`Rendering editClient.ejs for client ID: ${req.params.id}`);
     try {
-        res.render('editClient', { client: res.client, csrfToken: req.session.csrfToken });
+        res.render('editClient', { client: res.client, csrfToken: req.csrfToken() });
         console.log(`Rendered editClient.ejs for client ID: ${req.params.id}`);
     } catch (err) {
         console.error(`Error rendering editClient: ${err.message}`, err.stack);
@@ -57,36 +63,11 @@ router.get('/:id/edit', getClient, (req, res) => {
     }
 });
 
-
 // Create new client
-router.post('/', async (req, res) => {
-    const client = new Client({
-        clientId: uuidv4(), // Generate a unique clientId correctly
-        companyName: req.body.companyName,
-        name: req.body.name,
-        email: req.body.email,
-        phoneNumber: req.body.phoneNumber,
-        streetAddress: req.body.streetAddress,
-        city: req.body.city,
-        state: req.body.state,
-        zip: req.body.zip
-    });
-
-    try {
-        const newClient = await client.save();
-        await sendClientDataToCRM(newClient.toObject()).catch(err => {
-            console.error(`CRM Integration Error: ${err.message}`, err.stack);
-        });
-        console.log(`Created new client: ${newClient.name}`);
-        res.redirect('/clients'); // Redirect after successful creation
-    } catch (err) {
-        console.error(`Error creating client: ${err.message}`, err.stack);
-        res.status(400).json({ message: err.message });
-    }
-});
+router.post('/', csrfProtection, createClient);
 
 // Update client
-router.put('/:id/edit', getClient, async (req, res) => {
+router.put('/:id', getClient, csrfProtection, async (req, res) => {
     if (req.body.clientId != null) {
         res.client.clientId = req.body.clientId;
     }
@@ -118,7 +99,7 @@ router.put('/:id/edit', getClient, async (req, res) => {
             console.error(`CRM Integration Error: ${err.message}`, err.stack);
         });
         console.log(`Updated client with ID: ${req.params.id}`);
-        res.redirect('/clients');
+        res.redirect('/clients?updated=true'); // Redirect after successful update
     } catch (err) {
         console.error(`Error updating client: ${err.message}`, err.stack);
         res.status(400).json({ message: err.message });
@@ -126,7 +107,7 @@ router.put('/:id/edit', getClient, async (req, res) => {
 });
 
 // Delete client
-router.delete('/:id', getClient, async (req, res) => {
+router.delete('/:id', getClient, csrfProtection, async (req, res) => {
     try {
         await res.client.remove();
         res.json({ message: 'Deleted Client' });

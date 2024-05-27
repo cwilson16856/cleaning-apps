@@ -9,7 +9,8 @@
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Edit Quote</h1>
-        <form id="editQuoteForm">
+        <form id="editQuoteForm" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3">
                 <label for="clientId" class="form-label">Client ID</label>
                 <input type="text" class="form-control" id="clientId" name="clientId" value="<%= quote.clientId %>" readonly>
@@ -34,15 +35,12 @@
                     <option value="clicked" <%= quote.status === 'clicked' ? 'selected' : '' %>>Clicked</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label for="items" class="form-label">Items</label>
-                <textarea class="form-control" id="items" name="items" rows="5" required><%= JSON.stringify(quote.items) %></textarea>
-                <div id="itemsHelp" class="form-text">Enter items as JSON array.</div>
-            </div>
+            <!-- Removed items input field as per user feedback -->
             <button type="button" class="btn btn-primary" onclick="submitEditForm()">Update Quote</button>
         </form>
     </div>
     <%- include('partials/_footer.ejs') %>
+    <script src="/js/dynamicFormBehavior.js"></script>
     <script>
         function submitEditForm() {
             const quoteId = document.getElementById('quoteId').value;
@@ -51,16 +49,23 @@
                 title: document.getElementById('title').value,
                 scopeOfWork: document.getElementById('scopeOfWork').value,
                 status: document.getElementById('status').value,
-                items: JSON.parse(document.getElementById('items').value)
+                // Removed items from data payload as per user feedback
             };
+            const csrfToken = document.querySelector('input[name="_csrf"]').value;
 
-            axios.put('/quotes/' + quoteId, data)
+            axios.put('/quotes/' + quoteId, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': csrfToken
+                }
+            })
                 .then(function (response) {
                     console.log('Quote updated successfully', response.data);
                     window.location.href = '/dashboard';
                 })
                 .catch(function (error) {
                     console.error('Error updating quote', error.response.data);
+                    console.error('Error trace:', error);
                     alert('Failed to update quote. Please check the form for errors.');
                 });
         }

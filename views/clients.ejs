@@ -3,6 +3,11 @@
 <head>
     <%- include('partials/_head.ejs') %>
     <title>Clients</title>
+    <div class="mb-3">
+        <label for="clientSearch" class="form-label">Search Clients</label>
+        <input type="text" class="form-control" id="clientSearch" placeholder="Search for a client...">
+        <div id="clientResults" class="list-group mt-2"></div>
+    </div>
 </head>
 <body>
     <%- include('partials/_header.ejs') %>
@@ -11,7 +16,6 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
@@ -21,7 +25,6 @@
             <tbody>
                 <% clients.forEach(client => { %>
                     <tr>
-                        <td><%= client._id %></td>
                         <td><%= client.name %></td>
                         <td><%= client.email %></td>
                         <td><%= client.phoneNumber %></td>
@@ -38,5 +41,6 @@
         <a href="/clients/new" class="btn btn-primary">Add New Client</a>
     </div>
     <%- include('partials/_footer.ejs') %>
+    <script src="/js/clientSearch.js"></script>
 </body>
 </html>

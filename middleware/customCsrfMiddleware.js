@@ -13,7 +13,7 @@ function customCsrfMiddleware(req, res, next) {
     res.locals.csrfToken = req.session.csrfToken;
     next();
   } else if (["POST", "PUT", "DELETE"].includes(req.method)) {
-    const clientToken = req.body.csrfToken || req.query.csrfToken;
+    const clientToken = req.body._csrf || req.query._csrf;
     const serverToken = req.session.csrfToken;
 
     if (!clientToken || !serverToken || clientToken !== serverToken) {

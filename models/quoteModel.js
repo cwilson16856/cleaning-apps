@@ -8,8 +8,16 @@ const itemSchema = new mongoose.Schema({
   isService: Boolean, // true for service, false for product
 }, { _id: false }); // Prevents Mongoose from creating an _id for sub-documents
 
+// New Schema for Service Items in a Quote
+const serviceItemSchema = new mongoose.Schema({
+  serviceItemId: { type: mongoose.Schema.Types.ObjectId, ref: 'ServiceItem', required: true },
+  quantity: { type: Number, required: true },
+  customPrice: Number, // optional, if the user wants to override the price
+}, { _id: false }); // Prevents Mongoose from creating an _id for sub-documents
+
 const quoteSchema = new mongoose.Schema({
   quoteId: { type: String, default: uuidv4 },
+  clientName: { type: String, required: true },
   clientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Client', required: true },
   title: String,
   scopeOfWork: String,
@@ -32,7 +40,8 @@ const quoteSchema = new mongoose.Schema({
     type: String,
     enum: ['Walls', 'Windows', 'Inside Fridge', 'Inside Stove', 'Underneath Furniture', 'Other']
   }],
-  items: [itemSchema]
+  items: [itemSchema],
+  serviceItems: [serviceItemSchema] // Adding the new field for service items
 });
 
 quoteSchema.pre('save', async function(next) {

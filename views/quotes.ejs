@@ -8,12 +8,16 @@
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Quotes</h1>
+        <div class="mb-3">
+            <label for="clientSearch" class="form-label">Search Clients</label>
+            <input type="text" class="form-control" id="clientSearch" placeholder="Search for a client...">
+            <div id="clientResults" class="list-group mt-2"></div>
+        </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Client ID</th>
-                    <th>Scope of Work</th>
+                    <th>Client Name</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -22,8 +26,7 @@
                 <% quotes.forEach(quote => { %>
                     <tr>
                         <td><%= quote.title %></td>
-                        <td><%= quote.clientId %></td>
-                        <td><%= quote.scopeOfWork %></td>
+                        <td><%= quote.client %></td>
                         <td><%= quote.status %></td>
                         <td>
                             <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
@@ -39,5 +42,6 @@
         <a href="/quotes/new" class="btn btn-primary">Add New Quote</a>
     </div>
     <%- include('partials/_footer.ejs') %>
+    <script src="/js/clientSearch.js"></script>
 </body>
 </html>

@@ -5,13 +5,14 @@ const express = require("express");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const methodOverride = require('method-override');
-const path = require('path');  // Ensure path is required
-// const csurf = require('csurf'); // Removed csurf middleware
+const path = require('path');
+const cookieParser = require('cookie-parser'); // Ensure cookie-parser is required
+const csrf = require('csurf');
 const authRoutes = require("./routes/authRoutes");
 const clientRoutes = require('./routes/clientRoutes');
 const quoteRoutes = require('./routes/quoteRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
-const customCsrfMiddleware = require('./middleware/customCsrfMiddleware'); // Added custom CSRF middleware
+const serviceItemRoutes = require('./routes/serviceItemRoutes');
 
 if (!process.env.DATABASE_URL || !process.env.SESSION_SECRET) {
   console.error("Error: config environment variables not set. Please create/edit .env configuration file.");
@@ -34,6 +35,9 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use cookie parser
+app.use(cookieParser()); // Add cookie-parser middleware
+
 // Database connection
 mongoose
   .connect(process.env.DATABASE_URL)
@@ -53,14 +57,20 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+    cookie: { secure: process.env.NODE_ENV === 'production', httpOnly: true },
   }),
 );
 
 // Method Override Middleware
 app.use(methodOverride('_method'));
 
-// Custom CSRF Protection Middleware
-app.use(customCsrfMiddleware);
+// CSRF Protection Middleware using csurf
+app.use(csrf({ cookie: true }));
+
+app.use((req, res, next) => {
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
 
 app.on("error", (error) => {
   console.error(`Server error: ${error.message}`);
@@ -94,6 +104,9 @@ app.use('/quotes', quoteRoutes);
 
 // Dashboard Routes
 app.use('/dashboard', dashboardRoutes);
+
+// Service Item Routes
+app.use('/items', serviceItemRoutes); // Mounting the service item routes
 
 // Root path response
 app.get("/", (req, res) => {

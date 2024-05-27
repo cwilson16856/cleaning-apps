@@ -2,12 +2,12 @@
 <html lang="en">
 <%- include('partials/_head.ejs') %>
 <body>
-<%- include('partials/_header.ejs') %>
+<!-- <%- include('partials/_header.ejs') %> -->
     <main role="main">
       <div class="container mt-5">
         <h2>Login</h2>
         <form action="/auth/login" method="POST">
-          <input type="hidden" name="csrfToken" value="<%= csrfToken %>">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
           <div class="mb-3">
             <input type="text" name="username" placeholder="Username" required class="form-control">
           </div>
@@ -22,5 +22,5 @@
       </div>
     </main>
   </body>
-<%- include('partials/_footer.ejs') %>
+<!-- <%- include('partials/_footer.ejs') %> -->
 </html>
