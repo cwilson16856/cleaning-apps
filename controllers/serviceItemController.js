@@ -3,7 +3,7 @@ const ServiceItem = require('../models/serviceItem');
 // Create new ServiceItem
 exports.createServiceItem = async (req, res) => {
   try {
-    console.log('Request body:', req.body);  // Log the request body for debugging
+    console.log('Request body:', req.body); // Log the request body for debugging
     const newServiceItem = await ServiceItem.create(req.body);
     console.log(`Service item created: ${newServiceItem.name}`);
     res.status(201).json({
@@ -20,8 +20,26 @@ exports.createServiceItem = async (req, res) => {
 };
 
 
-// Get all ServiceItems and render the view
+// Get all ServiceItems and return JSON
 exports.getAllServiceItems = async (req, res) => {
+  try {
+    const serviceItems = await ServiceItem.find();
+    console.log(`Fetched all items, count: ${serviceItems.length}`);
+    res.status(200).json({
+      success: true,
+      data: serviceItems
+    });
+  } catch (error) {
+    console.error(`Error fetching items: ${error.message}`, error);
+    res.status(500).json({
+      success: false,
+      error: 'Error fetching service items'
+    });
+  }
+};
+
+// Get all ServiceItems and render the view
+exports.renderServiceItemsPage = async (req, res) => {
   try {
     const serviceItems = await ServiceItem.find();
     console.log(`Fetched all items, count: ${serviceItems.length}`);
@@ -33,7 +51,7 @@ exports.getAllServiceItems = async (req, res) => {
 };
 
 // Utility function to get a single ServiceItem by id
-exports.findServiceItemById = async (id) => {
+exports.getServiceItemById = async (id) => {
   try {
     const serviceItem = await ServiceItem.findById(id);
     if (!serviceItem) {
@@ -41,6 +59,7 @@ exports.findServiceItemById = async (id) => {
     }
     return serviceItem;
   } catch (error) {
+    console.error(`Error fetching service item by id: ${error.message}`, error);
     throw new Error(`Error fetching service item by id: ${error.message}`);
   }
 };
@@ -85,14 +104,10 @@ exports.deleteServiceItem = async (req, res) => {
       });
     }
     console.log(`Service item deleted: ${serviceItem.name}`);
-    // Determine the redirect URL based on the current page or context
-    let redirectUrl = '/items';
-    if (req.headers.referer.includes('/clients')) {
-      redirectUrl = '/clients';
-    } else if (req.headers.referer.includes('/quotes')) {
-      redirectUrl = '/quotes';
-    }
-    res.redirect(redirectUrl);  // Redirect based on context
+    res.status(200).json({
+      success: true,
+      message: 'Service item deleted successfully'
+    });
   } catch (error) {
     console.error(`Error deleting service item: ${error.message}`, error);
     res.status(400).json({

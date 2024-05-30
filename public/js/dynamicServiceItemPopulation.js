@@ -1,76 +1,219 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const addServiceItemBtn = document.getElementById('addServiceItemBtn');
-    const serviceItemsSection = document.getElementById('serviceItemsSection');
-    const validationErrorsElement = document.getElementById('validationErrors');
+  const clientSearchInput = document.getElementById('clientSearch');
+  const clientResults = document.getElementById('clientResults');
+  const clientIdInput = document.getElementById('clientId');
+  const clientPreview = document.getElementById('clientPreview');
+  const clientNamePreview = document.getElementById('clientNamePreview');
+  const clientEmailPreview = document.getElementById('clientEmailPreview');
+  const clientPhonePreview = document.getElementById('clientPhonePreview');
+  const removeClientBtn = document.getElementById('removeClientBtn');
+  const editClientBtn = document.getElementById('editClientBtn');
+  const serviceTypeSelect = document.getElementById('serviceType');
+  const frequencyDiv = document.getElementById('frequencyDiv');
+  const initialCleaningDiv = document.getElementById('initialCleaningDiv');
 
-    // Function to update pricing information dynamically
-    function updatePricing() {
-        let subtotal = 0;
-        document.querySelectorAll('.serviceItemSelect').forEach(select => {
-            const selectedOption = select.options[select.selectedIndex];
-            if (selectedOption && selectedOption.dataset.price) {
-                const quantityInput = select.closest('.service-item-row').querySelector('.itemQuantity');
-                const quantity = parseFloat(quantityInput.value) || 0;
-                const price = parseFloat(selectedOption.dataset.price);
-                subtotal += quantity * price;
-            }
-        });
-        const taxRateInput = document.getElementById('taxRate');
-        const taxRate = parseFloat(taxRateInput.value) / 100 || 0;
-        const taxAmount = subtotal * taxRate;
-        const total = subtotal + taxAmount;
-        document.getElementById('subtotal').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-        document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
+  // Function to toggle visibility of additional options based on service type
+  function toggleServiceOptions() {
+    const serviceType = serviceTypeSelect.value;
+    if (serviceType === 'Recurring') {
+      frequencyDiv.classList.remove('d-none');
+      initialCleaningDiv.classList.add('d-none');
+    } else if (serviceType === 'One-Time Deep Clean' || serviceType === 'Move In/Move Out') {
+      frequencyDiv.classList.add('d-none');
+      initialCleaningDiv.classList.remove('d-none');
+    } else {
+      frequencyDiv.classList.add('d-none');
+      initialCleaningDiv.classList.add('d-none');
     }
+  }
 
-    // Fetch and populate service items
-    function fetchServiceItems() {
-        axios.get('/items')
-            .then(function(response) {
-                const serviceItems = response.data;
-                serviceItems.forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item._id;
-                    option.textContent = `${item.name} - $${item.price}`;
-                    option.dataset.price = item.price; // Store price in data attribute for easy access
-                    // Append option to all service item selects if not already present
-                    document.querySelectorAll('.serviceItemSelect').forEach(select => {
-                        const exists = Array.from(select.options).some(option => option.value === item._id);
-                        if (!exists) {
-                            select.appendChild(option.cloneNode(true));
-                        }
-                    });
-                });
-                updatePricing(); // Update pricing after populating service items
-            })
-            .catch(function(error) {
-                console.error("Error fetching service items:", error.message, error.stack);
-                validationErrorsElement.innerHTML = 'Failed to fetch service items. Please refresh the page and try again.';
-                validationErrorsElement.classList.remove('d-none');
-            });
-    }
+  // Add event listener for the client search input
+  if (clientSearchInput) {
+      clientSearchInput.addEventListener('input', async function() {
+          const query = clientSearchInput.value.trim();
+          if (query.length > 2) {
+              try {
+                  const response = await fetch(`/clients/search?query=${query}`, { cache: 'no-store' });
+                  if (!response.ok) throw new Error('Network response was not ok');
+                  const clients = await response.json();
+                  clientResults.innerHTML = '';
+                  if (clients.length > 0) {
+                      clients.forEach(client => {
+                          const clientItem = document.createElement('a');
+                          clientItem.href = '#';
+                          clientItem.className = 'list-group-item list-group-item-action';
+                          clientItem.textContent = client.name;
+                          clientItem.addEventListener('click', function() {
+                              clientSearchInput.value = client.name;
+                              clientIdInput.value = client._id;
+                              clientResults.innerHTML = '';
+                              clientNamePreview.textContent = client.name;
+                              clientEmailPreview.textContent = client.email;
+                              clientPhonePreview.textContent = client.phoneNumber;
+                              clientPreview.classList.remove('d-none');
+                          });
+                          clientResults.appendChild(clientItem);
+                      });
+                  } else {
+                      const noResults = document.createElement('div');
+                      noResults.className = 'list-group-item';
+                      noResults.textContent = 'No clients found. Would you like to ';
+                      const createLink = document.createElement('a');
+                      createLink.href = '#';
+                      createLink.textContent = 'create a new client?';
+                      createLink.addEventListener('click', function() {
+                          const createClientModal = new bootstrap.Modal(document.getElementById('createClientModal'));
+                          createClientModal.show();
+                      });
+                      noResults.appendChild(createLink);
+                      clientResults.appendChild(noResults);
+                  }
+              } catch (error) {
+                  console.error('Error fetching clients:', error);
+                  clientResults.innerHTML = '<div class="list-group-item">Error fetching clients. Please try again later.</div>';
+              }
+          } else {
+              clientResults.innerHTML = '';
+          }
+      });
+  }
 
-    // Add new service item row
-    addServiceItemBtn.addEventListener('click', function() {
-        const serviceItemTemplate = document.getElementById('serviceItemTemplate').content.cloneNode(true);
-        const newServiceItemRow = document.importNode(serviceItemTemplate, true);
-        serviceItemsSection.appendChild(newServiceItemRow);
+  // Event listener for creating a client
+  const createClientForm = document.getElementById('createClientForm');
+  if (createClientForm) {
+      createClientForm.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          const formData = new FormData(createClientForm);
+          const data = {};
+          formData.forEach((value, key) => {
+              data[key] = value;
+          });
 
-        // Attach event listeners to newly added row for dynamic pricing update
-        const newItemSelect = serviceItemsSection.lastElementChild.querySelector('.serviceItemSelect');
-        const newItemQuantity = serviceItemsSection.lastElementChild.querySelector('.itemQuantity');
-        newItemSelect.addEventListener('change', updatePricing);
-        newItemQuantity.addEventListener('input', updatePricing);
+          try {
+              const response = await fetch('/clients', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'CSRF-Token': data._csrf
+                  },
+                  body: JSON.stringify(data)
+              });
+              if (!response.ok) throw new Error('Network response was not ok');
+              const newClient = await response.json();
+              if (newClient.success) {
+                  clientSearchInput.value = newClient.data.name;
+                  clientIdInput.value = newClient.data._id;
+                  clientNamePreview.textContent = newClient.data.name;
+                  clientEmailPreview.textContent = newClient.data.email;
+                  clientPhonePreview.textContent = newClient.data.phoneNumber;
+                  clientResults.innerHTML = '';
+                  clientPreview.classList.remove('d-none');
+                  const createClientModal = bootstrap.Modal.getInstance(document.getElementById('createClientModal'));
+                  createClientModal.hide();
+              } else {
+                  console.error('Failed to create client:', newClient.error);
+                  alert('Failed to create client. Please try again.');
+              }
+          } catch (error) {
+              console.error('Error creating client:', error);
+              alert('Error creating client. Please try again.');
+          }
+      });
+  }
 
-        serviceItemsSection.lastElementChild.querySelector('.removeServiceItemBtn').addEventListener('click', function() {
-            this.closest('.service-item-row').remove();
-            updatePricing(); // Update pricing when an item is removed
-        });
+  // Event listener for removing a client
+  if (removeClientBtn) {
+      removeClientBtn.addEventListener('click', function(event) {
+          event.preventDefault();
+          if (confirm('Are you sure you want to remove this client from the quote?')) {
+              clientIdInput.value = '';
+              clientSearchInput.value = '';
+              clientNamePreview.textContent = '';
+              clientEmailPreview.textContent = '';
+              clientPhonePreview.textContent = '';
+              clientPreview.classList.add('d-none');
+          }
+      });
+  }
 
-        // Populate the newly added service item select
-        fetchServiceItems();
-    });
+  // Event listener for editing a client
+  if (editClientBtn) {
+      editClientBtn.addEventListener('click', async function(event) {
+          event.preventDefault();
+          const clientId = clientIdInput.value;
+          if (clientId) {
+              try {
+                  const response = await fetch(`/clients/${clientId}`, { cache: 'no-store' });
+                  if (!response.ok) throw new Error('Network response was not ok');
+                  const client = await response.json();
 
-    // Initial fetch and populate service items
-    fetchServiceItems();
+                  // Fill the edit form with client data
+                  document.getElementById('editClientId').value = client._id;
+                  document.getElementById('editClientName').value = client.name;
+                  document.getElementById('editClientEmail').value = client.email;
+                  document.getElementById('editClientPhoneNumber').value = client.phoneNumber;
+                  document.getElementById('editClientStreetAddress').value = client.streetAddress;
+                  document.getElementById('editClientCity').value = client.city;
+                  document.getElementById('editClientState').value = client.state;
+                  document.getElementById('editClientZip').value = client.zip;
+
+                  // Show the edit client modal
+                  const editClientModal = new bootstrap.Modal(document.getElementById('editClientModal'));
+                  editClientModal.show();
+              } catch (error) {
+                  console.error('Error fetching client for edit:', error);
+                  alert('Error fetching client data. Please try again.');
+              }
+          }
+      });
+  }
+
+  // Event listener for submitting the edit client form
+  const editClientForm = document.getElementById('editClientForm');
+  if (editClientForm) {
+      editClientForm.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          const formData = new FormData(editClientForm);
+          const data = {};
+          formData.forEach((value, key) => {
+              data[key] = value;
+          });
+
+          try {
+              const response = await fetch(`/clients/${data.clientId}`, {
+                  method: 'PUT',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'CSRF-Token': data._csrf
+                  },
+                  body: JSON.stringify(data)
+              });
+              if (!response.ok) throw new Error('Network response was not ok');
+              const updatedClient = await response.json();
+              if (updatedClient.success) {
+                  clientSearchInput.value = updatedClient.data.name;
+                  clientIdInput.value = updatedClient.data._id;
+                  clientNamePreview.textContent = updatedClient.data.name;
+                  clientEmailPreview.textContent = updatedClient.data.email;
+                  clientPhonePreview.textContent = updatedClient.data.phoneNumber;
+                  clientResults.innerHTML = '';
+                  clientPreview.classList.remove('d-none');
+                  const editClientModal = bootstrap.Modal.getInstance(document.getElementById('editClientModal'));
+                  editClientModal.hide();
+              } else {
+                  console.error('Failed to update client:', updatedClient.error);
+                  alert('Failed to update client. Please try again.');
+              }
+          } catch (error) {
+              console.error('Error updating client:', error);
+              alert('Error updating client. Please try again.');
+          }
+      });
+  }
+
+  // Add event listener for service type selection changes
+  if (serviceTypeSelect) {
+    serviceTypeSelect.addEventListener('change', toggleServiceOptions);
+    toggleServiceOptions(); // Call on page load to set the correct initial state
+  }
 });

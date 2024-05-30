@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/_head.ejs') %>
-  <body>
+<body>
 <%- include('partials/_header.ejs') %>
-    <main role="main" class="container mt-4">
-      <div class="text-center">
-        <h1>cleaning-tools</h1>
-      </div>
-    </main>
-  </body>
+<main role="main" class="container mt-4">
+  <div class="text-center">
+    <h1>cleaning-tools</h1>
+  </div>
+  <!-- Sample form to demonstrate CSRF token usage -->
+  <form action="/some-endpoint" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <!-- Other form fields -->
+    <button type="submit">Submit</button>
+  </form>
+</main>
 <%- include('partials/_footer.ejs') %>
-  <script src="/js/main.js"></script>
+<script src="/js/main.js"></script>
+</body>
 </html>

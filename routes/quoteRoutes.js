@@ -5,24 +5,38 @@ const Client = require('../models/clientModel'); // Ensure Client model is impor
 const ServiceItem = require('../models/serviceItem'); // Import ServiceItem model for fetching service items
 const { sendQuoteDataToCRM } = require('../utils/crmIntegration');
 const csrf = require('csurf'); // Import csurf for CSRF protection
+const { isAuthenticated } = require('../middleware/authMiddleware'); // Assuming this is your auth middleware
+const getClient = require('../middleware/getClient'); // Import the middleware for fetching clients
 
 // CSRF Protection Middleware using csurf
-const csrfProtection = csrf({ cookie: false });
+const csrfProtection = csrf({ cookie: true });
 
 // GET route for retrieving and rendering all quotes
-router.get('/', async (req, res) => {
+router.get('/', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const quotes = await Quote.find().populate('clientId');
     console.log(`Rendering quotes.ejs with quotes data, count: ${quotes.length}`);
-    res.render('quotes', { quotes });
+    res.render('quotes', { quotes, csrfToken: req.csrfToken() });
   } catch (error) {
     console.error(`Error retrieving quotes: ${error.message}`, error.stack);
     res.status(500).json({ error: error.message });
   }
 });
 
+// Route to render the form to create a new quote
+router.get('/new', isAuthenticated, csrfProtection, async (req, res) => {
+  try {
+    const clients = await Client.find(); // Fetch all clients to populate the dropdown
+    const serviceItems = await ServiceItem.find(); // Fetch all service items to populate the dropdown
+    res.render('createQuote', { clients, serviceItems, csrfToken: req.csrfToken() }); // Pass clients and serviceItems to the view for dropdown population
+  } catch (error) {
+    console.error(`Error fetching data for quote creation: ${error.message}`, error.stack);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // POST route for creating a new quote with CSRF protection
-router.post('/', csrfProtection, async (req, res) => {
+router.post('/', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const { serviceType, frequency, initialCleaningOptions, serviceItems, ...rest } = req.body;
     // Validate serviceItems
@@ -43,7 +57,7 @@ router.post('/', csrfProtection, async (req, res) => {
 
     await newQuote.save();
 
-    console.log(`New quote created with ID: ${newQuote.quoteId}`);
+    console.log(`New quote created with ID: ${newQuote._id}`);
     await sendQuoteDataToCRM(newQuote.toObject()).catch(err => {
       console.error(`CRM Integration Error: ${err.message}`, err.stack);
     });
@@ -55,28 +69,19 @@ router.post('/', csrfProtection, async (req, res) => {
   }
 });
 
-router.get('/new', async (req, res) => {
-  try {
-    const clients = await Client.find(); // Fetch all clients to populate the dropdown
-    const serviceItems = await ServiceItem.find(); // Fetch all service items to populate the dropdown
-    res.render('createQuote', { clients, serviceItems, csrfToken: req.csrfToken() }); // Pass clients and serviceItems to the view for dropdown population
-  } catch (error) {
-    console.error(`Error fetching data for quote creation: ${error.message}`, error.stack);
-    res.status(500).json({ error: error.message });
-  }
-});
-
 // GET route for retrieving a single quote by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   try {
-    const quote = await Quote.findById(req.params.id).populate('clientId').populate({ path: 'serviceItems.serviceItemId', model: 'ServiceItem' });
+    const quote = await Quote.findById(req.params.id)
+      .populate('clientId')
+      .populate({ path: 'serviceItems.serviceItemId', model: 'ServiceItem' });
     if (!quote) {
       console.log(`Quote not found with ID: ${req.params.id}`);
       return res.status(404).json({ error: 'Quote not found' });
     }
     console.log(`Retrieved quote with ID: ${req.params.id}`);
     if (req.accepts('html')) {
-      res.render('quoteDetails', { quote });
+      res.render('quoteDetails', { quote, csrfToken: req.csrfToken() });
     } else {
       res.status(200).json(quote);
     }
@@ -87,7 +92,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // PUT route for updating a quote by its ID with CSRF protection
-router.put('/:id', csrfProtection, async (req, res) => {
+router.put('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const { serviceType, frequency, initialCleaningOptions, serviceItems, ...updateData } = req.body;
     // Validate serviceItems
@@ -123,7 +128,7 @@ router.put('/:id', csrfProtection, async (req, res) => {
 });
 
 // DELETE route for removing a quote with CSRF protection
-router.delete('/:id', csrfProtection, async (req, res) => {
+router.delete('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const deletedQuote = await Quote.findByIdAndDelete(req.params.id);
     if (!deletedQuote) {

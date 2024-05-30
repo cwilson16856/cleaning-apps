@@ -1,7 +1,7 @@
 const express = require('express');
 const User = require('../models/User');
-const bcrypt = require('bcrypt');
 const csrf = require('csurf');
+const { isAuthenticated } = require('../middleware/authMiddleware');
 const router = express.Router();
 
 // Setup CSRF protection middleware
@@ -13,14 +13,24 @@ router.get('/register', csrfProtection, (req, res) => {
 
 router.post('/register', csrfProtection, async (req, res) => {
   try {
-    const { username, password } = req.body;
-    // User model will automatically hash the password using bcrypt
-    await User.create({ username, password });
+    const { username, password, businessName, name, phoneNumber, email, streetAddress, city, state, zipCode } = req.body;
+    const newUser = new User({
+      username,
+      password,
+      businessName,
+      name,
+      phoneNumber,
+      email,
+      streetAddress,
+      city,
+      state,
+      zipCode
+    });
+    await newUser.save();
     res.redirect('/auth/login');
   } catch (error) {
     console.error('Registration error:', error);
-    console.error(error.stack);
-    res.status(500).send(error.message);
+    res.status(500).send('Error registering new user.');
   }
 });
 
@@ -38,26 +48,30 @@ router.post('/login', csrfProtection, async (req, res) => {
       return res.status(401).send('Invalid username or password');
     }
 
-    const isMatch = await bcrypt.compare(password, user.password);
+    user.comparePassword(password, (err, isMatch) => {
+      if (err) {
+        console.error('Error comparing password:', err);
+        return res.status(500).send('An error occurred during login');
+      }
 
-    if (!isMatch) {
-      console.warn(`Invalid password for user: ${username}`);
-      return res.status(401).send('Invalid username or password');
-    }
+      if (!isMatch) {
+        console.warn(`Invalid password for user: ${username}`);
+        return res.status(401).send('Invalid username or password');
+      }
 
-    req.session.userId = user._id;
-    res.redirect('/');
+      req.session.userId = user._id;
+      res.redirect('/');
+    });
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).send('An error occurred during login');
   }
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', isAuthenticated, (req, res) => {
   req.session.destroy(err => {
     if (err) {
       console.error('Error during session destruction:', err);
-      console.error(err.stack);
       return res.status(500).send('Error logging out');
     }
     res.redirect('/auth/login');

@@ -32,6 +32,7 @@
                             <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
                             <a href="/quotes/<%= quote._id %>/edit" class="btn btn-warning">Edit</a>
                             <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST" style="display:inline;">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>

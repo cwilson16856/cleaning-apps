@@ -44,12 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch and populate service items from the server
     async function fetchAndPopulateServiceItems() {
         try {
-            const response = await fetch('/api/service-items');
+            const response = await fetch('/items'); // Correct endpoint
             const serviceItems = await response.json();
             serviceItems.forEach(item => {
                 addServiceItem(item._id, item.name, item.category, item.price, item.description);
             });
             console.log('Service items fetched and populated successfully.');
+            logToServer('error', `Error fetching service items: ${error.message}`);
         } catch (error) {
             console.error('Failed to fetch service items:', error);
         }

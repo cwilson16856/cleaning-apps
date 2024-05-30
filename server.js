@@ -1,52 +1,74 @@
-// Load environment variables
-require("dotenv").config();
-const mongoose = require("mongoose");
-const express = require("express");
-const session = require("express-session");
-const MongoStore = require('connect-mongo');
-const methodOverride = require('method-override');
+require('dotenv').config(); // Load environment variables from .env file
+const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser'); // Ensure cookie-parser is required
-const csrf = require('csurf');
-const authRoutes = require("./routes/authRoutes");
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const mongoose = require('mongoose');
+const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
+const csrf = require('csurf'); // Import csrf middleware
+const winston = require('winston');
+const flash = require('connect-flash');
+const authRoutes = require('./routes/authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const quoteRoutes = require('./routes/quoteRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const serviceItemRoutes = require('./routes/serviceItemRoutes');
+const apiRoutes = require('./routes/apiRoutes'); // Import API routes
+const settingsRoutes = require('./routes/settingsRoutes'); // Import settings routes
 
 if (!process.env.DATABASE_URL || !process.env.SESSION_SECRET) {
   console.error("Error: config environment variables not set. Please create/edit .env configuration file.");
   process.exit(-1);
 }
 
+global.__basedir = __dirname;
+
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Logger setup
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.json(),
+  defaultMeta: { service: 'user-service' },
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ],
+});
+
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.simple(),
+  }));
+}
 
 // Middleware to parse request bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Setting the templating engine to EJS
-app.set("view engine", "ejs");
-
-// Set the views directory
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve Static Files from the 'uploads' directory
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // Use cookie parser
-app.use(cookieParser()); // Add cookie-parser middleware
+app.use(cookieParser());
 
 // Database connection
 mongoose
   .connect(process.env.DATABASE_URL)
   .then(() => {
-    console.log("Database connected successfully");
+    logger.info('Database connected successfully');
   })
   .catch((err) => {
-    console.error(`Database connection error: ${err.message}`);
-    console.error(err.stack);
+    logger.error(`Database connection error: ${err.message}`, err);
     process.exit(1);
   });
 
@@ -58,23 +80,25 @@ app.use(
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
     cookie: { secure: process.env.NODE_ENV === 'production', httpOnly: true },
-  }),
+  })
 );
+
+// CSRF protection middleware
+const csrfProtection = csrf({ cookie: true });
+app.use(csrfProtection);
 
 // Method Override Middleware
 app.use(methodOverride('_method'));
 
-// CSRF Protection Middleware using csurf
-app.use(csrf({ cookie: true }));
+// Flash messages middleware
+app.use(flash());
 
+// Custom middleware to pass the csrfToken and flash messages to all views
 app.use((req, res, next) => {
   res.locals.csrfToken = req.csrfToken();
+  res.locals.successMessage = req.flash('success');
+  res.locals.errorMessage = req.flash('error');
   next();
-});
-
-app.on("error", (error) => {
-  console.error(`Server error: ${error.message}`);
-  console.error(error.stack);
 });
 
 // Logging session creation and destruction
@@ -83,12 +107,10 @@ app.use((req, res, next) => {
   res.locals.session = sess;
   if (!sess.views) {
     sess.views = 1;
-    console.log("Session created at: ", new Date().toISOString());
+    logger.info(`Session created at: ${new Date().toISOString()}`);
   } else {
     sess.views++;
-    console.log(
-      `Session accessed again at: ${new Date().toISOString()}, Views: ${sess.views}, User ID: ${sess.userId || '(unauthenticated)'}`,
-    );
+    logger.info(`Session accessed again at: ${new Date().toISOString()}, Views: ${sess.views}, User ID: ${sess.userId || '(unauthenticated)'}`);
   }
   next();
 });
@@ -106,25 +128,48 @@ app.use('/quotes', quoteRoutes);
 app.use('/dashboard', dashboardRoutes);
 
 // Service Item Routes
-app.use('/items', serviceItemRoutes); // Mounting the service item routes
+app.use('/items', serviceItemRoutes);
+
+// API Routes
+app.use('/api', apiRoutes);
+
+// Settings Routes
+app.use('/settings', settingsRoutes);
 
 // Root path response
-app.get("/", (req, res) => {
-  res.render("index");
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
 // If no routes handled the request, it's a 404
 app.use((req, res, next) => {
-  res.status(404).send("Page not found.");
+  res.status(404).send('Page not found.');
 });
 
 // Error handling
 app.use((err, req, res, next) => {
-  console.error(`Unhandled application error: ${err.message}`);
-  console.error(err.stack);
-  res.status(500).send("There was an error serving your request.");
+  if (err.code === 'EBADCSRFTOKEN') {
+    // Log CSRF token errors with detailed information
+    logger.error(`CSRF token error: ${err.message}`, {
+      error: err,
+      sessionId: req.sessionID,
+      timestamp: new Date().toISOString(),
+      path: req.path,
+      method: req.method
+    });
+    res.status(403).send('Error with CSRF token');
+  } else {
+    // Handle other errors
+    logger.error(`Unhandled application error: ${err.message}`, {
+      error: err,
+      stack: err.stack,
+      sessionId: req.sessionID,
+      timestamp: new Date().toISOString()
+    });
+    res.status(500).send('Server error');
+  }
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  logger.info(`Server running at http://localhost:${port}`);
 });
