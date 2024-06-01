@@ -1,101 +1,131 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const addServiceItemBtn = document.getElementById('addServiceItemBtn');
-    const serviceItemsSection = document.getElementById('serviceItemsSection');
+    const addLineItemBtn = document.getElementById('addLineItemBtn');
+    const lineItemsContainer = document.getElementById('lineItemsContainer');
     const validationErrorsElement = document.getElementById('validationErrors');
     const subtotalElement = document.getElementById('subtotal');
     const taxRateElement = document.getElementById('taxRate');
     const totalElement = document.getElementById('total');
-    let serviceItemCounter = 0; // Counter to ensure unique IDs for dynamically added service items
-    const serviceTypeSelect = document.getElementById('serviceType');
-    const frequencyDiv = document.getElementById('frequencyDiv');
-    const initialCleaningDiv = document.getElementById('initialCleaningDiv');
+    let lineItemCounter = 0;
 
-    // Function to add new service item row
-    function addServiceItemRow() {
-        serviceItemCounter++; // Increment counter for each new service item
-        const serviceItemTemplate = document.getElementById('serviceItemTemplate').cloneNode(true);
-        serviceItemTemplate.style.display = 'block';
-        serviceItemTemplate.id = `serviceItem${serviceItemCounter}`;
-        serviceItemTemplate.querySelector('.serviceItemSelect').required = true; // Ensure required attribute is set
-        const quantityInput = serviceItemTemplate.querySelector('input[type="number"]');
-        quantityInput.required = true; // Ensure required attribute is set
-        quantityInput.id = `quantity${serviceItemCounter}`; // Set unique ID for quantity input
-        const quantityLabel = serviceItemTemplate.querySelector('label[for="quantity"]');
-        if (quantityLabel) quantityLabel.setAttribute('for', `quantity${serviceItemCounter}`); // Update label's for attribute to match input's id
-        serviceItemsSection.appendChild(serviceItemTemplate);
+    // Function to add a new line item row
+    function addLineItemRow() {
+        lineItemCounter++;
+        const lineItem = document.createElement('div');
+        lineItem.className = 'line-item';
+        lineItem.innerHTML = `
+            <div class="form-group">
+                <label for="itemSearch${lineItemCounter}">Item</label>
+                <input type="text" id="itemSearch${lineItemCounter}" class="form-control itemSearch" placeholder="Search for item...">
+                <div class="itemDropdown d-none"></div>
+            </div>
+            <div class="form-group">
+                <label for="description${lineItemCounter}">Description</label>
+                <input type="text" id="description${lineItemCounter}" class="form-control description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="quantity${lineItemCounter}">Quantity</label>
+                <input type="number" id="quantity${lineItemCounter}" class="form-control quantity" value="1" min="1">
+            </div>
+            <div class="form-group">
+                <label for="rate${lineItemCounter}">Rate</label>
+                <input type="number" id="rate${lineItemCounter}" class="form-control rate" value="0" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="total${lineItemCounter}">Total</label>
+                <input type="number" id="total${lineItemCounter}" class="form-control total" value="0" readonly>
+            </div>
+            <button type="button" class="btn btn-danger removeLineItemBtn">Remove</button>
+        `;
+        lineItemsContainer.appendChild(lineItem);
 
-        // Remove service item row on button click
-        const removeBtn = serviceItemTemplate.querySelector('.removeServiceItemBtn');
-        removeBtn.addEventListener('click', function() {
-            serviceItemTemplate.remove();
+        // Event listener for removing the line item
+        lineItem.querySelector('.removeLineItemBtn').addEventListener('click', function() {
+            lineItem.remove();
             updatePricing();
         });
 
-        // Update pricing when quantity changes
-        quantityInput.addEventListener('change', updatePricing);
+        // Event listeners for quantity and rate changes
+        lineItem.querySelector('.quantity').addEventListener('input', updatePricing);
+        lineItem.querySelector('.rate').addEventListener('input', updatePricing);
+        lineItem.querySelector('.itemSearch').addEventListener('input', fetchServiceItems);
+        lineItem.querySelector('.itemSearch').addEventListener('blur', () => setTimeout(() => hideDropdown(lineItem.querySelector('.itemDropdown')), 200));
 
-        // Populate the newly added service item select
-        fetchServiceItems();
+        updatePricing();
     }
 
     // Fetch and populate service items
-    async function fetchServiceItems() {
+    async function fetchServiceItems(event) {
         try {
-            const response = await axios.get('/api/service-items');
-            if (!response.data.success) {
-                throw new Error("Failed to fetch service items: Success flag not true");
+            const query = event.target.value.trim();
+            const dropdown = event.target.nextElementSibling; // Get the dropdown element
+            if (query.length > 2) {
+                const response = await axios.get(`/api/service-items?query=${query}`);
+                const serviceItems = response.data.data;
+                showDropdown(dropdown, event.target, serviceItems);
+            } else {
+                hideDropdown(dropdown);
             }
-            const serviceItems = response.data.data;
-            if (!Array.isArray(serviceItems)) {
-                console.error("Service items data is not an array:", serviceItems);
-                throw new Error("Service items data is not an array");
-            }
-            document.querySelectorAll('.serviceItemSelect').forEach(select => {
-                if (select.options.length === 1) { // Only add options if they are not already present
-                    serviceItems.forEach(item => {
-                        const option = document.createElement('option');
-                        option.value = item._id;
-                        option.textContent = item.name;
-                        option.dataset.price = item.price; // Store price in data attribute
-                        select.appendChild(option);
-                    });
-                }
-            });
         } catch (error) {
-            console.error("Failed to fetch service items:", error.message, error.stack);
-            validationErrorsElement.innerHTML = 'Failed to fetch service items. Please refresh the page and try again.';
-            validationErrorsElement.classList.remove('d-none');
+            console.error('Failed to fetch service items:', error);
         }
+    }
+
+    // Show dropdown for service items
+    function showDropdown(dropdown, inputElement, items) {
+        dropdown.classList.remove('d-none'); // Show the dropdown
+        dropdown.innerHTML = '';
+        items.forEach(item => {
+            const option = document.createElement('div');
+            option.className = 'dropdown-item';
+            option.textContent = item.name;
+            option.dataset.id = item._id; // Store the ObjectId in data attribute
+            option.dataset.price = item.price;
+            option.addEventListener('click', () => {
+                inputElement.value = item.name;
+                const rateInput = inputElement.closest('.line-item').querySelector('.rate');
+                rateInput.value = item.price;
+                const descriptionInput = inputElement.closest('.line-item').querySelector('.description');
+                descriptionInput.value = item.description || ''; // Set description if available
+                const itemIdInput = document.createElement('input'); // Create hidden input for serviceItemId
+                itemIdInput.type = 'hidden';
+                itemIdInput.name = 'serviceItemIds[]';
+                itemIdInput.value = item._id;
+                inputElement.closest('.line-item').appendChild(itemIdInput);
+                updatePricing();
+                hideDropdown(dropdown); // Hide the dropdown after selection
+            });
+            dropdown.appendChild(option);
+        });
+    }
+
+    // Hide dropdown
+    function hideDropdown(dropdown) {
+        dropdown.classList.add('d-none'); // Hide the dropdown
+        dropdown.innerHTML = '';
     }
 
     // Calculate and update pricing
     function updatePricing() {
         let subtotal = 0;
-        document.querySelectorAll('.serviceItemSelect').forEach((select, index) => {
-            const quantityInput = document.querySelectorAll('input[name="quantities[]"]')[index];
-            if (quantityInput) {
-                const quantity = parseFloat(quantityInput.value) || 0;
-                const price = parseFloat(select.selectedOptions[0].dataset.price) || 0; // Access price from data attribute
-                subtotal += quantity * price;
-            } else {
-                console.error("Error updating pricing: Quantity Input for index " + index + " is missing in the DOM.");
-            }
+        document.querySelectorAll('.line-item').forEach(lineItem => {
+            const quantity = parseFloat(lineItem.querySelector('.quantity').value) || 0;
+            const rate = parseFloat(lineItem.querySelector('.rate').value) || 0;
+            const total = quantity * rate;
+            lineItem.querySelector('.total').value = total.toFixed(2);
+            subtotal += total;
         });
-        subtotalElement.textContent = `$${subtotal.toFixed(2)}`; // Update the text content with currency symbol
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
         const taxRate = parseFloat(taxRateElement.value) || 0;
         const taxAmount = subtotal * (taxRate / 100);
         const total = subtotal + taxAmount;
-        totalElement.textContent = `$${total.toFixed(2)}`; // Update the text content with currency symbol
+        totalElement.textContent = `$${total.toFixed(2)}`;
     }
 
-    // Add new service item row on button click
-    addServiceItemBtn.addEventListener('click', addServiceItemRow);
-
-    // Initial fetch and populate service items
-    fetchServiceItems();
+    // Add new line item row on button click
+    addLineItemBtn.addEventListener('click', addLineItemRow);
 
     // Update pricing when tax rate changes
-    taxRateElement.addEventListener('change', updatePricing);
+    taxRateElement.addEventListener('input', updatePricing);
 
     // Handle form submission
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
@@ -105,13 +135,18 @@ document.addEventListener('DOMContentLoaded', function() {
         data.serviceItems = [];
         let formValid = true;
 
-        document.querySelectorAll('.serviceItemSelect').forEach((select, index) => {
-            const quantityInput = document.querySelectorAll('input[name="quantities[]"]')[index];
-            if (quantityInput && select.value && quantityInput.value) {
-                const quantity = parseFloat(quantityInput.value) || 0;
+        document.querySelectorAll('.line-item').forEach(lineItem => {
+            const itemSearch = lineItem.querySelector('.itemSearch').value.trim();
+            const description = lineItem.querySelector('.description').value.trim();
+            const quantity = parseFloat(lineItem.querySelector('.quantity').value) || 0;
+            const rate = parseFloat(lineItem.querySelector('.rate').value) || 0;
+            const serviceItemId = lineItem.querySelector('input[name="serviceItemIds[]"]')?.value;
+            if (itemSearch && quantity && rate && serviceItemId) {
                 data.serviceItems.push({
-                    serviceItemId: select.value,
-                    quantity: quantity
+                    serviceItemId: serviceItemId,
+                    description: description,
+                    quantity: quantity,
+                    rate: rate
                 });
             } else {
                 formValid = false;
@@ -124,6 +159,31 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        // Ensure clientName is set
+        const clientName = document.getElementById('clientSearch').value;
+        if (!clientName) {
+            validationErrorsElement.innerHTML = 'Please select a client.';
+            validationErrorsElement.classList.remove('d-none');
+            return;
+        }
+        data.clientName = clientName;
+
+        // Validate and set frequency field
+        const serviceType = document.getElementById('serviceType').value;
+        if (serviceType === 'Recurring') {
+            const frequency = document.getElementById('frequency').value;
+            if (frequency === 'Choose...') {
+                validationErrorsElement.innerHTML = 'Please select a valid frequency.';
+                validationErrorsElement.classList.remove('d-none');
+                return;
+            }
+            data.frequency = frequency;
+        } else {
+            data.frequency = null; // Set frequency to null for non-recurring services
+        }
+
+        console.log('Form data being sent:', data); // Log the data object
+
         axios.post('/quotes', data, {
             headers: {
                 'Content-Type': 'application/json',
@@ -132,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(response) {
             console.log('Quote created successfully', response.data);
-            window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
+            window.location.href = '/quotes'; // Redirect to dashboard after successful creation
         })
         .catch(function(error) {
             console.error('Error creating quote', error.response.data, error.message, error.stack);
@@ -141,24 +201,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Function to toggle visibility of elements based on service type
-    function toggleServiceOptions() {
-        const selectedServiceType = serviceTypeSelect.value;
-        // Hide all options initially
-        frequencyDiv.style.display = 'none';
-        initialCleaningDiv.style.display = 'none';
-
-        // Show options based on selected service type
-        if (selectedServiceType === 'Recurring') {
-            frequencyDiv.style.display = 'block';
-        } else if (selectedServiceType === 'One-Time Deep Clean' || selectedServiceType === 'Move In/Move Out') {
-            initialCleaningDiv.style.display = 'block';
-        }
-    }
-
-    // Initial toggle on page load in case the select has a default value
-    toggleServiceOptions();
-
-    // Event listener for service type change
-    serviceTypeSelect.addEventListener('change', toggleServiceOptions);
+    // Initial line item row
+    addLineItemRow();
 });

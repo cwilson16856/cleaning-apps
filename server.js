@@ -9,6 +9,8 @@ const cookieParser = require('cookie-parser');
 const csrf = require('csurf'); // Import csrf middleware
 const winston = require('winston');
 const flash = require('connect-flash');
+
+// Route imports
 const authRoutes = require('./routes/authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const quoteRoutes = require('./routes/quoteRoutes');
@@ -34,7 +36,7 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'user-service' },
   transports: [
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
+    new winston.transports.File({ filename: 'combined.log' }),
   ],
 });
 
@@ -44,54 +46,41 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-// Middleware to parse request bodies
+// Middleware setup
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method'));
+app.use(flash());
 
-// Setting the templating engine to EJS
+// View engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files
+// Static files
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Serve Static Files from the 'uploads' directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Use cookie parser
-app.use(cookieParser());
-
 // Database connection
-mongoose
-  .connect(process.env.DATABASE_URL)
-  .then(() => {
-    logger.info('Database connected successfully');
-  })
+mongoose.connect(process.env.DATABASE_URL)
+  .then(() => logger.info('Database connected successfully'))
   .catch((err) => {
     logger.error(`Database connection error: ${err.message}`, err);
     process.exit(1);
   });
 
-// Session configuration with connect-mongo
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
-    cookie: { secure: process.env.NODE_ENV === 'production', httpOnly: true },
-  })
-);
+// Session configuration
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+  cookie: { secure: process.env.NODE_ENV === 'production', httpOnly: true },
+}));
 
 // CSRF protection middleware
 const csrfProtection = csrf({ cookie: true });
 app.use(csrfProtection);
-
-// Method Override Middleware
-app.use(methodOverride('_method'));
-
-// Flash messages middleware
-app.use(flash());
 
 // Custom middleware to pass the csrfToken and flash messages to all views
 app.use((req, res, next) => {
@@ -101,7 +90,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Logging session creation and destruction
+// Session logging middleware
 app.use((req, res, next) => {
   const sess = req.session;
   res.locals.session = sess;
@@ -115,25 +104,13 @@ app.use((req, res, next) => {
   next();
 });
 
-// Authentication Routes
+// Routes
 app.use('/auth', authRoutes);
-
-// Client Routes
 app.use('/clients', clientRoutes);
-
-// Quote Routes
 app.use('/quotes', quoteRoutes);
-
-// Dashboard Routes
 app.use('/dashboard', dashboardRoutes);
-
-// Service Item Routes
 app.use('/items', serviceItemRoutes);
-
-// API Routes
 app.use('/api', apiRoutes);
-
-// Settings Routes
 app.use('/settings', settingsRoutes);
 
 // Root path response
@@ -141,7 +118,7 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-// If no routes handled the request, it's a 404
+// 404 handler
 app.use((req, res, next) => {
   res.status(404).send('Page not found.');
 });
@@ -149,27 +126,26 @@ app.use((req, res, next) => {
 // Error handling
 app.use((err, req, res, next) => {
   if (err.code === 'EBADCSRFTOKEN') {
-    // Log CSRF token errors with detailed information
     logger.error(`CSRF token error: ${err.message}`, {
       error: err,
       sessionId: req.sessionID,
       timestamp: new Date().toISOString(),
       path: req.path,
-      method: req.method
+      method: req.method,
     });
     res.status(403).send('Error with CSRF token');
   } else {
-    // Handle other errors
     logger.error(`Unhandled application error: ${err.message}`, {
       error: err,
       stack: err.stack,
       sessionId: req.sessionID,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
     res.status(500).send('Server error');
   }
 });
 
+// Start server
 app.listen(port, () => {
   logger.info(`Server running at http://localhost:${port}`);
 });

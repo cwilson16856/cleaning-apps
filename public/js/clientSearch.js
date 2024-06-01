@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const clientSearchInput = document.getElementById('clientSearch');
     const clientResults = document.getElementById('clientResults');
     const clientIdInput = document.getElementById('clientId');
+    const clientNameInput = document.getElementById('clientName'); // Ensure clientName input is captured
     const clientPreview = document.getElementById('clientPreview');
     const clientNamePreview = document.getElementById('clientNamePreview');
     const clientEmailPreview = document.getElementById('clientEmailPreview');
     const clientPhonePreview = document.getElementById('clientPhonePreview');
-    const clientAddressPreview = document.getElementById('clientAddressPreview'); // Added for displaying client address
+    const clientAddressPreview = document.getElementById('clientAddressPreview');
     const removeClientBtn = document.getElementById('removeClientBtn');
     const editClientBtn = document.getElementById('editClientBtn');
 
-    // Add event listener for the client search input
     if (clientSearchInput) {
         clientSearchInput.addEventListener('input', async function() {
             const query = clientSearchInput.value.trim();
@@ -29,11 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             clientItem.addEventListener('click', function() {
                                 clientSearchInput.value = client.name;
                                 clientIdInput.value = client._id;
+                                clientNameInput.value = client.name; // Populate the hidden clientName field
                                 clientResults.innerHTML = '';
                                 clientNamePreview.textContent = client.name;
                                 clientEmailPreview.textContent = client.email;
                                 clientPhonePreview.textContent = client.phoneNumber;
-                                clientAddressPreview.textContent = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`; // Displaying client address
+                                clientAddressPreview.textContent = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
                                 clientPreview.classList.remove('d-none');
                             });
                             clientResults.appendChild(clientItem);
@@ -62,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Event listener for creating a client
     const createClientForm = document.getElementById('createClientForm');
     if (createClientForm) {
         createClientForm.addEventListener('submit', async function(event) {
@@ -87,10 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (newClient.success) {
                     clientSearchInput.value = newClient.data.name;
                     clientIdInput.value = newClient.data._id;
+                    clientNameInput.value = newClient.data.name; // Populate the hidden clientName field
                     clientNamePreview.textContent = newClient.data.name;
                     clientEmailPreview.textContent = newClient.data.email;
                     clientPhonePreview.textContent = newClient.data.phoneNumber;
-                    clientAddressPreview.textContent = `${newClient.data.streetAddress}, ${newClient.data.city}, ${newClient.data.state}, ${newClient.data.zip}`; // Displaying client address
+                    clientAddressPreview.textContent = `${newClient.data.streetAddress}, ${newClient.data.city}, ${newClient.data.state}, ${newClient.data.zip}`;
                     clientResults.innerHTML = '';
                     clientPreview.classList.remove('d-none');
                     const createClientModal = bootstrap.Modal.getInstance(document.getElementById('createClientModal'));
@@ -106,23 +107,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Event listener for removing a client
     if (removeClientBtn) {
         removeClientBtn.addEventListener('click', function(event) {
             event.preventDefault();
             if (confirm('Are you sure you want to remove this client from the quote?')) {
                 clientIdInput.value = '';
+                clientNameInput.value = ''; // Clear the hidden clientName field
                 clientSearchInput.value = '';
                 clientNamePreview.textContent = '';
                 clientEmailPreview.textContent = '';
                 clientPhonePreview.textContent = '';
-                clientAddressPreview.textContent = ''; // Clearing client address
+                clientAddressPreview.textContent = '';
                 clientPreview.classList.add('d-none');
             }
         });
     }
 
-    // Event listener for editing a client
     if (editClientBtn) {
         editClientBtn.addEventListener('click', async function(event) {
             event.preventDefault();
@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Event listener for submitting the edit client form
     const editClientForm = document.getElementById('editClientForm');
     if (editClientForm) {
         editClientForm.addEventListener('submit', async function(event) {
@@ -179,10 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (updatedClient.success) {
                     clientSearchInput.value = updatedClient.data.name;
                     clientIdInput.value = updatedClient.data._id;
+                    clientNameInput.value = updatedClient.data.name; // Populate the hidden clientName field
                     clientNamePreview.textContent = updatedClient.data.name;
                     clientEmailPreview.textContent = updatedClient.data.email;
                     clientPhonePreview.textContent = updatedClient.data.phoneNumber;
-                    clientAddressPreview.textContent = `${updatedClient.data.streetAddress}, ${updatedClient.data.city}, ${updatedClient.data.state}, ${updatedClient.data.zip}`; // Displaying updated client address
+                    clientAddressPreview.textContent = `${updatedClient.data.streetAddress}, ${updatedClient.data.city}, ${updatedClient.data.state}, ${updatedClient.data.zip}`;
                     clientResults.innerHTML = '';
                     clientPreview.classList.remove('d-none');
                     const editClientModal = bootstrap.Modal.getInstance(document.getElementById('editClientModal'));

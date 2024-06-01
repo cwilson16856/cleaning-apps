@@ -2,11 +2,18 @@ const Quote = require('../models/quoteModel');
 const Client = require('../models/clientModel');
 const ServiceItem = require('../models/serviceItem');
 const { calculateQuotePrice } = require('../utils/pricingCalculator');
+const { calculateDistance } = require('../utils/distanceCalculator');
 const logger = require('../logger'); // Import the logger
+const { isAuthenticated } = require('../middleware/authMiddleware');
 
 exports.createQuote = async (req, res) => {
   try {
-    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, pricingOption } = req.body;
+    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress } = req.body;
+
+    if (!Array.isArray(serviceItems) || serviceItems.length === 0) {
+      throw new Error('Invalid serviceItems data provided.');
+    }
+
     const client = await Client.findById(clientId);
     if (!client) {
       logger.error(`Client not found with ID: ${clientId}`);
@@ -14,29 +21,38 @@ exports.createQuote = async (req, res) => {
     }
 
     const processedServiceItems = await Promise.all(serviceItems.map(async (item) => {
-      const serviceItem = await ServiceItem.findById(item.serviceItemId);
-      if (!serviceItem) {
-        throw new Error(`Service item not found with ID: ${item.serviceItemId}`);
+      if (item.serviceItemId) {
+        const serviceItem = await ServiceItem.findById(item.serviceItemId);
+        if (!serviceItem) {
+          throw new Error(`Service item not found with ID: ${item.serviceItemId}`);
+        }
+        return {
+          serviceItemId: item.serviceItemId,
+          quantity: item.quantity,
+          customPrice: item.customPrice ? item.customPrice : serviceItem.price
+        };
+      } else {
+        return {
+          customItemName: item.name,
+          quantity: item.quantity,
+          customPrice: item.rate
+        };
       }
-      return {
-        serviceItemId: item.serviceItemId,
-        quantity: item.quantity,
-        customPrice: item.customPrice ? item.customPrice : serviceItem.price
-      };
     }));
 
     const quoteDetails = {
-      clientName: client.name,
+      clientName,
       clientId,
       title,
       scopeOfWork,
       serviceType,
       frequency,
       initialCleaningOptions,
-      serviceItems: processedServiceItems
+      serviceItems: processedServiceItems,
+      userAddress
     };
 
-    const { totalPrice, breakdown } = await calculateQuotePrice({ serviceItems: processedServiceItems }, pricingOption ? pricingOption : 'itemized');
+    const { totalPrice, breakdown } = await calculateQuotePrice({ serviceItems: processedServiceItems });
 
     const newQuote = new Quote({
       ...quoteDetails,
@@ -61,6 +77,23 @@ exports.getQuotes = async (req, res) => {
   } catch (error) {
     logger.error(`Error fetching quotes: ${error.message}`, error);
     res.status(500).json({ message: 'Failed to fetch quotes', error: error.message });
+  }
+};
+
+exports.calculateDistance = async (req, res) => {
+  const { clientId, userAddress } = req.body;
+
+  try {
+    const client = await Client.findById(clientId);
+    if (!client) {
+      return res.status(404).json({ error: 'Client not found' });
+    }
+
+    const clientAddress = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
+    const distance = await calculateDistance(clientAddress, userAddress);
+    res.json({ distance });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 

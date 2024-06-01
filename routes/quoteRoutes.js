@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const Quote = require('../models/quoteModel');
-const Client = require('../models/clientModel'); // Ensure Client model is imported for client data fetching
-const ServiceItem = require('../models/serviceItem'); // Import ServiceItem model for fetching service items
+const Client = require('../models/clientModel');
+const ServiceItem = require('../models/serviceItem');
+const User = require('../models/User');
 const { sendQuoteDataToCRM } = require('../utils/crmIntegration');
-const csrf = require('csurf'); // Import csurf for CSRF protection
-const { isAuthenticated } = require('../middleware/authMiddleware'); // Assuming this is your auth middleware
-const getClient = require('../middleware/getClient'); // Import the middleware for fetching clients
+const csrf = require('csurf');
+const { isAuthenticated } = require('../middleware/authMiddleware');
+const quoteController = require('../controllers/quoteController');
 
 // CSRF Protection Middleware using csurf
 const csrfProtection = csrf({ cookie: true });
@@ -28,7 +29,9 @@ router.get('/new', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const clients = await Client.find(); // Fetch all clients to populate the dropdown
     const serviceItems = await ServiceItem.find(); // Fetch all service items to populate the dropdown
-    res.render('createQuote', { clients, serviceItems, csrfToken: req.csrfToken() }); // Pass clients and serviceItems to the view for dropdown population
+    const userId = req.session.userId;
+    const user = await User.findById(userId);
+    res.render('createQuote', { clients, serviceItems, user, csrfToken: req.csrfToken() }); // Pass clients, serviceItems, and user to the view for dropdown population
   } catch (error) {
     console.error(`Error fetching data for quote creation: ${error.message}`, error.stack);
     res.status(500).json({ error: error.message });
@@ -37,35 +40,41 @@ router.get('/new', isAuthenticated, csrfProtection, async (req, res) => {
 
 // POST route for creating a new quote with CSRF protection
 router.post('/', isAuthenticated, csrfProtection, async (req, res) => {
+  console.log('Request body:', req.body);
   try {
-    const { serviceType, frequency, initialCleaningOptions, serviceItems, ...rest } = req.body;
-    // Validate serviceItems
-    if (!serviceItems || !Array.isArray(serviceItems)) {
-      throw new Error("Invalid serviceItems data provided.");
-    }
-    const newQuote = new Quote({
-      serviceType,
-      frequency,
-      initialCleaningOptions,
-      serviceItems: serviceItems.map(item => ({
-        serviceItemId: item.serviceItemId,
-        quantity: item.quantity,
-        customPrice: item.customPrice ? item.customPrice : undefined
-      })),
-      ...rest
-    });
+      const { clientId, clientName, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, distance, taxRate } = req.body;
 
-    await newQuote.save();
+      // Validate service items
+      if (!serviceItems || !Array.isArray(serviceItems) || serviceItems.length === 0) {
+          return res.status(400).json({ error: 'Service items are required.' });
+      }
 
-    console.log(`New quote created with ID: ${newQuote._id}`);
-    await sendQuoteDataToCRM(newQuote.toObject()).catch(err => {
-      console.error(`CRM Integration Error: ${err.message}`, err.stack);
-    });
+      const newQuote = new Quote({
+          clientId,
+          clientName, // Ensure clientName is included here
+          title,
+          scopeOfWork,
+          serviceType,
+          frequency,
+          initialCleaningOptions,
+          serviceItems: serviceItems.map(item => ({
+              serviceItemId: item.serviceItemId,
+              description: item.description,
+              quantity: item.quantity,
+              rate: item.rate
+          })),
+          userAddress,
+          distance,
+          taxRate
+      });
 
-    res.status(201).json(newQuote);
+      console.log('New quote object:', newQuote);
+
+      await newQuote.save();
+      res.status(201).json(newQuote);
   } catch (error) {
-    console.error(`Error creating new quote: ${error.message}`, error.stack);
-    res.status(400).json({ error: "Failed to create quote. " + error.message });
+      console.error(`Error creating new quote: ${error.message}`, error.stack);
+      res.status(400).json({ error: `Failed to create quote. ${error.message}` });
   }
 });
 
@@ -95,7 +104,7 @@ router.get('/:id', isAuthenticated, csrfProtection, async (req, res) => {
 router.put('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const { serviceType, frequency, initialCleaningOptions, serviceItems, ...updateData } = req.body;
-    // Validate serviceItems
+      // Validate serviceItems
     if (!serviceItems || !Array.isArray(serviceItems)) {
       throw new Error("Invalid serviceItems data provided.");
     }
@@ -142,5 +151,8 @@ router.delete('/:id', isAuthenticated, csrfProtection, async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// POST route to calculate distance
+router.post('/calculate-distance', isAuthenticated, csrfProtection, quoteController.calculateDistance);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 /* Placeholder for custom styles */
 
-/* Improve visibility of the "Create Quote" button without using fixed positioning */
+/* Improve visibility of the "Create Quote" button */
 .btn-primary {
   margin-top: 20px;
 }
@@ -18,8 +18,77 @@
     width: 100%;
     margin-top: 20px;
   }
-
 }
-  .password-change-container {
-    margin-top: 20px;
-  }
+
+/* Style the line items section */
+.line-items-section {
+  margin-top: 20px;
+}
+
+.line-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative; /* Add relative positioning to line-item */
+}
+
+.line-item .form-group {
+  flex: 1;
+}
+
+.line-item .form-control {
+  flex: 1;
+  min-width: 100px;
+}
+
+.line-item .btn {
+  margin-left: auto;
+  align-self: center;
+  margin-top: 25px;
+}
+
+.itemDropdown {
+  position: absolute;
+  background-color: white;
+  z-index: 1000;
+  width: calc(100% - 20px); /* Adjust width to fit within the parent container */
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 2px; /* Add a small margin to avoid the grey line issue */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visibility */
+}
+
+.dropdown-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Adjust spacing and alignment for form sections */
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+/* Style for the subtotal, tax rate, and total sections */
+#subtotal,
+#total {
+  font-weight: bold;
+}
+
+#subtotal {
+  margin-top: 10px;
+}
+
+#total {
+  margin-top: 10px;
+}
+
+/* Adjust spacing for client search buttons */
+#clientPreview .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
