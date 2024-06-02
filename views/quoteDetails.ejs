@@ -47,7 +47,7 @@
             <ul>
                 <% quote.attachments.forEach(function(attachment) { %>
                     <li>
-                        <a href="/uploads/<%= attachment %>" target="_blank"><%= attachment %></a>
+                        <a href="/uploads/<%= attachment.savedFilename %>" target="_blank"><%= attachment.originalFilename %></a>
                     </li>
                 <% }); %>
             </ul>
@@ -59,7 +59,7 @@
             <ul>
                 <% quote.contracts.forEach(function(contract) { %>
                     <li>
-                        <a href="/uploads/<%= contract %>" target="_blank"><%= contract %></a>
+                        <a href="/uploads/<%= contract.savedFilename %>" target="_blank"><%= contract.originalFilename %></a>
                     </li>
                 <% }); %>
             </ul>

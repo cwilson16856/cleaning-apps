@@ -83,6 +83,16 @@ router.post('/', isAuthenticated, upload.fields([{ name: 'attachments' }, { name
     const calculatedTaxRate = parseFloat(taxRate) || 7.5;
     const total = subtotal + (subtotal * (calculatedTaxRate / 100));
 
+    const attachments = (req.files['attachments'] || []).map(file => ({
+      savedFilename: file.filename,
+      originalFilename: file.originalname
+    }));
+
+    const contracts = (req.files['contracts'] || []).map(file => ({
+      savedFilename: file.filename,
+      originalFilename: file.originalname
+    }));
+
     const newQuote = new Quote({
       clientId,
       clientName, // Ensure clientName is included here
@@ -97,8 +107,8 @@ router.post('/', isAuthenticated, upload.fields([{ name: 'attachments' }, { name
       subtotal,
       taxRate: calculatedTaxRate,
       total,
-      attachments: req.files['attachments'] ? req.files['attachments'].map(file => file.filename) : [],
-      contracts: req.files['contracts'] ? req.files['contracts'].map(file => file.filename) : [],
+      attachments,
+      contracts,
     });
 
     console.log('New quote object:', newQuote);
