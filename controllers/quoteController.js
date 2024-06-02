@@ -6,9 +6,13 @@ const { calculateDistance } = require('../utils/distanceCalculator');
 const logger = require('../logger'); // Import the logger
 const { isAuthenticated } = require('../middleware/authMiddleware');
 
+const calculateSubtotal = (serviceItems) => {
+  return serviceItems.reduce((sum, item) => sum + (item.customPrice || item.rate) * item.quantity, 0);
+};
+
 exports.createQuote = async (req, res) => {
   try {
-    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress } = req.body;
+    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, taxRate } = req.body;
 
     if (!Array.isArray(serviceItems) || serviceItems.length === 0) {
       throw new Error('Invalid serviceItems data provided.');
@@ -21,27 +25,23 @@ exports.createQuote = async (req, res) => {
     }
 
     const processedServiceItems = await Promise.all(serviceItems.map(async (item) => {
-      if (item.serviceItemId) {
-        const serviceItem = await ServiceItem.findById(item.serviceItemId);
-        if (!serviceItem) {
-          throw new Error(`Service item not found with ID: ${item.serviceItemId}`);
-        }
-        return {
-          serviceItemId: item.serviceItemId,
-          quantity: item.quantity,
-          customPrice: item.customPrice ? item.customPrice : serviceItem.price
-        };
-      } else {
-        return {
-          customItemName: item.name,
-          quantity: item.quantity,
-          customPrice: item.rate
-        };
+      const serviceItem = await ServiceItem.findById(item.serviceItemId);
+      if (!serviceItem) {
+        throw new Error(`Service item not found with ID: ${item.serviceItemId}`);
       }
+      return {
+        serviceItemId: item.serviceItemId,
+        quantity: item.quantity,
+        customPrice: item.customPrice ? item.customPrice : serviceItem.price
+      };
     }));
 
-    const quoteDetails = {
-      clientName,
+    const subtotal = calculateSubtotal(processedServiceItems);
+    const calculatedTaxRate = parseFloat(taxRate) || 7.5;
+    const total = subtotal + (subtotal * (calculatedTaxRate / 100));
+
+    const newQuote = new Quote({
+      clientName: client.name,
       clientId,
       title,
       scopeOfWork,
@@ -49,15 +49,12 @@ exports.createQuote = async (req, res) => {
       frequency,
       initialCleaningOptions,
       serviceItems: processedServiceItems,
-      userAddress
-    };
-
-    const { totalPrice, breakdown } = await calculateQuotePrice({ serviceItems: processedServiceItems });
-
-    const newQuote = new Quote({
-      ...quoteDetails,
-      totalPrice,
-      priceBreakdown: breakdown
+      userAddress,
+      attachments: req.files && req.files['attachments'] ? req.files['attachments'].map(file => file.filename) : [],
+      contracts: req.files && req.files['contracts'] ? req.files['contracts'].map(file => file.filename) : [],
+      subtotal,
+      taxRate: calculatedTaxRate,
+      total
     });
 
     await newQuote.save();
@@ -99,13 +96,17 @@ exports.calculateDistance = async (req, res) => {
 
 exports.getQuoteById = async (req, res) => {
   try {
-    const quote = await Quote.findById(req.params.id).populate('clientId').populate('serviceItems.serviceItemId');
+    const quote = await Quote.findById(req.params.id)
+      .populate('clientId')
+      .populate('serviceItems.serviceItemId');
+
     if (!quote) {
       logger.error(`Quote not found with ID: ${req.params.id}`);
       return res.status(404).json({ message: 'Quote not found' });
     }
+
     logger.info(`Fetched quote with ID: ${req.params.id}`);
-    res.status(200).json(quote);
+    res.render('quoteDetails', { quote });
   } catch (error) {
     logger.error(`Error fetching quote with ID ${req.params.id}: ${error.message}`, error);
     res.status(500).json({ message: 'Failed to fetch quote', error: error.message });
@@ -127,6 +128,10 @@ exports.updateQuote = async (req, res) => {
       };
     }));
 
+    const subtotal = calculateSubtotal(processedServiceItems);
+    const taxRate = parseFloat(req.body.taxRate) || 7.5; // Parse tax rate
+    const total = subtotal + (subtotal * (taxRate / 100));
+
     const { totalPrice, breakdown } = await calculateQuotePrice({ serviceItems: processedServiceItems }, pricingOption);
 
     const updatedQuote = await Quote.findByIdAndUpdate(req.params.id, {
@@ -134,6 +139,9 @@ exports.updateQuote = async (req, res) => {
       frequency,
       initialCleaningOptions,
       serviceItems: processedServiceItems,
+      subtotal,
+      total,
+      taxRate,
       totalPrice,
       priceBreakdown: breakdown
     }, { new: true }).populate('clientId').populate('serviceItems.serviceItemId');

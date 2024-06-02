@@ -3,31 +3,105 @@
 <head>
     <%- include('partials/_head.ejs') %>
     <title>Quote Details</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
-        <h1>Quote Details</h1>
-        <div class="quote-details">
-            <p><strong>Quote ID:</strong> <%= quote.quoteId %></p>
-            <p><strong>Title:</strong> <%= quote.title %></p>
-            <p><strong>Scope of Work:</strong> <%= quote.scopeOfWork %></p>
-            <p><strong>Status:</strong> <%= quote.status %></p>
-            <p><strong>Service Type:</strong> <%= quote.serviceType %></p>
-            <p><strong>Frequency:</strong> <%= quote.frequency ? quote.frequency : 'N/A' %></p>
-            <p><strong>Initial Cleaning Options:</strong> <%= quote.initialCleaningOptions.join(', ') %></p>
-            <h2>Items</h2>
+        <h1>Quote for <%= quote.clientName %></h1>
+        <h2>Current Status: <%= quote.status %></h2>
+        <hr>
+        <p class="section-title">Client Information</p>
+        <p>Client Name: <%= quote.clientName %></p>
+        <p>Phone: <%= quote.clientId.phone %></p>
+        <p>Email: <%= quote.clientId.email %></p>
+        <p>Address: <%= quote.clientId.streetAddress %>, <%= quote.clientId.city %>, <%= quote.clientId.state %> <%= quote.clientId.zip %></p>
+        <hr>
+
+        <p class="section-title">Quote Title</p>
+        <p><%= quote.title %></p>
+
+        <% if (quote.scopeOfWork) { %>
+            <hr>
+            <p class="section-title">Scope of Work</p>
+            <p><%= quote.scopeOfWork %></p>
+        <% } %>
+
+        <hr>
+        <p class="section-title">Service Type</p>
+        <p><%= quote.serviceType %></p>
+        
+        <% if (quote.frequency) { %>
+            <p>Frequency: <%= quote.frequency %></p>
+        <% } %>
+
+        <% if (quote.initialCleaningOptions && quote.initialCleaningOptions.length > 0) { %>
+            <hr>
+            <p class="section-title">Initial Cleaning Options</p>
+            <p><%= quote.initialCleaningOptions.join(', ') %></p>
+        <% } %>
+        
+        <% if (quote.attachments && quote.attachments.length > 0) { %>
+            <hr>
+            <p class="section-title">Attachments</p>
             <ul>
-                <% quote.items.forEach(function(item) { %>
+                <% quote.attachments.forEach(function(attachment) { %>
                     <li>
-                        <%= item.description %> - Quantity: <%= item.quantity %>, Price: $<%= item.price.toFixed(2) %>
+                        <a href="/uploads/<%= attachment %>" target="_blank"><%= attachment %></a>
                     </li>
                 <% }); %>
             </ul>
+        <% } %>
+
+        <% if (quote.contracts && quote.contracts.length > 0) { %>
+            <hr>
+            <p class="section-title">Contracts</p>
+            <ul>
+                <% quote.contracts.forEach(function(contract) { %>
+                    <li>
+                        <a href="/uploads/<%= contract %>" target="_blank"><%= contract %></a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+        <% if (quote.serviceItems && quote.serviceItems.length > 0) { %>
+            <hr>
+            <p class="section-title">Line Items</p>
+            <table class="line-items-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quote.serviceItems.forEach(function(serviceItem) { %>
+                        <tr>
+                            <td><%= serviceItem.serviceItemId.name %><br><span class="line-item-description">($<%= serviceItem.customPrice ? serviceItem.customPrice.toFixed(2) : serviceItem.serviceItemId.price.toFixed(2) %> ea) x <%= serviceItem.quantity %></span></td>
+                            <td><%= serviceItem.serviceItemId.description %></td>
+                            <td>$<%= (serviceItem.quantity * (serviceItem.customPrice || serviceItem.serviceItemId.price)).toFixed(2) %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } %>
+
+        <div class="pricing-and-buttons">
+            <div class="pricing-details">
+                <p>Subtotal: <span>$<%= quote.subtotal.toFixed(2) %></span></p>
+                <p>Tax Rate: <span><%= quote.taxRate %>%</span></p>
+                <p>Total: <span>$<%= quote.total.toFixed(2) %></span></p>
+            </div>
+
+            <div class="button-group">
+                <a href="/quotes/<%= quote._id %>/edit" class="btn btn-custom-primary">Edit</a>
+                <a href="/quotes" class="btn btn-custom-secondary">Back</a>
+            </div>
         </div>
-        <a href="/quotes/<%= quote._id %>/edit" class="btn btn-primary">Edit Quote</a>
-        <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
     </div>
     <%- include('partials/_footer.ejs') %>
+    <script src="/js/clientSearch.js"></script>
 </body>
 </html>

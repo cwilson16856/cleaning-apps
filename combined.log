@@ -3187,3 +3187,487 @@
 {"level":"info","message":"Session accessed again at: 2024-06-01T16:50:20.188Z, Views: 367, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
 {"level":"info","message":"Session accessed again at: 2024-06-01T16:50:25.695Z, Views: 368, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
 {"level":"info","message":"Session accessed again at: 2024-06-01T16:50:28.726Z, Views: 369, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T17:50:15.655Z, Views: 370, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:00:46.058Z, Views: 371, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:01:14.273Z, Views: 372, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:03:54.528Z, Views: 373, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:04:31.066Z, Views: 374, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:04:32.749Z, Views: 375, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:04:34.854Z, Views: 376, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:04:35.726Z, Views: 377, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:05:05.822Z, Views: 378, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:06:51.375Z, Views: 379, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:07:05.313Z, Views: 380, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:08:02.878Z, Views: 381, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:15:42.196Z, Views: 382, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:16:27.148Z, Views: 383, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:16:57.378Z, Views: 384, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:16:57.498Z, Views: 385, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:16:57.545Z, Views: 386, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:17:30.578Z, Views: 387, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:18:26.128Z, Views: 388, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:18:29.037Z, Views: 389, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:18:29.129Z, Views: 390, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:18:29.218Z, Views: 391, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:24:29.308Z, Views: 392, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:24:31.106Z, Views: 393, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:24:31.211Z, Views: 394, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:24:31.277Z, Views: 395, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:25:26.324Z, Views: 396, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:25:30.607Z, Views: 397, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:25:30.779Z, Views: 398, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:25:30.824Z, Views: 399, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:25:34.928Z, Views: 400, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:18.170Z, Views: 401, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:21.638Z, Views: 402, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:21.771Z, Views: 403, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:21.861Z, Views: 404, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:25.352Z, Views: 405, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:58.263Z, Views: 406, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:58.452Z, Views: 407, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:58.547Z, Views: 408, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:28:58.655Z, Views: 409, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:29:34.155Z, Views: 410, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:29:34.189Z, Views: 411, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:30:46.203Z, Views: 412, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:31:03.782Z, Views: 413, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:31:59.470Z, Views: 414, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:32:56.364Z, Views: 415, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs:51\n    49|                             <td><%= quote.quoteId %></td>\r\n    50|                             <td><%= quote.status %></td>\r\n >> 51|                             <td>$<%= quote.totalPrice.toFixed(2) %></td>\r\n    52|                             <td>\r\n    53|                                 <a href=\"/quotes/<%= quote._id %>\" class=\"btn btn-primary\">View</a>\r\n    54|                                 <a href=\"/quotes/<%= quote._id %>/edit\" class=\"btn btn-warning\">Edit</a>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs:51\n    49|                             <td><%= quote.quoteId %></td>\r\n    50|                             <td><%= quote.status %></td>\r\n >> 51|                             <td>$<%= quote.totalPrice.toFixed(2) %></td>\r\n    52|                             <td>\r\n    53|                                 <a href=\"/quotes/<%= quote._id %>\" class=\"btn btn-primary\">View</a>\r\n    54|                                 <a href=\"/quotes/<%= quote._id %>/edit\" class=\"btn btn-warning\">Edit</a>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\dashboard.ejs\":36:43)\n    at Array.forEach (<anonymous>)\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\dashboard.ejs\":21:15)\n    at dashboard (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)","timestamp":"2024-06-01T18:32:56.369Z"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:33:00.017Z, Views: 416, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:33:01.094Z, Views: 417, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:36:11.732Z, Views: 418, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":65:26)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:36:11.737Z"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:40:14.090Z, Views: 419, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":65:26)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:40:14.120Z"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:40:24.109Z, Views: 420, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:40\n    38|             <h2>Attachments</h2>\r\n    39|             <ul>\r\n >> 40|                 <% quote.attachments.forEach(function(attachment) { %>\r\n    41|                     <li>\r\n    42|                         <a href=\"/uploads/<%= attachment %>\" target=\"_blank\"><%= attachment %></a>\r\n    43|                     </li>\r\n\nCannot read properties of undefined (reading 'forEach')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":65:26)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:40:24.117Z"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:41:39.181Z, Views: 421, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:41:40.837Z, Views: 422, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":87:41)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:41:40.851Z"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:43:57.153Z, Views: 423, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":87:41)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:43:57.181Z"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:43:59.438Z, Views: 424, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:57\n    55| \r\n    56|             <h2>Pricing</h2>\r\n >> 57|             <p><strong>Subtotal:</strong> $<%= quote.subtotal.toFixed(2) %></p>\r\n    58|             <p><strong>Tax Rate:</strong> <%= quote.taxRate %>%</p>\r\n    59|             <p><strong>Total:</strong> $<%= quote.total.toFixed(2) %></p>\r\n    60|         </div>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":87:41)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T18:43:59.447Z"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:45:35.503Z, Views: 425, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:45:38.790Z, Views: 426, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:50:01.998Z, Views: 427, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T18:57:58.103Z, Views: 428, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:16:54.280Z, Views: 429, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:18:21.144Z, Views: 430, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:18:22.944Z, Views: 431, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:18:41.567Z, Views: 432, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:24:03.809Z, Views: 433, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:24:06.350Z, Views: 434, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:24:08.959Z, Views: 435, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:24:25.303Z, Views: 436, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:25:17.880Z, Views: 437, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:26:14.627Z, Views: 438, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:37:12.953Z, Views: 439, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:40:08.132Z, Views: 440, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:44:13.317Z, Views: 441, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:45:39.579Z, Views: 442, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T19:45:45.672Z, Views: 443, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:43:05.206Z, Views: 444, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:45:27.249Z, Views: 445, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:45:40.916Z, Views: 446, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:47:36.608Z, Views: 447, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:47:46.362Z, Views: 448, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:47:53.729Z, Views: 449, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:48:03.114Z, Views: 450, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:48:26.856Z, Views: 451, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:51:44.525Z, Views: 452, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:52:00.948Z, Views: 453, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:52:35.039Z, Views: 454, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:54:00.117Z, Views: 455, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:54:33.011Z, Views: 456, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:55:56.698Z, Views: 457, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:57:18.049Z, Views: 458, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:57:32.059Z, Views: 459, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:58:13.367Z, Views: 460, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:58:58.521Z, Views: 461, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:59:15.982Z, Views: 462, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T20:59:43.303Z, Views: 463, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:00:03.197Z, Views: 464, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:00:25.431Z, Views: 465, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:00:47.818Z, Views: 466, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:01:20.240Z, Views: 467, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:01:47.165Z, Views: 468, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:02:28.916Z, Views: 469, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:02:36.906Z, Views: 470, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:03:02.066Z, Views: 471, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:03:35.198Z, Views: 472, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:03:48.446Z, Views: 473, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:05:24.901Z, Views: 474, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:05:47.631Z, Views: 475, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:16:33.509Z, Views: 476, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:17:03.087Z, Views: 477, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:18:00.285Z, Views: 478, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:18:02.082Z, Views: 479, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:18:34.937Z, Views: 480, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:18:35.972Z, Views: 481, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:21:04.685Z, Views: 482, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:23:01.262Z, Views: 483, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:25:00.029Z, Views: 484, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:25:07.271Z, Views: 485, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:25:09.483Z, Views: 486, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:25:12.127Z, Views: 487, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:25:41.808Z, Views: 488, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= quote.subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= quote.taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= quote.total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= quote.subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= quote.taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= quote.total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":134:41)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T21:25:41.815Z"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:26:52.021Z, Views: 489, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:31:00.813Z, Views: 490, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:32:07.571Z, Views: 491, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:32:09.315Z, Views: 492, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:32:12.824Z, Views: 493, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:39:57.343Z, Views: 494, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:40:11.688Z, Views: 495, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:42:12.424Z, Views: 496, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:42:59.346Z, Views: 497, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:43:14.012Z, Views: 498, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:44:58.550Z, Views: 499, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nsubtotal is not defined","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"ReferenceError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nsubtotal is not defined\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":134:26)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T21:44:58.575Z"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:45:38.509Z, Views: 500, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nsubtotal is not defined","service":"user-service","sessionId":"DihoAIbc4qJaA2jMhLCdGsp_QoMjC8s1","stack":"ReferenceError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\quoteDetails.ejs:93\n    91|         <div class=\"pricing-and-buttons\">\r\n    92|             <div class=\"pricing-details\">\r\n >> 93|                 <p>Subtotal: <span>$<%= subtotal.toFixed(2) %></span></p>\r\n    94|                 <p>Tax Rate: <span><%= taxRate %>%</span></p>\r\n    95|                 <p>Total: <span>$<%= total.toFixed(2) %></span></p>\r\n    96|             </div>\r\n\nsubtotal is not defined\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\quoteDetails.ejs\":134:26)\n    at quoteDetails (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)\n    at C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\routes\\quoteRoutes.js:93:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-06-01T21:45:38.535Z"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:46:07.114Z, Views: 501, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:47:14.142Z, Views: 502, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:47:14.901Z, Views: 503, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:47:16.838Z, Views: 504, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T21:55:15.290Z, Views: 505, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:19.280Z, Views: 506, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:26.245Z, Views: 507, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:28.238Z, Views: 508, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:28.361Z, Views: 509, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:28.418Z, Views: 510, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:30.923Z, Views: 511, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:44.005Z, Views: 512, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:44.174Z, Views: 513, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:44.265Z, Views: 514, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:44.359Z, Views: 515, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:07:57.228Z, Views: 516, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:10:46.798Z, Views: 517, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:44.230Z, Views: 518, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:45.826Z, Views: 519, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:49.764Z, Views: 520, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:49.831Z, Views: 521, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:49.924Z, Views: 522, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:52.376Z, Views: 523, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:59.167Z, Views: 524, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:59.326Z, Views: 525, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:59.418Z, Views: 526, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:15:59.503Z, Views: 527, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:16:06.337Z, Views: 528, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:16:40.964Z, Views: 529, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:16:41.006Z, Views: 530, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:24:54.468Z, Views: 531, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:24:59.269Z, Views: 532, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:01.472Z, Views: 533, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:01.596Z, Views: 534, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:01.673Z, Views: 535, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:04.981Z, Views: 536, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:39.067Z, Views: 537, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:39.225Z, Views: 538, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:39.355Z, Views: 539, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:39.434Z, Views: 540, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:50.361Z, Views: 541, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:25:50.402Z, Views: 542, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:26:43.128Z, Views: 543, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:26:49.808Z, Views: 544, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:26:53.863Z, Views: 545, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:45:54.003Z, Views: 546, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:46:02.037Z, Views: 547, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:59:56.376Z, Views: 548, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:59:58.967Z, Views: 549, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:59:59.069Z, Views: 550, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:59:59.128Z, Views: 551, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T22:59:59.286Z, Views: 552, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:03.758Z, Views: 553, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:32.115Z, Views: 554, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:32.283Z, Views: 555, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:32.376Z, Views: 556, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:32.473Z, Views: 557, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:00:42.971Z, Views: 558, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:02:21.617Z, Views: 559, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:02:25.191Z, Views: 560, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:03:09.375Z, Views: 561, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:17.731Z, Views: 562, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:20.214Z, Views: 563, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:20.378Z, Views: 564, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:20.461Z, Views: 565, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:24.334Z, Views: 566, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:35.642Z, Views: 567, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:35.792Z, Views: 568, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:35.896Z, Views: 569, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:35.979Z, Views: 570, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:48.669Z, Views: 571, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:48.700Z, Views: 572, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:04:50.847Z, Views: 573, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:08:56.739Z, Views: 574, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:08:59.105Z, Views: 575, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:02.986Z, Views: 576, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:05.427Z, Views: 577, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:05.565Z, Views: 578, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:05.622Z, Views: 579, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:08.523Z, Views: 580, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:18.908Z, Views: 581, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:19.059Z, Views: 582, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:19.161Z, Views: 583, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:19.264Z, Views: 584, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:09:33.741Z, Views: 585, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:07.264Z, Views: 586, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:08.850Z, Views: 587, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:11.734Z, Views: 588, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:11.833Z, Views: 589, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:11.918Z, Views: 590, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:13.837Z, Views: 591, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:26.284Z, Views: 592, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-01T23:10:38.621Z, Views: 593, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:09.837Z, Views: 594, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:13.496Z, Views: 595, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:13.586Z, Views: 596, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:14.128Z, Views: 597, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:17.668Z, Views: 598, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:17.765Z, Views: 599, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:50.753Z, Views: 600, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:14:57.251Z, Views: 601, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:15:12.508Z, Views: 602, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:15:12.701Z, Views: 603, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:15:12.787Z, Views: 604, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:15:12.890Z, Views: 605, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:15:28.668Z, Views: 606, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:20.099Z, Views: 607, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:21.507Z, Views: 608, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:24.959Z, Views: 609, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:25.031Z, Views: 610, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:28.407Z, Views: 611, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:49.245Z, Views: 612, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:55.811Z, Views: 613, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:55.957Z, Views: 614, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:56.070Z, Views: 615, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:56.149Z, Views: 616, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:21:56.239Z, Views: 617, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:22:16.859Z, Views: 618, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:47.782Z, Views: 619, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:49.932Z, Views: 620, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:52.020Z, Views: 621, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:52.906Z, Views: 622, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:54.824Z, Views: 623, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:54.912Z, Views: 624, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:25:57.483Z, Views: 625, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:26:07.664Z, Views: 626, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:26:07.822Z, Views: 627, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:26:07.926Z, Views: 628, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:26:08.006Z, Views: 629, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:26:20.109Z, Views: 630, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:30:52.532Z, Views: 631, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:07.197Z, Views: 632, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:10.965Z, Views: 633, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:11.078Z, Views: 634, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:15.795Z, Views: 635, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:32.896Z, Views: 636, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:33.086Z, Views: 637, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:33.201Z, Views: 638, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:33.287Z, Views: 639, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:31:50.552Z, Views: 640, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:34:10.123Z, Views: 641, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:34:15.147Z, Views: 642, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:39:12.605Z, Views: 643, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:39:57.922Z, Views: 644, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:01.341Z, Views: 645, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:01.474Z, Views: 646, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:05.527Z, Views: 647, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:19.563Z, Views: 648, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:19.714Z, Views: 649, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:19.836Z, Views: 650, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:19.914Z, Views: 651, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:40:33.998Z, Views: 652, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:42:23.120Z, Views: 653, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:44:24.662Z, Views: 654, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:44:41.004Z, Views: 655, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:44:58.520Z, Views: 656, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session created at: 2024-06-02T00:44:58.529Z","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:44:59.625Z, Views: 2, User ID: (unauthenticated)","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:44:59.688Z, Views: 3, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:12.962Z, Views: 4, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:14.307Z, Views: 5, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:20.795Z, Views: 6, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:21.332Z, Views: 7, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:21.531Z, Views: 8, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:24.980Z, Views: 9, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:50.750Z, Views: 10, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:45:50.918Z, Views: 11, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:46:08.180Z, Views: 12, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:47:27.514Z, Views: 13, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:47:54.352Z, Views: 14, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:47:59.285Z, Views: 15, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:01.985Z, Views: 16, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:34.377Z, Views: 17, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:36.059Z, Views: 18, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:36.165Z, Views: 19, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:38.281Z, Views: 20, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:48:48.358Z, Views: 21, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:49:00.387Z, Views: 22, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:51:59.723Z, Views: 23, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:51:59.765Z, Views: 24, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:16.481Z, Views: 25, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:28.307Z, Views: 26, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:30.071Z, Views: 27, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:32.204Z, Views: 28, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:50.161Z, Views: 29, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:52:55.135Z, Views: 30, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:00.122Z, Views: 31, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:01.923Z, Views: 32, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:03.916Z, Views: 33, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:05.019Z, Views: 34, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:05.697Z, Views: 35, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:06.133Z, Views: 36, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:06.508Z, Views: 37, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:06.856Z, Views: 38, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:09.711Z, Views: 39, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:13.700Z, Views: 40, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:14.975Z, Views: 41, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:17.113Z, Views: 42, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:17.194Z, Views: 43, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:19.911Z, Views: 44, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:34.836Z, Views: 45, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:35.009Z, Views: 46, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:35.092Z, Views: 47, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:35.193Z, Views: 48, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:40.143Z, Views: 49, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:43.666Z, Views: 50, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:43.820Z, Views: 51, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:43.914Z, Views: 52, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:53:43.987Z, Views: 53, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:54:41.461Z, Views: 54, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:54:41.487Z, Views: 55, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T00:54:51.936Z, Views: 56, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:17:50.344Z, Views: 57, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:17:52.373Z, Views: 58, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:17:52.481Z, Views: 59, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:17:52.612Z, Views: 60, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:02.418Z, Views: 61, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:21.122Z, Views: 62, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:21.295Z, Views: 63, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:21.397Z, Views: 64, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:21.491Z, Views: 65, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:18:36.350Z, Views: 66, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:36.502Z, Views: 67, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:43.370Z, Views: 68, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:46.650Z, Views: 69, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:51.296Z, Views: 70, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:51.399Z, Views: 71, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:51.503Z, Views: 72, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:21:54.981Z, Views: 73, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:22:25.316Z, Views: 74, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:22:25.511Z, Views: 75, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:22:25.603Z, Views: 76, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:22:25.715Z, Views: 77, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:22:40.055Z, Views: 78, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:23:12.354Z, Views: 79, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Server running at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected successfully","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:26:21.090Z, Views: 80, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:06.663Z, Views: 81, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:08.943Z, Views: 82, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:09.090Z, Views: 83, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:09.181Z, Views: 84, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:12.420Z, Views: 85, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:39.797Z, Views: 86, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:57.268Z, Views: 87, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:27:57.309Z, Views: 88, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}
+{"level":"info","message":"Session accessed again at: 2024-06-02T01:28:02.683Z, Views: 89, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service"}

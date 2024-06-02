@@ -8,6 +8,26 @@ const { sendQuoteDataToCRM } = require('../utils/crmIntegration');
 const csrf = require('csurf');
 const { isAuthenticated } = require('../middleware/authMiddleware');
 const quoteController = require('../controllers/quoteController');
+const multer = require('multer');
+const path = require('path');
+
+// Configure storage for uploaded files
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Specify the directory to save files
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // Append extension
+  }
+});
+
+// Initialize multer with storage configuration
+const upload = multer({ storage: storage });
+
+// Function to calculate the subtotal
+const calculateSubtotal = (serviceItems) => {
+  return serviceItems.reduce((sum, item) => sum + (item.customPrice || item.rate) * item.quantity, 0);
+};
 
 // CSRF Protection Middleware using csurf
 const csrfProtection = csrf({ cookie: true });
@@ -39,42 +59,56 @@ router.get('/new', isAuthenticated, csrfProtection, async (req, res) => {
 });
 
 // POST route for creating a new quote with CSRF protection
-router.post('/', isAuthenticated, csrfProtection, async (req, res) => {
+router.post('/', isAuthenticated, upload.fields([{ name: 'attachments' }, { name: 'contracts' }]), csrfProtection, async (req, res) => {
   console.log('Request body:', req.body);
+  console.log('Uploaded files:', req.files); // Log uploaded files for debugging
   try {
-      const { clientId, clientName, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, distance, taxRate } = req.body;
+    const { clientId, clientName, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, distance, taxRate } = req.body;
 
-      // Validate service items
-      if (!serviceItems || !Array.isArray(serviceItems) || serviceItems.length === 0) {
-          return res.status(400).json({ error: 'Service items are required.' });
-      }
+    // Validate service items
+    if (!serviceItems || !Array.isArray(serviceItems) || serviceItems.length === 0) {
+      return res.status(400).json({ error: 'Service items are required.' });
+    }
 
-      const newQuote = new Quote({
-          clientId,
-          clientName, // Ensure clientName is included here
-          title,
-          scopeOfWork,
-          serviceType,
-          frequency,
-          initialCleaningOptions,
-          serviceItems: serviceItems.map(item => ({
-              serviceItemId: item.serviceItemId,
-              description: item.description,
-              quantity: item.quantity,
-              rate: item.rate
-          })),
-          userAddress,
-          distance,
-          taxRate
-      });
+    console.log('Processing service items:', serviceItems);
 
-      console.log('New quote object:', newQuote);
+    const processedServiceItems = serviceItems.map(item => ({
+      serviceItemId: item.serviceItemId,
+      description: item.description,
+      quantity: item.quantity,
+      customPrice: item.customPrice ? item.customPrice : item.rate
+    }));
 
-      await newQuote.save();
-      res.status(201).json(newQuote);
+    const subtotal = calculateSubtotal(processedServiceItems);
+    const calculatedTaxRate = parseFloat(taxRate) || 7.5;
+    const total = subtotal + (subtotal * (calculatedTaxRate / 100));
+
+    const newQuote = new Quote({
+      clientId,
+      clientName, // Ensure clientName is included here
+      title,
+      scopeOfWork,
+      serviceType,
+      frequency,
+      initialCleaningOptions,
+      serviceItems: processedServiceItems,
+      userAddress,
+      distance,
+      subtotal,
+      taxRate: calculatedTaxRate,
+      total,
+      attachments: req.files['attachments'] ? req.files['attachments'].map(file => file.filename) : [],
+      contracts: req.files['contracts'] ? req.files['contracts'].map(file => file.filename) : [],
+    });
+
+    console.log('New quote object:', newQuote);
+
+    await newQuote.save();
+    console.log('Quote saved successfully:', newQuote);
+    res.status(201).json(newQuote);
   } catch (error) {
-      console.error(`Error creating new quote: ${error.message}`, error.stack);
-      res.status(400).json({ error: `Failed to create quote. ${error.message}` });
+    console.error(`Error creating new quote: ${error.message}`, error.stack);
+    res.status(400).json({ error: `Failed to create quote. ${error.message}` });
   }
 });
 
@@ -104,19 +138,29 @@ router.get('/:id', isAuthenticated, csrfProtection, async (req, res) => {
 router.put('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const { serviceType, frequency, initialCleaningOptions, serviceItems, ...updateData } = req.body;
-      // Validate serviceItems
+    // Validate serviceItems
     if (!serviceItems || !Array.isArray(serviceItems)) {
       throw new Error("Invalid serviceItems data provided.");
     }
+
+    const processedServiceItems = serviceItems.map(item => ({
+      serviceItemId: item.serviceItemId,
+      quantity: item.quantity,
+      customPrice: item.customPrice ? item.customPrice : undefined
+    }));
+
+    const subtotal = calculateSubtotal(processedServiceItems);
+    const calculatedTaxRate = parseFloat(updateData.taxRate) || 7.5;
+    const total = subtotal + (subtotal * (calculatedTaxRate / 100));
+
     const updatedQuote = await Quote.findByIdAndUpdate(req.params.id, {
       serviceType,
       frequency,
       initialCleaningOptions,
-      serviceItems: serviceItems.map(item => ({
-        serviceItemId: item.serviceItemId,
-        quantity: item.quantity,
-        customPrice: item.customPrice ? item.customPrice : undefined
-      })),
+      serviceItems: processedServiceItems,
+      subtotal,
+      taxRate: calculatedTaxRate,
+      total,
       ...updateData
     }, { new: true, runValidators: true }).populate({ path: 'serviceItems.serviceItemId', model: 'ServiceItem' });
 

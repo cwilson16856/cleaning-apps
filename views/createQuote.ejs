@@ -9,7 +9,7 @@
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Create New Quote</h1>
-        <form id="quoteForm" method="POST" action="/quotes">
+        <form id="quoteForm" method="POST" action="/quotes" enctype="multipart/form-data">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <input type="hidden" id="clientId" name="clientId">
             <input type="hidden" id="clientName" name="clientName">
@@ -17,88 +17,151 @@
             <input type="hidden" id="clientPhone" name="clientPhone">
             <input type="hidden" id="clientAddress" name="clientAddress">
 
-            <div class="mb-3">
-                <label for="clientSearch" class="form-label">Select Client</label>
-                <input type="text" class="form-control" id="clientSearch" name="clientSearch" placeholder="Search for a client..." autocomplete="off">
-                <div id="clientResults" class="list-group mt-2"></div>
-            </div>
-            <div id="clientPreview" class="d-none">
-                <p class="small">
-                    <strong>Name:</strong> <span id="clientNamePreview"></span><br>
-                    <strong>Email:</strong> <span id="clientEmailPreview"></span><br>
-                    <strong>Phone:</strong> <span id="clientPhonePreview"></span><br>
-                    <strong>Address:</strong> <span id="clientAddressPreview"></span>
-                </p>
-                <button type="button" class="btn btn-sm btn-primary" id="editClientBtn">Edit Client</button>
-                <button type="button" class="btn btn-sm btn-danger" id="removeClientBtn">Remove Client</button>
-            </div>
-            <div class="mb-3">
-                <label for="quoteTitle" class="form-label">Quote Title</label>
-                <input type="text" class="form-control" id="quoteTitle" name="title" required>
-            </div>
-            <div class="mb-3">
-                <label for="scopeOfWork" class="form-label">Scope of Work</label>
-                <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="serviceType" class="form-label">Type of Service</label>
-                <select class="form-select" id="serviceType" name="serviceType" required>
-                    <option selected>Choose...</option>
-                    <option value="Recurring">Recurring</option>
-                    <option value="One-Time Deep Clean">One-Time Deep Clean</option>
-                    <option value="Move In/Move Out">Move In/Move Out</option>
-                </select>
-            </div>
-            <div class="mb-3 d-none" id="frequencyDiv">
-                <label for="frequency" class="form-label">Frequency</label>
-                <select class="form-select" id="frequency" name="frequency">
-                    <option selected>Choose...</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Bi-Weekly">Bi-Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>
-            </div>
-            <div class="mb-3 d-none" id="initialCleaningDiv">
-                <label>Initial Cleaning Options</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Walls" id="walls" name="initialCleaningOptions[]">
-                    <label class="form-check-label" for="walls">Walls</label>
+            <!-- Select Client Section -->
+            <div class="form-section">
+                <div class="section-title">Select Client</div>
+                <div class="mb-3">
+                    <label for="clientSearch" class="form-label">Select Client</label>
+                    <input type="text" class="form-control" id="clientSearch" name="clientSearch" placeholder="Search for a client..." autocomplete="off">
+                    <div id="clientResults" class="list-group mt-2"></div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Windows" id="windows" name="initialCleaningOptions[]">
-                    <label class="form-check-label" for="windows">Windows</label>
+                <div id="clientPreview" class="d-none">
+                    <p class="small">
+                        <strong>Name:</strong> <span id="clientNamePreview"></span><br>
+                        <strong>Email:</strong> <span id="clientEmailPreview"></span><br>
+                        <strong>Phone:</strong> <span id="clientPhonePreview"></span><br>
+                        <strong>Address:</strong> <span id="clientAddressPreview"></span>
+                    </p>
+                    <button type="button" class="btn btn-sm btn-primary" id="editClientBtn">Edit Client</button>
+                    <button type="button" class="btn btn-sm btn-danger" id="removeClientBtn">Remove Client</button>
                 </div>
             </div>
-            <div class="line-items-section">
-                <label class="form-label">Line Items</label>
+
+            <!-- Get Distance Section -->
+            <div class="form-section">
+                <div class="section-title">Get Distance</div>
+                <div class="mb-3">
+                        <label for="userAddress" class="form-label">User Address</label>
+                        <p><%= user.streetAddress %>, <%= user.city %>, <%= user.state %> <%= user.zipCode %></p>
+                        <input type="hidden" id="userAddress" name="userAddress" value="<%= user.streetAddress %>, <%= user.city %>, <%= user.state %> <%= user.zipCode %>">
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="distance" class="form-label">Distance (miles)</label>
+                        <input type="text" class="form-control" id="distance" name="distance" readonly>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="calculateDistanceBtn">Calculate Distance</button>
+        
+
+            <!-- Quote Title Section -->
+            <div class="form-section">
+                <div class="section-title">Quote Title</div>
+                <div class="mb-3">
+                    <label for="quoteTitle" class="form-label">Quote Title</label>
+                    <input type="text" class="form-control" id="quoteTitle" name="title" required>
+                </div>
+            </div>
+
+            <!-- Scope of Work Section -->
+            <div class="form-section">
+                <div class="section-title">Scope of Work</div>
+                <div class="mb-3">
+                    <label for="scopeOfWork" class="form-label">Scope of Work</label>
+                    <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required></textarea>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Type of Service Section -->
+            <div class="form-section">
+                <div class="section-title">Type of Service</div>
+                <div class="mb-3">
+                    <label for="serviceType" class="form-label">Type of Service</label>
+                    <select class="form-select" id="serviceType" name="serviceType" required>
+                        <option selected>Choose...</option>
+                        <option value="Recurring">Recurring</option>
+                        <option value="One-Time Deep Clean">One-Time Deep Clean</option>
+                        <option value="Move In/Move Out">Move In/Move Out</option>
+                    </select>
+                </div>
+                <div class="mb-3 d-none" id="frequencyDiv">
+                    <label for="frequency" class="form-label">Frequency</label>
+                    <select class="form-select" id="frequency" name="frequency">
+                        <option selected>Choose...</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Bi-Weekly">Bi-Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                </div>
+                <div class="mb-3 d-none" id="initialCleaningDiv">
+                    <label>Initial Cleaning Options</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Walls" id="walls" name="initialCleaningOptions[]">
+                        <label class="form-check-label" for="walls">Walls</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Windows" id="windows" name="initialCleaningOptions[]">
+                        <label class="form-check-label" for="windows">Windows</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Line Items Section -->
+            <div class="form-section line-items-section">
+                <div class="section-title">Line Items</div>
                 <div id="lineItemsContainer"></div>
                 <button type="button" class="btn btn-primary mt-3" id="addLineItemBtn">Add an item</button>
             </div>
-            <div id="validationErrors" class="alert alert-danger d-none" role="alert"></div>
-            <div class="mb-3">
-                <label for="userAddress" class="form-label">User Address</label>
-                <p><%= user.streetAddress %>, <%= user.city %>, <%= user.state %> <%= user.zipCode %></p>
-                <input type="hidden" id="userAddress" name="userAddress" value="<%= user.streetAddress %>, <%= user.city %>, <%= user.state %> <%= user.zipCode %>">
+
+            <hr>
+
+            <!-- Attachments Section -->
+            <div class="form-section">
+                <div class="section-title">Attachments</div>
+                <div id="attachmentsContainer">
+                    <div class="form-group attachment-group">
+                        <label for="attachments">Upload Attachments</label>
+                        <input type="file" id="attachments" name="attachments" class="form-control" multiple>
+                        <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" id="addAttachmentBtn">Add Attachment</button>
             </div>
 
-            <div class="mb-3">
-                <label for="distance" class="form-label">Distance (miles)</label>
-                <input type="text" class="form-control" id="distance" name="distance" readonly>
+            <!-- Contracts Section -->
+            <div class="form-section">
+                <div class="section-title">Contracts</div>
+                <div id="contractsContainer">
+                    <div class="form-group contract-group">
+                        <label for="contracts">Upload Contracts</label>
+                        <input type="file" id="contracts" name="contracts" class="form-control" multiple>
+                        <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" id="addContractBtn">Add Contract</button>
             </div>
-            <button type="button" class="btn btn-primary" id="calculateDistanceBtn">Calculate Distance</button>
-            <div class="mb-3">
-                <label for="subtotal" class="form-label">Subtotal</label>
-                <div id="subtotal">$0.00</div>
+
+            <!-- Subtotal, Tax Rate, and Total Section -->
+            <div class="form-section clearfix">
+                <div class="right-section">
+                    <div class="form-group">
+                        <label for="subtotal" class="form-label">Subtotal</label>
+                        <div id="subtotal">$0.00</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="taxRate" class="form-label">Tax Rate</label>
+                        <input type="number" class="form-control" id="taxRate" name="taxRate" placeholder="Enter tax rate in percentage" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="total" class="form-label">Total</label>
+                        <div id="total">$0.00</div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Create Quote</button>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="taxRate" class="form-label">Tax Rate</label>
-                <input type="number" class="form-control" id="taxRate" name="taxRate" placeholder="Enter tax rate in percentage" step="0.01">
-            </div>
-            <div class="mb-3">
-                <label for="total" class="form-label">Total</label>
-                <div id="total">$0.00</div>
-            </div>
-            <button type="submit" class="btn btn-primary">Create Quote</button>
         </form>
     </div>
 
@@ -213,6 +276,65 @@
             } catch (error) {
                 console.error('Error calculating distance:', error);
             }
+        });
+    </script>
+    <script>
+        // Add attachment
+        document.getElementById('addAttachmentBtn').addEventListener('click', () => {
+            const attachmentsContainer = document.getElementById('attachmentsContainer');
+            const attachmentGroup = document.createElement('div');
+            attachmentGroup.className = 'form-group attachment-group';
+            attachmentGroup.innerHTML = `
+                <label for="attachments">Upload Attachments</label>
+                <input type="file" id="attachments" name="attachments" class="form-control" multiple>
+                <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
+            `;
+            attachmentsContainer.appendChild(attachmentGroup);
+            attachmentGroup.querySelector('.remove-attachment-btn').addEventListener('click', () => {
+                attachmentsContainer.removeChild(attachmentGroup);
+            });
+        });
+
+        // Add contract
+        document.getElementById('addContractBtn').addEventListener('click', () => {
+            const contractsContainer = document.getElementById('contractsContainer');
+            const contractGroup = document.createElement('div');
+            contractGroup.className = 'form-group contract-group';
+            contractGroup.innerHTML = `
+                <label for="contracts">Upload Contracts</label>
+                <input type="file" id="contracts" name="contracts" class="form-control" multiple>
+                <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
+            `;
+            contractsContainer.appendChild(contractGroup);
+            contractGroup.querySelector('.remove-contract-btn').addEventListener('click', () => {
+                contractsContainer.removeChild(contractGroup);
+            });
+        });
+
+        // Initial event listeners for existing remove buttons
+        document.querySelectorAll('.remove-attachment-btn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.target.closest('.attachment-group').remove();
+            });
+        });
+
+        document.querySelectorAll('.remove-contract-btn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.target.closest('.contract-group').remove();
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scopeOfWorkTextarea = document.getElementById('scopeOfWork');
+    
+            scopeOfWorkTextarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+    
+            // Trigger input event to adjust height on page load if there's pre-filled content
+            scopeOfWorkTextarea.dispatchEvent(new Event('input'));
         });
     </script>
 </body>

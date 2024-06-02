@@ -16,33 +16,39 @@ const serviceItemSchema = new mongoose.Schema({
 }, { _id: false }); // Prevents Mongoose from creating an _id for sub-documents
 
 const quoteSchema = new mongoose.Schema({
-  quoteId: { type: String, default: uuidv4 },
-  clientName: { type: String, required: true },
-  clientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Client', required: true },
-  title: String,
-  scopeOfWork: String,
-  status: {
-    type: String,
-    enum: ['sent', 'opened', 'clicked'],
-    default: 'sent'
-  },
-  serviceType: {
-    type: String,
-    required: true,
-    enum: ['Recurring', 'One-Time Deep Clean', 'Move In/Move Out']
-  },
-  frequency: {
-    type: String,
-    enum: ['Weekly', 'Bi-Weekly', 'Monthly'],
-    default: null // Set to null as it's optional and dependent on serviceType being 'Recurring'
-  },
-  initialCleaningOptions: [{
-    type: String,
-    enum: ['Walls', 'Windows', 'Inside Fridge', 'Inside Stove', 'Underneath Furniture', 'Other']
-  }],
-  items: [itemSchema],
-  serviceItems: [serviceItemSchema] // Adding the new field for service items
-});
+    quoteId: { type: String, default: uuidv4 },
+    clientName: { type: String, required: true },
+    clientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Client', required: true },
+    title: String,
+    scopeOfWork: String,
+    status: {
+      type: String,
+      enum: ['sent', 'opened', 'clicked'],
+      default: 'sent'
+    },
+    serviceType: {
+      type: String,
+      required: true,
+      enum: ['Recurring', 'One-Time Deep Clean', 'Move In/Move Out']
+    },
+    frequency: {
+      type: String,
+      enum: ['Weekly', 'Bi-Weekly', 'Monthly'],
+      default: null
+    },
+    initialCleaningOptions: [{
+      type: String,
+      enum: ['Walls', 'Windows', 'Inside Fridge', 'Inside Stove', 'Underneath Furniture', 'Other']
+    }],
+    serviceItems: [serviceItemSchema],
+    attachments: [String],
+    contracts: [String],
+    subtotal: { type: Number, default: 0 },
+    taxRate: { type: Number, default: 7.5 },
+    total: { type: Number, default: 0 },
+    totalPrice: Number,
+    priceBreakdown: mongoose.Schema.Types.Mixed
+  });
 
 quoteSchema.pre('save', async function(next) {
   try {
