@@ -3,12 +3,39 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const csrf = require('csurf');
+const bcrypt = require('bcrypt');
 const isAuthenticated = require('../middleware/authMiddleware').isAuthenticated;
 const User = require('../models/User');
 const logger = require('../logger');
 
 // Setup CSRF protection middleware
 const csrfProtection = csrf({ cookie: true });
+
+// Setup multer for file upload
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true);
+  } else {
+    cb(new Error('Unsupported file format'), false);
+  }
+};
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5 // 5MB max file size
+  },
+  fileFilter: fileFilter
+});
 
 // POST route to handle password change
 router.post('/change-password', isAuthenticated, csrfProtection, async (req, res) => {
@@ -23,7 +50,7 @@ router.post('/change-password', isAuthenticated, csrfProtection, async (req, res
     const user = await User.findById(userId);
 
     if (!user) {
-      throw new Error('User not found');
+      return res.status(404).json({ success: false, message: 'User not found' });
     }
 
     const isMatch = await bcrypt.compare(currentPassword, user.password);
@@ -57,34 +84,6 @@ router.post('/change-password', isAuthenticated, csrfProtection, async (req, res
   }
 });
 
-module.exports = router;
-
-// Setup multer for file upload
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  }
-});
-
-const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-    cb(null, true);
-  } else {
-    cb(new Error('Unsupported file format'), false);
-  }
-};
-
-const upload = multer({
-  storage: storage,
-  limits: {
-    fileSize: 1024 * 1024 * 5 // 5MB max file size
-  },
-  fileFilter: fileFilter
-});
-
 // GET settings page with authentication and CSRF protection
 router.get('/', isAuthenticated, csrfProtection, async (req, res) => {
   try {
@@ -92,11 +91,11 @@ router.get('/', isAuthenticated, csrfProtection, async (req, res) => {
     const user = await User.findById(userId);
 
     if (!user) {
-      throw new Error('User not found');
+      return res.status(404).send('User not found');
     }
 
     res.render('settings', {
-      title: 'Settings',
+      pageTitle: 'Settings',
       csrfToken: req.csrfToken(),
       user: user // Pass the user object to the template
     });
@@ -122,12 +121,13 @@ router.post('/', isAuthenticated, csrfProtection, upload.single('businessLogo'),
       to: req.body[`${day}To`]
     };
   });
+
   try {
     const userId = req.session.userId;
     const user = await User.findById(userId);
 
     if (!user) {
-      throw new Error('User not found');
+      return res.status(404).json({ success: false, message: 'User not found.' });
     }
 
     user.businessName = businessName;
@@ -154,8 +154,7 @@ router.post('/', isAuthenticated, csrfProtection, upload.single('businessLogo'),
       timestamp: new Date().toISOString()
     });
 
-    // Send a JSON response to indicate success
-    res.json({ success: true, message: 'User information updated successfully.', csrfToken: req.csrfToken() });
+    res.json({ success: true, message: 'User information updated successfully.' });
   } catch (error) {
     logger.error(`Error saving user information: ${error}`, {
       error: error,
@@ -165,8 +164,11 @@ router.post('/', isAuthenticated, csrfProtection, upload.single('businessLogo'),
       timestamp: new Date().toISOString()
     });
 
-    // Send a JSON response to indicate failure
-    res.status(500).json({ success: false, message: 'Error saving user information.', error: error.message });
+    res.status(500).json({
+      success: false,
+      message: 'Error saving user information.',
+      error: error.message
+    });
   }
 });
 

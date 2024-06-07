@@ -1,20 +1,36 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Cleaning Tools</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-      <li class="nav-item"><a class="nav-link" href="/quotes">Create Quote</a></li>
-      <li class="nav-item"><a class="nav-link" href="/clients">Clients</a></li>
-      <li class="nav-item"><a class="nav-link" href="/items">Items</a></li>
-      <li class="nav-item"><a class="nav-link" href="/settings">Settings</a></li>
+      <li class="nav-item <%= (currentPath === '/' ? 'active' : '') %>">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item <%= (currentPath === '/dashboard' ? 'active' : '') %>">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item <%= (currentPath === '/quotes' ? 'active' : '') %>">
+        <a class="nav-link" href="/quotes">Create Quote</a>
+      </li>
+      <li class="nav-item <%= (currentPath === '/clients' ? 'active' : '') %>">
+        <a class="nav-link" href="/clients">Clients</a>
+      </li>
+      <li class="nav-item <%= (currentPath === '/items' ? 'active' : '') %>">
+        <a class="nav-link" href="/items">Items</a>
+      </li>
+      <li class="nav-item <%= (currentPath === '/settings' ? 'active' : '') %>">
+        <a class="nav-link" href="/settings">Settings</a>
+      </li>
       <% if (session && session.userId) { %>
-      <li class="nav-item"><a class="nav-link" href="/auth/logout">Logout</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">Logout</a>
+      </li>
       <% } else { %>
-      <li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/login">Login</a>
+      </li>
       <% } %>
     </ul>
   </div>

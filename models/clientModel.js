@@ -9,7 +9,8 @@ const clientSchema = new mongoose.Schema({
   streetAddress: { type: String, required: false },
   city: { type: String, required: false },
   state: { type: String, required: false },
-  zip: { type: String, required: false }
+  zip: { type: String, required: false },
+  notes: { type: [String], default: [] } // Add notes field
 });
 
 clientSchema.pre('save', function(next) {

@@ -12,7 +12,7 @@ router.get('/', isAuthenticated, csrfProtection, renderServiceItemsPage);
 
 // GET route to render the create item page
 router.get('/new', isAuthenticated, csrfProtection, (req, res) => {
-  res.render('createItem', { csrfToken: req.csrfToken() });
+  res.render('createItem', { pageTitle: 'Create New Item '}, { csrfToken: req.csrfToken() });
 });
 
 // POST route to create a new service item
@@ -29,7 +29,7 @@ router.post('/', isAuthenticated, csrfProtection, async (req, res) => {
 router.get('/:id/edit', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const item = await getServiceItemById(req.params.id);
-    res.render('editItem', { item, csrfToken: req.csrfToken() });
+    res.render('editItem', { pageTitle: 'Edit Item' }, { item, csrfToken: req.csrfToken() });
   } catch (error) {
     console.error(`Error fetching service item for editing: ${error.message}`, error);
     res.status(500).send('Error fetching service item for editing');

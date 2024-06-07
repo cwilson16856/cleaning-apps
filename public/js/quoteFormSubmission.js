@@ -131,21 +131,22 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const formData = new FormData(this);
-        const serviceItems = [];
-
+        const data = Object.fromEntries(formData.entries());
+        data.serviceItems = [];
         let formValid = true;
-        document.querySelectorAll('.line-item').forEach((lineItem, index) => {
+
+        document.querySelectorAll('.line-item').forEach(lineItem => {
             const itemSearch = lineItem.querySelector('.itemSearch').value.trim();
             const description = lineItem.querySelector('.description').value.trim();
             const quantity = parseFloat(lineItem.querySelector('.quantity').value) || 0;
             const rate = parseFloat(lineItem.querySelector('.rate').value) || 0;
             const serviceItemId = lineItem.querySelector('input[name="serviceItemIds[]"]')?.value;
             if (itemSearch && quantity && rate && serviceItemId) {
-                serviceItems.push({
+                data.serviceItems.push({
                     serviceItemId: serviceItemId,
                     description: description,
                     quantity: quantity,
-                    customPrice: rate
+                    rate: rate
                 });
             } else {
                 formValid = false;
@@ -158,25 +159,40 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Add service items to FormData
-        serviceItems.forEach((item, index) => {
-            formData.append(`serviceItems[${index}][serviceItemId]`, item.serviceItemId);
-            formData.append(`serviceItems[${index}][description]`, item.description);
-            formData.append(`serviceItems[${index}][quantity]`, item.quantity);
-            formData.append(`serviceItems[${index}][customPrice]`, item.customPrice);
-        });
+        // Ensure clientName is set
+        const clientName = document.getElementById('clientSearch').value;
+        if (!clientName) {
+            validationErrorsElement.innerHTML = 'Please select a client.';
+            validationErrorsElement.classList.remove('d-none');
+            return;
+        }
+        data.clientName = clientName;
 
-        console.log('Form data being sent:', formData); // Log the FormData object
+        // Validate and set frequency field
+        const serviceType = document.getElementById('serviceType').value;
+        if (serviceType === 'Recurring') {
+            const frequency = document.getElementById('frequency').value;
+            if (frequency === 'Choose...') {
+                validationErrorsElement.innerHTML = 'Please select a valid frequency.';
+                validationErrorsElement.classList.remove('d-none');
+                return;
+            }
+            data.frequency = frequency;
+        } else {
+            data.frequency = null; // Set frequency to null for non-recurring services
+        }
 
-        axios.post('/quotes', formData, {
+        console.log('Form data being sent:', data); // Log the data object
+
+        axios.post('/quotes', data, {
             headers: {
-                'Content-Type': 'multipart/form-data',
+                'Content-Type': 'application/json',
                 'X-CSRF-Token': formData.get('_csrf')
             }
         })
         .then(function(response) {
             console.log('Quote created successfully', response.data);
-            window.location.href = '/quotes'; // Redirect to dashboard after successful creation
+            window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
         })
         .catch(function(error) {
             console.error('Error creating quote', error.response.data, error.message, error.stack);
@@ -188,3 +204,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial line item row
     addLineItemRow();
 });
+

@@ -4,13 +4,13 @@ const getClient = async (req, res, next) => {
   try {
     const client = await Client.findById(req.params.id);
     if (!client) {
-      return res.status(404).json({ message: 'Client not found' });
+      return res.status(404).json({ success: false, message: 'Client not found' });
     }
-    req.client = client; // Attach client to the request object
+    req.client = client;
     next();
   } catch (error) {
-    console.error(`Error fetching client with ID ${req.params.id}: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to fetch client', error: error.message });
+    console.error(`Error fetching client: ${error.message}`);
+    res.status(500).json({ success: false, message: 'Error fetching client', error: error.message });
   }
 };
 

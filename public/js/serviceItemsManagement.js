@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${name}</td>
             <td>${category}</td>
             <td>${description}</td>
-            <td>$${price}</td>
+            <td>$${price.toFixed(2)}</td>
             <td>
                 <a href="/items/${itemId}/edit" class="btn btn-warning btn-sm">Edit</a>
                 <button class="btn btn-danger btn-sm deleteServiceItemBtn">Delete</button>
@@ -50,14 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 addServiceItem(item._id, item.name, item.category, item.price, item.description);
             });
             console.log('Service items fetched and populated successfully.');
-            logToServer('error', `Error fetching service items: ${error.message}`);
         } catch (error) {
             console.error('Failed to fetch service items:', error);
+            logToServer('error', `Error fetching service items: ${error.message}`);
         }
     }
 
     // Initial fetch and populate service items
     fetchAndPopulateServiceItems();
 
-    // Additional logic for handling dynamic updates, form submissions, etc., can be added here
+    // Example event listener for adding a new service item
+    if (addServiceItemBtn) {
+        addServiceItemBtn.addEventListener('click', function() {
+            // Logic for adding a new service item (possibly opening a form/modal for input)
+        });
+    }
+
+    // Additional logic for handling form submissions, etc., can be added here
 });

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/_head.ejs') %>
+<%- include('partials/_head.ejs') %> <!-- Make sure this partial includes meta tags and title -->
 <body>
 <%- include('partials/_header.ejs') %>
 <main role="main" class="container mt-4">
   <div class="text-center">
-    <h1>cleaning-tools</h1>
+    <h1>Cleaning Tools</h1>
   </div>
   <!-- Sample form to demonstrate CSRF token usage -->
   <form action="/some-endpoint" method="POST">
-    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-    <!-- Other form fields -->
+    <input type="hidden" name="_csrf" value="<%= csrfToken || '' %>"> <!-- Default to an empty string if csrfToken is not defined -->
+    <!-- Make sure to add label elements and other form fields -->
+    <label for="exampleField">Example Field:</label>
+    <input type="text" id="exampleField" name="exampleField" required>
     <button type="submit">Submit</button>
   </form>
 </main>
 <%- include('partials/_footer.ejs') %>
-<script src="/js/main.js"></script>
+<script src="/js/main.js"></script> <!-- Ensure this is working correctly -->
 </body>
 </html>

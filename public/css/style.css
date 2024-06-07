@@ -210,12 +210,30 @@
 }
 
 /* Footer styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: calc(100vh - 60px); /* Adjust the height calculation as needed */
+  padding-bottom: 20px; /* Space for the footer */
+}
+
 .footer {
-  position: relative;
-  bottom: 0;
   width: 100%;
   text-align: center;
   padding: 10px;
   background: #f8f9fa;
-  margin-top: 20;
+  margin-top: 20px;
+  position: relative;
+  bottom: 0;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+textarea {
+  resize: vertical;
 }

@@ -1,53 +1,59 @@
 const express = require('express');
 const router = express.Router();
-const Client = require('../models/clientModel'); // Import the Client model
-const { createClient, searchClients, updateClient, deleteClient} = require('../controllers/clientController');
-const { isAuthenticated } = require('../middleware/authMiddleware'); // Assuming this is your auth middleware
-const csrf = require('csurf'); // Import csurf for CSRF protection
-const getClient = require('../middleware/getClient'); // Import the middleware
+const Client = require('../models/clientModel');
+const { createClient, searchClients, updateClient, deleteClient, getClientByIdWithQuotes } = require('../controllers/clientController');
+const { isAuthenticated } = require('../middleware/authMiddleware');
+const csrf = require('csurf');
+const getClient = require('../middleware/getClient');
 
 // CSRF Protection Middleware using csurf
 const csrfProtection = csrf({ cookie: true });
 
+// Middleware Sequence for Routes
+const authAndCsrf = [isAuthenticated, csrfProtection];
+
 // Get all clients and render the clients.ejs template
-router.get('/', isAuthenticated, csrfProtection, async (req, res) => {
+router.get('/', ...authAndCsrf, async (req, res) => {
   try {
     const clients = await Client.find();
-    res.render('clients', { clients, csrfToken: req.csrfToken() }); // Use csrfToken from req
-    console.log("Fetched all clients successfully.");
+    res.render('clients', { pageTitle: 'Clients', clients, csrfToken: req.csrfToken(), currentPath: req.originalUrl });
   } catch (err) {
-    console.error(`Error fetching clients: ${err.message}`, err.stack);
-    res.status(500).json({ message: err.message });
+    res.status(500).json({ message: 'Failed to fetch clients. Please try again later.' });
   }
 });
 
 // Render the form to create a new client
-router.get('/new', isAuthenticated, csrfProtection, (req, res) => {
-  console.log("Rendering createClient.ejs");
-  res.render('createClient', { csrfToken: req.csrfToken() }); // Use csrfToken from req
+router.get('/new', ...authAndCsrf, (req, res) => {
+  res.render('createClient', { pageTitle: 'Create New Client', csrfToken: req.csrfToken(), currentPath: req.originalUrl });
 });
 
-// Search for clients
-router.get('/search', isAuthenticated, csrfProtection, searchClients);
-
-// Get one client
-router.get('/:id', isAuthenticated, csrfProtection, getClient, (req, res) => {
-  res.status(200).json(req.client);
+router.get('/:id/profile', ...authAndCsrf, async (req, res) => {
+  const { client, quotes, error } = await getClientByIdWithQuotes(req, res);
+  if (error) {
+    console.error(`Error fetching client or quotes: ${error.message}`);
+    return res.status(500).render('error', { message: 'Failed to fetch client data. Please try again later.' });
+  }
+  res.render('clientProfile', {
+    pageTitle: 'Client Profile',
+    client: client,
+    quotes: quotes || [],
+    csrfToken: req.csrfToken(),
+    currentPath: req.originalUrl
+  });
 });
 
 // Render the form to edit a client
-router.get('/:id/edit', isAuthenticated, csrfProtection, getClient, (req, res) => {
-  res.render('editClient', { client: req.client, csrfToken: req.csrfToken() });
-  console.log(`Rendered editClient.ejs for client ID: ${req.params.id}`);
+router.get('/:id/edit', ...authAndCsrf, getClient, (req, res) => {
+  res.render('editClient', { pageTitle: 'Edit Client', client: req.client, csrfToken: req.csrfToken(), currentPath: req.originalUrl });
 });
 
 // Create new client
-router.post('/', isAuthenticated, csrfProtection, createClient);
+router.post('/', ...authAndCsrf, createClient);
 
 // Update client
-router.put('/:id', isAuthenticated, csrfProtection, getClient, updateClient);
+router.put('/:id', ...authAndCsrf, getClient, updateClient);
 
 // Delete client
-router.delete('/:id', isAuthenticated, csrfProtection, getClient, deleteClient);
+router.delete('/:id', ...authAndCsrf, getClient, deleteClient);
 
 module.exports = router;

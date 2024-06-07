@@ -8,18 +8,14 @@
 <body>
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
-        <h1>Quote for <%= quote.clientName %></h1>
+        <h1><%= quote.title %></h1>
         <h2>Current Status: <%= quote.status %></h2>
         <hr>
         <p class="section-title">Client Information</p>
-        <p>Client Name: <%= quote.clientName %></p>
-        <p>Phone: <%= quote.clientId.phone %></p>
-        <p>Email: <%= quote.clientId.email %></p>
-        <p>Address: <%= quote.clientId.streetAddress %>, <%= quote.clientId.city %>, <%= quote.clientId.state %> <%= quote.clientId.zip %></p>
-        <hr>
-
-        <p class="section-title">Quote Title</p>
-        <p><%= quote.title %></p>
+        <p><b>Client Name:</b> <%= quote.clientName %></p>
+        <p><b>Phone:</b> <%= quote.clientId?.phoneNumber ?? 'N/A' %></p>
+        <p><b>Email:</b> <%= quote.clientId?.email ?? 'N/A' %></p>
+        <p><b>Address:</b> <%= quote.clientId?.streetAddress ?? 'N/A' %>, <%= quote.clientId?.city ?? '' %>, <%= quote.clientId?.state ?? '' %> <%= quote.clientId?.zip ?? '' %></p>
 
         <% if (quote.scopeOfWork) { %>
             <hr>
@@ -47,10 +43,12 @@
             <ul>
                 <% quote.attachments.forEach(function(attachment) { %>
                     <li>
-                        <a href="/uploads/<%= attachment.savedFilename %>" target="_blank"><%= attachment.originalFilename %></a>
+                        <a href="/uploads/<%= attachment.savedFilename %>" target="_blank"><%= attachment.originalFilename || 'Unnamed File' %></a>
                     </li>
                 <% }); %>
             </ul>
+        <% } else { %>
+            <p>No attachments available.</p>
         <% } %>
 
         <% if (quote.contracts && quote.contracts.length > 0) { %>
@@ -63,6 +61,8 @@
                     </li>
                 <% }); %>
             </ul>
+        <% } else { %>
+            <p>No contracts available.</p>
         <% } %>
 
         <% if (quote.serviceItems && quote.serviceItems.length > 0) { %>
@@ -90,9 +90,9 @@
 
         <div class="pricing-and-buttons">
             <div class="pricing-details">
-                <p>Subtotal: <span>$<%= quote.subtotal.toFixed(2) %></span></p>
-                <p>Tax Rate: <span><%= quote.taxRate %>%</span></p>
-                <p>Total: <span>$<%= quote.total.toFixed(2) %></span></p>
+                <p>Subtotal: <span>$<%= quote.subtotal?.toFixed(2) || '0.00' %></span></p>
+                <p>Tax Rate: <span><%= quote.taxRate || '0' %>%</span></p>
+                <p>Total: <span>$<%= quote.total?.toFixed(2) || '0.00' %></span></p>
             </div>
 
             <div class="button-group">

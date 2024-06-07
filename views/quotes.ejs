@@ -3,45 +3,54 @@
 <head>
     <%- include('partials/_head.ejs') %>
     <title>Quotes</title>
+    <meta name="csrf-token" content="<%= csrfToken %>">
 </head>
 <body>
     <%- include('partials/_header.ejs') %>
-    <div class="container mt-5">
+    <main class="container mt-5">
         <h1>Quotes</h1>
         <div class="mb-3">
             <label for="clientSearch" class="form-label">Search Clients</label>
-            <input type="text" class="form-control" id="clientSearch" placeholder="Search for a client...">
+            <input type="text" class="form-control" id="clientSearch" aria-label="Search for a client..." placeholder="Search for a client...">
             <div id="clientResults" class="list-group mt-2"></div>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Client Name</th>
-                    <th>Title</th>                    
+                    <th>Title</th>
+                    <th>Price</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <% quotes.forEach(quote => { %>
+                <% if (quotes.length === 0) { %>
                     <tr>
-                        <td><%= quote.clientName %></td>
-                        <td><%= quote.title %></td>                       
-                        <td><%= quote.status %></td>
-                        <td>
-                            <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
-                            <a href="/quotes/<%= quote._id %>/edit" class="btn btn-warning">Edit</a>
-                            <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST" style="display:inline;">
-                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <td colspan="5" class="text-center">No quotes available</td>
                     </tr>
-                <% }) %>
+                <% } else { %>
+                    <% quotes.forEach(quote => { %>
+                        <tr>
+                            <td><%- quote.clientName %></td>
+                            <td><%- quote.title %></td>
+                            <td>$<%- quote.total.toFixed(2) %></td>
+                            <td><%- quote.status %></td>
+                            <td>
+                                <a href="/quotes/<%= quote._id %>" class="btn btn-primary">View</a>
+                                <a href="/quotes/<%= quote._id %>/edit" class="btn btn-warning">Edit</a>
+                                <form action="/quotes/<%= quote._id %>?_method=DELETE" method="POST" class="d-inline">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } %>
             </tbody>
         </table>
         <a href="/quotes/new" class="btn btn-primary">Add New Quote</a>
-    </div>
+    </main>
     <%- include('partials/_footer.ejs') %>
     <script src="/js/clientSearch.js"></script>
 </body>

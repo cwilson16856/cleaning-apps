@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/_head.ejs') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Quote</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -275,56 +277,52 @@
                 document.getElementById('distance').value = response.data.distance;
             } catch (error) {
                 console.error('Error calculating distance:', error);
+                alert('Failed to calculate distance. Please try again.');
             }
         });
-    </script>
-    <script>
+
+        function addRemoveButtonEventListeners(selector, containerSelector) {
+            document.querySelectorAll(selector).forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    event.target.closest(containerSelector).remove();
+                });
+            });
+        }
+
         // Add attachment
         document.getElementById('addAttachmentBtn').addEventListener('click', () => {
             const attachmentsContainer = document.getElementById('attachmentsContainer');
+            const uniqueId = `attachments-${Date.now()}`;
             const attachmentGroup = document.createElement('div');
             attachmentGroup.className = 'form-group attachment-group';
             attachmentGroup.innerHTML = `
-                <label for="attachments">Upload Attachments</label>
-                <input type="file" id="attachments" name="attachments" class="form-control" multiple>
+                <label for="${uniqueId}">Upload Attachments</label>
+                <input type="file" id="${uniqueId}" name="attachments" class="form-control" multiple>
                 <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
             `;
             attachmentsContainer.appendChild(attachmentGroup);
-            attachmentGroup.querySelector('.remove-attachment-btn').addEventListener('click', () => {
-                attachmentsContainer.removeChild(attachmentGroup);
-            });
+            addRemoveButtonEventListeners('.remove-attachment-btn', '.attachment-group');
         });
 
         // Add contract
         document.getElementById('addContractBtn').addEventListener('click', () => {
             const contractsContainer = document.getElementById('contractsContainer');
+            const uniqueId = `contracts-${Date.now()}`;
             const contractGroup = document.createElement('div');
             contractGroup.className = 'form-group contract-group';
             contractGroup.innerHTML = `
-                <label for="contracts">Upload Contracts</label>
-                <input type="file" id="contracts" name="contracts" class="form-control" multiple>
+                <label for="${uniqueId}">Upload Contracts</label>
+                <input type="file" id="${uniqueId}" name="contracts" class="form-control" multiple>
                 <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
             `;
             contractsContainer.appendChild(contractGroup);
-            contractGroup.querySelector('.remove-contract-btn').addEventListener('click', () => {
-                contractsContainer.removeChild(contractGroup);
-            });
+            addRemoveButtonEventListeners('.remove-contract-btn', '.contract-group');
         });
 
         // Initial event listeners for existing remove buttons
-        document.querySelectorAll('.remove-attachment-btn').forEach(btn => {
-            btn.addEventListener('click', (event) => {
-                event.target.closest('.attachment-group').remove();
-            });
-        });
+        addRemoveButtonEventListeners('.remove-attachment-btn', '.attachment-group');
+        addRemoveButtonEventListeners('.remove-contract-btn', '.contract-group');
 
-        document.querySelectorAll('.remove-contract-btn').forEach(btn => {
-            btn.addEventListener('click', (event) => {
-                event.target.closest('.contract-group').remove();
-            });
-        });
-    </script>
-    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const scopeOfWorkTextarea = document.getElementById('scopeOfWork');
     
@@ -335,6 +333,27 @@
     
             // Trigger input event to adjust height on page load if there's pre-filled content
             scopeOfWorkTextarea.dispatchEvent(new Event('input'));
+        });
+
+        document.getElementById('quoteForm').addEventListener('submit', (event) => {
+            const fields = ['clientId', 'quoteTitle', 'scopeOfWork'];
+            let isValid = true;
+            
+            fields.forEach((field) => {
+                const input = document.getElementById(field);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault();
+                alert('Please fill in all required fields.');
+            }
         });
     </script>
 </body>

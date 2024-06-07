@@ -9,66 +9,273 @@
     <%- include('partials/_header.ejs') %>
     <div class="container mt-5">
         <h1>Edit Quote</h1>
-        <form id="editQuoteForm" method="POST">
+        <form id="quoteForm" method="POST" action="/quotes/<%= quote._id %>?_method=PUT" enctype="multipart/form-data">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <div class="mb-3">
-                <label for="clientId" class="form-label">Client ID</label>
-                <input type="text" class="form-control" id="clientId" name="clientId" value="<%= quote.clientId %>" readonly>
+            <input type="hidden" id="clientId" name="clientId" value="<%= quote.clientId._id %>">
+            <input type="hidden" id="clientName" name="clientName" value="<%= quote.clientName %>">
+            <input type="hidden" id="clientEmail" name="clientEmail" value="<%= quote.clientEmail %>">
+            <input type="hidden" id="clientPhone" name="clientPhone" value="<%= quote.clientPhone %>">
+            <input type="hidden" id="clientAddress" name="clientAddress" value="<%= quote.clientAddress %>">
+
+            <!-- Client Information Section -->
+            <div class="form-section">
+                <p><b>Client Name:</b> <%= quote.clientName %></p>
+                <p><b>Phone:</b> <%= quote.clientId.phoneNumber %></p>
+                <p><b>Email:</b> <%= quote.clientId.email %></p>
+                <p><b>Address:</b> <%= quote.clientId.streetAddress %>, <%= quote.clientId.city %>, <%= quote.clientId.state %> <%= quote.clientId.zip %></p>
             </div>
-            <div class="mb-3">
-                <label for="quoteId" class="form-label">Quote ID</label>
-                <input type="text" class="form-control" id="quoteId" name="quoteId" value="<%= quote.quoteId %>" readonly>
+
+            <!-- Quote Title Section -->
+            <div class="form-section">
+                <div class="section-title">Quote Title</div>
+                <div class="mb-3">
+                    <label for="quoteTitle" class="form-label">Quote Title</label>
+                    <input type="text" class="form-control" id="quoteTitle" name="title" value="<%= quote.title %>" required>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" value="<%= quote.title %>" required>
+
+            <!-- Scope of Work Section -->
+            <div class="form-section">
+                <div class="section-title">Scope of Work</div>
+                <div class="mb-3">
+                    <label for="scopeOfWork" class="form-label">Scope of Work</label>
+                    <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required><%= quote.scopeOfWork %></textarea>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="scopeOfWork" class="form-label">Scope of Work</label>
-                <textarea class="form-control" id="scopeOfWork" name="scopeOfWork" rows="3" required><%= quote.scopeOfWork %></textarea>
+
+            <hr>
+
+            <!-- Type of Service Section -->
+            <div class="form-section">
+                <div class="section-title">Type of Service</div>
+                <div class="mb-3">
+                    <label for="serviceType" class="form-label">Type of Service</label>
+                    <select class="form-select" id="serviceType" name="serviceType" required>
+                        <option value="Recurring" <%= quote.serviceType === 'Recurring' ? 'selected' : '' %>>Recurring</option>
+                        <option value="One-Time Deep Clean" <%= quote.serviceType === 'One-Time Deep Clean' ? 'selected' : '' %>>One-Time Deep Clean</option>
+                        <option value="Move In/Move Out" <%= quote.serviceType === 'Move In/Move Out' ? 'selected' : '' %>>Move In/Move Out</option>
+                    </select>
+                </div>
+                <div class="mb-3 <%= quote.serviceType === 'Recurring' ? '' : 'd-none' %>" id="frequencyDiv">
+                    <label for="frequency" class="form-label">Frequency</label>
+                    <select class="form-select" id="frequency" name="frequency">
+                        <option value="Weekly" <%= quote.frequency === 'Weekly' ? 'selected' : '' %>>Weekly</option>
+                        <option value="Bi-Weekly" <%= quote.frequency === 'Bi-Weekly' ? 'selected' : '' %>>Bi-Weekly</option>
+                        <option value="Monthly" <%= quote.frequency === 'Monthly' ? 'selected' : '' %>>Monthly</option>
+                    </select>
+                </div>
+                <div class="mb-3 <%= quote.serviceType === 'One-Time Deep Clean' ? '' : 'd-none' %>" id="initialCleaningDiv">
+                    <label>Initial Cleaning Options</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Walls" id="walls" name="initialCleaningOptions[]" <%= quote.initialCleaningOptions.includes('Walls') ? 'checked' : '' %>>
+                        <label class="form-check-label" for="walls">Walls</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Windows" id="windows" name="initialCleaningOptions[]" <%= quote.initialCleaningOptions.includes('Windows') ? 'checked' : '' %>>
+                        <label class="form-check-label" for="windows">Windows</label>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="status" class="form-label">Status</label>
-                <select class="form-select" id="status" name="status" required>
-                    <option value="sent" <%= quote.status === 'sent' ? 'selected' : '' %>>Sent</option>
-                    <option value="opened" <%= quote.status === 'opened' ? 'selected' : '' %>>Opened</option>
-                    <option value="clicked" <%= quote.status === 'clicked' ? 'selected' : '' %>>Clicked</option>
-                </select>
+
+            <!-- Line Items Section -->
+            <div class="form-section line-items-section">
+                <div class="section-title">Line Items</div>
+                <div id="lineItemsContainer">
+                    <% quote.serviceItems.forEach(function(serviceItem, index) { %>
+                        <div class="line-item mb-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="item<%= index %>" class="form-label">Item</label>
+                                    <input type="text" class="form-control itemSearch" id="item<%= index %>" name="serviceItems[<%= index %>][name]" value="<%= serviceItem.serviceItemId.name %>" required>
+                                    <div class="itemDropdown d-none"></div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="description<%= index %>" class="form-label">Description</label>
+                                    <input type="text" class="form-control description" id="description<%= index %>" name="serviceItems[<%= index %>][description]" value="<%= serviceItem.serviceItemId.description %>">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="quantity<%= index %>" class="form-label">Quantity</label>
+                                    <input type="number" class="form-control quantity" id="quantity<%= index %>" name="serviceItems[<%= index %>][quantity]" value="<%= serviceItem.quantity %>" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="rate<%= index %>" class="form-label">Rate</label>
+                                    <input type="number" class="form-control rate" id="rate<%= index %>" name="serviceItems[<%= index %>][rate]" value="<%= serviceItem.customPrice || serviceItem.serviceItemId.price %>" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="total<%= index %>" class="form-label">Total</label>
+                                    <input type="text" class="form-control total" id="total<%= index %>" name="serviceItems[<%= index %>][total]" value="<%= (serviceItem.quantity * (serviceItem.customPrice || serviceItem.serviceItemId.price)).toFixed(2) %>" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="addLineItemBtn">Add an item</button>
             </div>
-            <!-- Removed items input field as per user feedback -->
-            <button type="button" class="btn btn-primary" onclick="submitEditForm()">Update Quote</button>
+
+            <hr>
+
+            <!-- Attachments Section -->
+            <div class="form-section">
+                <div class="section-title">Attachments</div>
+                <div id="attachmentsContainer">
+                    <% quote.attachments.forEach(function(attachment, index) { %>
+                        <div class="form-group attachment-group">
+                            <label for="attachments<%= index %>">Upload Attachments</label>
+                            <input type="file" id="attachments<%= index %>" name="attachments[]" class="form-control" multiple>
+                            <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
+                        </div>
+                    <% }); %>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" id="addAttachmentBtn">Add Attachment</button>
+            </div>
+
+            <!-- Contracts Section -->
+            <div class="form-section">
+                <div class="section-title">Contracts</div>
+                <div id="contractsContainer">
+                    <% quote.contracts.forEach(function(contract, index) { %>
+                        <div class="form-group contract-group">
+                            <label for="contracts<%= index %>">Upload Contracts</label>
+                            <input type="file" id="contracts<%= index %>" name="contracts[]" class="form-control" multiple>
+                            <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
+                        </div>
+                    <% }); %>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" id="addContractBtn">Add Contract</button>
+            </div>
+
+            <!-- Subtotal, Tax Rate, and Total Section -->
+            <div class="form-section clearfix">
+                <div class="right-section">
+                    <div class="form-group">
+                        <label for="subtotal" class="form-label">Subtotal</label>
+                        <div id="subtotal">$<%= quote.subtotal.toFixed(2) %></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="taxRate" class="form-label">Tax Rate</label>
+                        <input type="number" class="form-control" id="taxRate" name="taxRate" value="<%= quote.taxRate %>" placeholder="Enter tax rate in percentage" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="total" class="form-label">Total</label>
+                        <div id="total">$<%= quote.total.toFixed(2) %></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Update Quote</button>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
     <%- include('partials/_footer.ejs') %>
-    <script src="/js/dynamicFormBehavior.js"></script>
+    <script src="/js/quoteFormSubmission.js"></script>
+    <script src="/js/dynamicServiceItemPopulation.js"></script>
     <script>
-        function submitEditForm() {
-            const quoteId = document.getElementById('quoteId').value;
-            const data = {
-                clientId: document.getElementById('clientId').value,
-                title: document.getElementById('title').value,
-                scopeOfWork: document.getElementById('scopeOfWork').value,
-                status: document.getElementById('status').value,
-                // Removed items from data payload as per user feedback
-            };
-            const csrfToken = document.querySelector('input[name="_csrf"]').value;
+        document.getElementById('calculateDistanceBtn').addEventListener('click', async () => {
+            const clientId = document.getElementById('clientId').value;
+            const userAddress = document.getElementById('userAddress').value;
+            const csrfToken = document.querySelector('input[name="_csrf"]').value; // Get CSRF token
 
-            axios.put('/quotes/' + quoteId, data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-Token': csrfToken
-                }
-            })
-                .then(function (response) {
-                    console.log('Quote updated successfully', response.data);
-                    window.location.href = '/dashboard';
-                })
-                .catch(function (error) {
-                    console.error('Error updating quote', error.response.data);
-                    console.error('Error trace:', error);
-                    alert('Failed to update quote. Please check the form for errors.');
+            try {
+                const response = await axios.post('/quotes/calculate-distance', { clientId, userAddress }, {
+                    headers: {
+                        'CSRF-Token': csrfToken // Ensure CSRF token is sent in the header for validation
+                    }
                 });
-        }
+                document.getElementById('distance').value = response.data.distance;
+            } catch (error) {
+                console.error('Error calculating distance:', error);
+            }
+        });
+
+        // Add attachment
+        document.getElementById('addAttachmentBtn').addEventListener('click', () => {
+            const attachmentsContainer = document.getElementById('attachmentsContainer');
+            const index = attachmentsContainer.children.length;
+            const attachmentGroup = document.createElement('div');
+            attachmentGroup.className = 'form-group attachment-group';
+            attachmentGroup.innerHTML = `
+                <label for="attachments${index}">Upload Attachments</label>
+                <input type="file" id="attachments${index}" name="attachments[]" class="form-control" multiple>
+                <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
+            `;
+            attachmentsContainer.appendChild(attachmentGroup);
+            attachmentGroup.querySelector('.remove-attachment-btn').addEventListener('click', () => {
+                attachmentsContainer.removeChild(attachmentGroup);
+            });
+        });
+
+        // Add contract
+        document.getElementById('addContractBtn').addEventListener('click', () => {
+            const contractsContainer = document.getElementById('contractsContainer');
+            const index = contractsContainer.children.length;
+            const contractGroup = document.createElement('div');
+            contractGroup.className = 'form-group contract-group';
+            contractGroup.innerHTML = `
+                <label for="contracts${index}">Upload Contracts</label>
+                <input type="file" id="contracts${index}" name="contracts[]" class="form-control" multiple>
+                <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
+            `;
+            contractsContainer.appendChild(contractGroup);
+            contractGroup.querySelector('.remove-contract-btn').addEventListener('click', () => {
+                contractsContainer.removeChild(contractGroup);
+            });
+        });
+
+        // Initial event listeners for existing remove buttons
+        document.querySelectorAll('.remove-attachment-btn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.target.closest('.attachment-group').remove();
+            });
+        });
+
+        document.querySelectorAll('.remove-contract-btn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.target.closest('.contract-group').remove();
+            });
+        });
+
+        document.getElementById('serviceType').addEventListener('change', function() {
+            const frequencyDiv = document.getElementById('frequencyDiv');
+            const initialCleaningDiv = document.getElementById('initialCleaningDiv');
+            if (this.value === 'Recurring') {
+                frequencyDiv.classList.remove('d-none');
+                initialCleaningDiv.classList.add('d-none');
+            } else if (this.value === 'One-Time Deep Clean') {
+                frequencyDiv.classList.add('d-none');
+                initialCleaningDiv.classList.remove('d-none');
+            } else {
+                frequencyDiv.classList.add('d-none');
+                initialCleaningDiv.classList.add('d-none');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const scopeOfWorkTextarea = document.getElementById('scopeOfWork');
+    
+            scopeOfWorkTextarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+    
+            // Trigger input event to adjust height on page load if there's pre-filled content
+            scopeOfWorkTextarea.dispatchEvent(new Event('input'));
+        });
+
+        document.getElementById('quoteForm').addEventListener('submit', function(event) {
+            const requiredFields = document.querySelectorAll('[required]');
+            let isValid = true;
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            if (!isValid) {
+                event.preventDefault(); // Prevent submit if invalid
+            }
+        });
     </script>
 </body>
 </html>

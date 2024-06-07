@@ -5,18 +5,51 @@ const { calculateQuotePrice } = require('../utils/pricingCalculator');
 const { calculateDistance } = require('../utils/distanceCalculator');
 const logger = require('../logger'); // Import the logger
 const { isAuthenticated } = require('../middleware/authMiddleware');
+const Joi = require('joi');
+
+const DEFAULT_TAX_RATE = 7.5;
+
+// Utility function for handling errors
+const handleError = (res, error, message, statusCode = 500) => {
+  logger.error(message, error);
+  res.status(statusCode).json({
+    success: false,
+    message,
+    error: error.message
+  });
+};
 
 const calculateSubtotal = (serviceItems) => {
   return serviceItems.reduce((sum, item) => sum + (item.customPrice || item.rate) * item.quantity, 0);
 };
 
+// Joi schema for quote validation
+const quoteSchema = Joi.object({
+  clientId: Joi.string().required(),
+  title: Joi.string().required(),
+  scopeOfWork: Joi.string().optional(),
+  serviceType: Joi.string().required(),
+  frequency: Joi.string().optional(),
+  initialCleaningOptions: Joi.array().optional(),
+  serviceItems: Joi.array().items(
+    Joi.object({
+      serviceItemId: Joi.string().required(),
+      quantity: Joi.number().required(),
+      customPrice: Joi.number().optional()
+    })
+  ).required(),
+  userAddress: Joi.string().required(),
+  taxRate: Joi.number().optional()
+});
+
 exports.createQuote = async (req, res) => {
   try {
-    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, taxRate } = req.body;
-
-    if (!Array.isArray(serviceItems) || serviceItems.length === 0) {
-      throw new Error('Invalid serviceItems data provided.');
+    const { error } = quoteSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ success: false, message: error.details[0].message });
     }
+
+    const { clientId, title, scopeOfWork, serviceType, frequency, initialCleaningOptions, serviceItems, userAddress, taxRate } = req.body;
 
     const client = await Client.findById(clientId);
     if (!client) {
@@ -37,7 +70,7 @@ exports.createQuote = async (req, res) => {
     }));
 
     const subtotal = calculateSubtotal(processedServiceItems);
-    const calculatedTaxRate = parseFloat(taxRate) || 7.5;
+    const calculatedTaxRate = parseFloat(taxRate) || DEFAULT_TAX_RATE;
     const total = subtotal + (subtotal * (calculatedTaxRate / 100));
 
     const newQuote = new Quote({
@@ -61,8 +94,7 @@ exports.createQuote = async (req, res) => {
     logger.info(`New quote created with ID: ${newQuote._id}`);
     res.status(201).json(newQuote);
   } catch (error) {
-    logger.error(`Error creating new quote: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to create quote', error: error.message });
+    handleError(res, error, 'Error creating new quote', 500);
   }
 };
 
@@ -70,10 +102,9 @@ exports.getQuotes = async (req, res) => {
   try {
     const quotes = await Quote.find().populate('clientId');
     logger.info(`Fetched ${quotes.length} quotes`);
-    res.status(200).json(quotes);
+    res.status(200).json({ success: true, data: quotes });
   } catch (error) {
-    logger.error(`Error fetching quotes: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to fetch quotes', error: error.message });
+    handleError(res, error, 'Error fetching quotes', 500);
   }
 };
 
@@ -83,14 +114,14 @@ exports.calculateDistance = async (req, res) => {
   try {
     const client = await Client.findById(clientId);
     if (!client) {
-      return res.status(404).json({ error: 'Client not found' });
+      return res.status(404).json({ message: 'Client not found' });
     }
 
     const clientAddress = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
     const distance = await calculateDistance(clientAddress, userAddress);
-    res.json({ distance });
+    res.status(200).json({ success: true, data: { distance } });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    handleError(res, error, 'Error calculating distance', 500);
   }
 };
 
@@ -106,15 +137,19 @@ exports.getQuoteById = async (req, res) => {
     }
 
     logger.info(`Fetched quote with ID: ${req.params.id}`);
-    res.render('quoteDetails', { quote });
+    res.status(200).json({ success: true, data: quote });
   } catch (error) {
-    logger.error(`Error fetching quote with ID ${req.params.id}: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to fetch quote', error: error.message });
+    handleError(res, error, `Error fetching quote with ID ${req.params.id}`, 500);
   }
 };
 
 exports.updateQuote = async (req, res) => {
   try {
+    const { error } = quoteSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ success: false, message: error.details[0].message });
+    }
+
     const { serviceType, frequency, initialCleaningOptions, serviceItems, pricingOption } = req.body;
     const processedServiceItems = await Promise.all(serviceItems.map(async (item) => {
       const serviceItem = await ServiceItem.findById(item.serviceItemId);
@@ -129,7 +164,7 @@ exports.updateQuote = async (req, res) => {
     }));
 
     const subtotal = calculateSubtotal(processedServiceItems);
-    const taxRate = parseFloat(req.body.taxRate) || 7.5; // Parse tax rate
+    const taxRate = parseFloat(req.body.taxRate) || DEFAULT_TAX_RATE;
     const total = subtotal + (subtotal * (taxRate / 100));
 
     const { totalPrice, breakdown } = await calculateQuotePrice({ serviceItems: processedServiceItems }, pricingOption);
@@ -151,10 +186,9 @@ exports.updateQuote = async (req, res) => {
       return res.status(404).json({ message: 'Quote not found' });
     }
     logger.info(`Updated quote with ID: ${req.params.id}`);
-    res.status(200).json(updatedQuote);
+    res.status(200).json({ success: true, message: 'Quote updated successfully', data: updatedQuote });
   } catch (error) {
-    logger.error(`Error updating quote with ID ${req.params.id}: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to update quote', error: error.message });
+    handleError(res, error, `Error updating quote with ID ${req.params.id}`, 500);
   }
 };
 
@@ -166,9 +200,8 @@ exports.deleteQuote = async (req, res) => {
       return res.status(404).json({ message: 'Quote not found' });
     }
     logger.info(`Deleted quote with ID: ${req.params.id}`);
-    res.status(200).json({ message: 'Quote deleted successfully' });
+    res.status(200).json({ success: true, message: 'Quote deleted successfully' });
   } catch (error) {
-    logger.error(`Error deleting quote with ID ${req.params.id}: ${error.message}`, error);
-    res.status(500).json({ message: 'Failed to delete quote', error: error.message });
+    handleError(res, error, `Error deleting quote with ID ${req.params.id}`, 500);
   }
 };

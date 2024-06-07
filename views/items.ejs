@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your cleaning tools service items efficiently.">
     <title>Cleaning Tools</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -9,25 +11,27 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Cleaning Tools</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="/quotes">Create Quote</a></li>
-            <li class="nav-item"><a class="nav-link" href="/clients">Clients</a></li>
-            <li class="nav-item"><a class="nav-link" href="/items">Items</a></li>
-            <li class="nav-item"><a class="nav-link" href="/settings">Settings</a></li>
-            <% if (session && session.userId) { %>
-            <li class="nav-item"><a class="nav-link" href="/auth/logout">Logout</a></li>
-            <% } else { %>
-            <li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
-            <% } %>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="/quotes">Create Quote</a></li>
+                <li class="nav-item"><a class="nav-link" href="/clients">Clients</a></li>
+                <li class="nav-item"><a class="nav-link" href="/items">Items</a></li>
+                <li class="nav-item"><a class="nav-link" href="/settings">Settings</a></li>
+                <% if (session && session.userId) { %>
+                <li class="nav-item"><a class="nav-link" href="/auth/logout">Logout</a></li>
+                <% } else { %>
+                <li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
+                <% } %>
+            </ul>
         </div>
-      </nav>
+    </nav>
+
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
 
     <div class="container mt-5">
         <h1>Manage Service Items</h1>
@@ -65,42 +69,45 @@
         <% } %>
     </div>
 
-    <footer class="footer fixed-bottom bg-light">
-        <div class="container text-center my-2">
-          <span>Copyright &copy; <%= 1900 + new Date().getYear() %> cleaning-tools</span>
-        </div>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <%- include('partials/_footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const deleteButtons = document.querySelectorAll('.delete-item-btn');
-            deleteButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const itemId = this.getAttribute('data-id');
-                    const row = this.closest('tr');
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceItemsTable = document.getElementById('serviceItemsTable');
+            const csrfToken = document.querySelector('input[name="_csrf"]').value;
+
+            serviceItemsTable.addEventListener('click', async (event) => {
+                if (event.target.classList.contains('delete-item-btn')) {
+                    const row = event.target.closest('tr');
+                    const itemId = event.target.getAttribute('data-id');
+
                     if (confirm('Are you sure you want to delete this item?')) {
-                        fetch(`/api/service-items/${itemId}`, {
-                            method: 'DELETE',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'CSRF-Token': document.querySelector('input[name="_csrf"]').value
-                            }
-                        })
-                        .then(response => response.json())
-                        .then(data => {
+                        try {
+                            const response = await fetch(`/api/service-items/${itemId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'CSRF-Token': csrfToken
+                                }
+                            });
+
+                            const data = await response.json();
+
                             if (data.success) {
                                 row.remove();
                                 alert('Service item deleted successfully.');
                             } else {
                                 alert('Error deleting service item: ' + data.error);
                             }
-                        })
-                        .catch(error => {
+                        } catch (error) {
                             console.error('Error deleting service item:', error);
                             alert('Error deleting service item.');
-                        });
+                        }
                     }
-                });
+                }
             });
         });
     </script>

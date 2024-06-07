@@ -8,11 +8,17 @@
 <body>
     <div class="container mt-5">
         <h2>Register</h2>
+        <% if (errorMessage) { %>
+        <div class="alert alert-danger"><%= errorMessage %></div>
+        <% } %>
+        <% if (successMessage) { %>
+        <div class="alert alert-success"><%= successMessage %></div>
+        <% } %>
         <form action="/auth/register" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+                <input type="text" pattern="[a-zA-Z0-9]+" class="form-control" id="username" name="username" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -28,7 +34,7 @@
             </div>
             <div class="mb-3">
                 <label for="phoneNumber" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                <input type="tel" pattern="[0-9]{10}" class="form-control" id="phoneNumber" name="phoneNumber" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -48,7 +54,7 @@
             </div>
             <div class="mb-3">
                 <label for="zipCode" class="form-label">Zip Code</label>
-                <input type="text" class="form-control" id="zipCode" name="zipCode" required>
+                <input type="text" pattern="[0-9]{5}" class="form-control" id="zipCode" name="zipCode" required>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>

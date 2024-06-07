@@ -1,40 +1,66 @@
 const ServiceItem = require('../models/serviceItem');
+const mongoose = require('mongoose');
+const { body, validationResult } = require('express-validator');
 
-// Create new ServiceItem
-exports.createServiceItem = async (req, res) => {
+// Utility function for handling errors
+const handleError = (res, error, message, statusCode = 500) => {
+  console.error(message, error);
+  res.status(statusCode).json({
+    success: false,
+    message,
+    error: error.message
+  });
+};
+
+// Middleware to validate ObjectId
+exports.validateObjectId = (req, res, next) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    return res.status(400).json({ success: false, error: 'Invalid ID' });
+  }
+  next();
+};
+
+// Middleware to get ServiceItem by ID
+exports.getServiceItemById = async (req, res, next) => {
   try {
-    console.log('Request body:', req.body); // Log the request body for debugging
-    const newServiceItem = await ServiceItem.create(req.body);
-    console.log(`Service item created: ${newServiceItem.name}`);
-    res.status(201).json({
-      success: true,
-      data: newServiceItem
-    });
+    const serviceItem = await ServiceItem.findById(req.params.id);
+    if (!serviceItem) {
+      return res.status(404).json({ success: false, error: 'ServiceItem not found' });
+    }
+    req.serviceItem = serviceItem; // Save in request object for further use
+    next(); // Pass to the next middleware/controller function
   } catch (error) {
-    console.error(`Error creating new item: ${error.message}`, error);
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
+    handleError(res, error, 'Error fetching service item by id');
   }
 };
 
+// Create new ServiceItem with validation
+exports.createServiceItem = [
+  body('name').not().isEmpty().withMessage('Name is required'),
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ success: false, errors: errors.array() });
+    }
+
+    try {
+      const newServiceItem = await ServiceItem.create(req.body);
+      console.log(`Service item created: ${newServiceItem.name}`);
+      res.status(201).json({ success: true, data: newServiceItem });
+    } catch (error) {
+      handleError(res, error, 'Error creating new service item', 400);
+    }
+  }
+];
 
 // Get all ServiceItems and return JSON
 exports.getAllServiceItems = async (req, res) => {
   try {
     const serviceItems = await ServiceItem.find();
     console.log(`Fetched all items, count: ${serviceItems.length}`);
-    res.status(200).json({
-      success: true,
-      data: serviceItems
-    });
+    res.status(200).json({ success: true, data: serviceItems });
   } catch (error) {
-    console.error(`Error fetching items: ${error.message}`, error);
-    res.status(500).json({
-      success: false,
-      error: 'Error fetching service items'
-    });
+    handleError(res, error, 'Error fetching service items');
   }
 };
 
@@ -50,20 +76,6 @@ exports.renderServiceItemsPage = async (req, res) => {
   }
 };
 
-// Utility function to get a single ServiceItem by id
-exports.getServiceItemById = async (id) => {
-  try {
-    const serviceItem = await ServiceItem.findById(id);
-    if (!serviceItem) {
-      throw new Error(`Item not found with id: ${id}`);
-    }
-    return serviceItem;
-  } catch (error) {
-    console.error(`Error fetching service item by id: ${error.message}`, error);
-    throw new Error(`Error fetching service item by id: ${error.message}`);
-  }
-};
-
 // Update a ServiceItem
 exports.updateServiceItem = async (req, res) => {
   try {
@@ -73,22 +85,12 @@ exports.updateServiceItem = async (req, res) => {
     });
     if (!serviceItem) {
       console.log(`Service item not found with id: ${req.params.id}`);
-      return res.status(404).json({
-        success: false,
-        error: 'ServiceItem not found'
-      });
+      return res.status(404).json({ success: false, error: 'ServiceItem not found' });
     }
     console.log(`Service item updated: ${serviceItem.name}`);
-    res.status(200).json({
-      success: true,
-      data: serviceItem
-    });
+    res.status(200).json({ success: true, data: serviceItem });
   } catch (error) {
-    console.error(`Error updating service item: ${error.message}`, error);
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
+    handleError(res, error, 'Error updating service item', 400);
   }
 };
 
@@ -98,21 +100,11 @@ exports.deleteServiceItem = async (req, res) => {
     const serviceItem = await ServiceItem.findByIdAndDelete(req.params.id);
     if (!serviceItem) {
       console.log(`Service item not found with id: ${req.params.id}`);
-      return res.status(404).json({
-        success: false,
-        error: 'ServiceItem not found'
-      });
+      return res.status(404).json({ success: false, error: 'ServiceItem not found' });
     }
     console.log(`Service item deleted: ${serviceItem.name}`);
-    res.status(200).json({
-      success: true,
-      message: 'Service item deleted successfully'
-    });
+    res.status(200).json({ success: true, message: 'Service item deleted successfully' });
   } catch (error) {
-    console.error(`Error deleting service item: ${error.message}`, error);
-    res.status(400).json({
-      success: false,
-      error: error.message
-    });
+    handleError(res, error, 'Error deleting service item', 400);
   }
 };
