@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Quote</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -18,6 +18,9 @@
             <input type="hidden" id="clientEmail" name="clientEmail">
             <input type="hidden" id="clientPhone" name="clientPhone">
             <input type="hidden" id="clientAddress" name="clientAddress">
+
+            <!-- Validation Errors -->
+            <div id="validationErrors" class="alert alert-danger d-none"></div>
 
             <!-- Select Client Section -->
             <div class="form-section">
@@ -258,103 +261,41 @@
     </div>
 
     <%- include('partials/_footer.ejs') %>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
     <script src="/js/quoteFormSubmission.js"></script>
+    <script src="/js/getDistance.js"></script>
+    <script src="/js/clientSearch.js"></script>
     <script src="/js/dynamicServiceItemPopulation.js"></script>
-    <script>
-        document.getElementById('calculateDistanceBtn').addEventListener('click', async () => {
-            const clientId = document.getElementById('clientId').value;
-            const userAddress = document.getElementById('userAddress').value;
-            const csrfToken = document.querySelector('input[name="_csrf"]').value; // Get CSRF token
+    <script src="/js/quoteAttachments.js"></script>
 
-            try {
-                const response = await axios.post('/quotes/calculate-distance', { clientId, userAddress }, {
-                    headers: {
-                        'CSRF-Token': csrfToken // Ensure CSRF token is sent in the header for validation
-                    }
-                });
-                document.getElementById('distance').value = response.data.distance;
-            } catch (error) {
-                console.error('Error calculating distance:', error);
-                alert('Failed to calculate distance. Please try again.');
-            }
-        });
-
-        function addRemoveButtonEventListeners(selector, containerSelector) {
-            document.querySelectorAll(selector).forEach(btn => {
-                btn.addEventListener('click', (event) => {
-                    event.target.closest(containerSelector).remove();
-                });
-            });
-        }
-
-        // Add attachment
-        document.getElementById('addAttachmentBtn').addEventListener('click', () => {
-            const attachmentsContainer = document.getElementById('attachmentsContainer');
-            const uniqueId = `attachments-${Date.now()}`;
-            const attachmentGroup = document.createElement('div');
-            attachmentGroup.className = 'form-group attachment-group';
-            attachmentGroup.innerHTML = `
-                <label for="${uniqueId}">Upload Attachments</label>
-                <input type="file" id="${uniqueId}" name="attachments" class="form-control" multiple>
-                <button type="button" class="btn btn-danger mt-2 remove-attachment-btn">Remove</button>
-            `;
-            attachmentsContainer.appendChild(attachmentGroup);
-            addRemoveButtonEventListeners('.remove-attachment-btn', '.attachment-group');
-        });
-
-        // Add contract
-        document.getElementById('addContractBtn').addEventListener('click', () => {
-            const contractsContainer = document.getElementById('contractsContainer');
-            const uniqueId = `contracts-${Date.now()}`;
-            const contractGroup = document.createElement('div');
-            contractGroup.className = 'form-group contract-group';
-            contractGroup.innerHTML = `
-                <label for="${uniqueId}">Upload Contracts</label>
-                <input type="file" id="${uniqueId}" name="contracts" class="form-control" multiple>
-                <button type="button" class="btn btn-danger mt-2 remove-contract-btn">Remove</button>
-            `;
-            contractsContainer.appendChild(contractGroup);
-            addRemoveButtonEventListeners('.remove-contract-btn', '.contract-group');
-        });
-
-        // Initial event listeners for existing remove buttons
-        addRemoveButtonEventListeners('.remove-attachment-btn', '.attachment-group');
-        addRemoveButtonEventListeners('.remove-contract-btn', '.contract-group');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const scopeOfWorkTextarea = document.getElementById('scopeOfWork');
-    
-            scopeOfWorkTextarea.addEventListener('input', function() {
-                this.style.height = 'auto';
-                this.style.height = (this.scrollHeight) + 'px';
-            });
-    
-            // Trigger input event to adjust height on page load if there's pre-filled content
-            scopeOfWorkTextarea.dispatchEvent(new Event('input'));
-        });
-
-        document.getElementById('quoteForm').addEventListener('submit', (event) => {
-            const fields = ['clientId', 'quoteTitle', 'scopeOfWork'];
-            let isValid = true;
-            
-            fields.forEach((field) => {
-                const input = document.getElementById(field);
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.classList.add('is-invalid');
-                } else {
-                    input.classList.remove('is-invalid');
-                    input.classList.add('is-valid');
-                }
-            });
-
-            if (!isValid) {
-                event.preventDefault();
-                alert('Please fill in all required fields.');
-            }
-        });
-    </script>
+    <!-- Add the template for dynamicServiceItemPopulation.js -->
+    <template id="itemTemplate">
+        <div class="form-group line-item">
+            <div class="form-group">
+                <label for="itemSearch">Item</label>
+                <input type="text" id="itemSearch" class="form-control itemSearch" placeholder="Search for item...">
+                <div class="itemDropdown d-none"></div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" class="form-control description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" class="form-control quantity" value="1" min="1">
+            </div>
+            <div class="form-group">
+                <label for="rate">Rate</label>
+                <input type="number" id="rate" class="form-control rate" value="0" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" id="total" class="form-control total" value="0" readonly>
+            </div>
+            <button type="button" class="btn btn-danger removeLineItemBtn">Remove</button>
+        </div>
+    </template>
 </body>
 </html>
+

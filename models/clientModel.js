@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 
+const noteSchema = new mongoose.Schema({
+  id: { type: String, required: true, unique: true },
+  text: { type: String, required: true }
+});
+
 const clientSchema = new mongoose.Schema({
   clientId: { type: String, required: true, unique: true },
   companyName: { type: String, required: false },
@@ -10,7 +15,7 @@ const clientSchema = new mongoose.Schema({
   city: { type: String, required: false },
   state: { type: String, required: false },
   zip: { type: String, required: false },
-  notes: { type: [String], default: [] } // Add notes field
+  notes: { type: [noteSchema], default: [] }
 });
 
 clientSchema.pre('save', function(next) {

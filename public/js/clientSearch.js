@@ -1,200 +1,212 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const clientSearchInput = document.getElementById('clientSearch');
-    const clientResults = document.getElementById('clientResults');
-    const clientIdInput = document.getElementById('clientId');
-    const clientNameInput = document.getElementById('clientName'); // Ensure clientName input is captured
-    const clientPreview = document.getElementById('clientPreview');
-    const clientNamePreview = document.getElementById('clientNamePreview');
-    const clientEmailPreview = document.getElementById('clientEmailPreview');
-    const clientPhonePreview = document.getElementById('clientPhonePreview');
-    const clientAddressPreview = document.getElementById('clientAddressPreview');
-    const removeClientBtn = document.getElementById('removeClientBtn');
-    const editClientBtn = document.getElementById('editClientBtn');
+    const elements = {
+        clientSearchInput: document.getElementById('clientSearch'),
+        clientResults: document.getElementById('clientResults'),
+        clientIdInput: document.getElementById('clientId'),
+        clientNameInput: document.getElementById('clientName'),
+        clientEmailInput: document.getElementById('clientEmail'),
+        clientPhoneInput: document.getElementById('clientPhone'),
+        clientAddressInput: document.getElementById('clientAddress'),
+        clientPreview: document.getElementById('clientPreview'),
+        clientNamePreview: document.getElementById('clientNamePreview'),
+        clientEmailPreview: document.getElementById('clientEmailPreview'),
+        clientPhonePreview: document.getElementById('clientPhonePreview'),
+        clientAddressPreview: document.getElementById('clientAddressPreview'),
+        removeClientBtn: document.getElementById('removeClientBtn'),
+        editClientBtn: document.getElementById('editClientBtn'),
+        createClientForm: document.getElementById('createClientForm'),
+        editClientForm: document.getElementById('editClientForm'),
+    };
 
-    if (clientSearchInput) {
-        clientSearchInput.addEventListener('input', async function() {
-            const query = clientSearchInput.value.trim();
-            if (query.length > 2) {
-                try {
-                    const response = await fetch(`/clients/search?query=${query}`, { cache: 'no-store' });
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    const clients = await response.json();
-                    clientResults.innerHTML = '';
-                    if (clients.length > 0) {
-                        clients.forEach(client => {
-                            const clientItem = document.createElement('a');
-                            clientItem.href = '#';
-                            clientItem.className = 'list-group-item list-group-item-action';
-                            clientItem.textContent = client.name;
-                            clientItem.addEventListener('click', function() {
-                                clientSearchInput.value = client.name;
-                                clientIdInput.value = client._id;
-                                clientNameInput.value = client.name; // Populate the hidden clientName field
-                                clientResults.innerHTML = '';
-                                clientNamePreview.textContent = client.name;
-                                clientEmailPreview.textContent = client.email;
-                                clientPhonePreview.textContent = client.phoneNumber;
-                                clientAddressPreview.textContent = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
-                                clientPreview.classList.remove('d-none');
-                            });
-                            clientResults.appendChild(clientItem);
-                        });
-                    } else {
-                        const noResults = document.createElement('div');
-                        noResults.className = 'list-group-item';
-                        noResults.textContent = 'No clients found. Would you like to ';
-                        const createLink = document.createElement('a');
-                        createLink.href = '#';
-                        createLink.textContent = 'create a new client?';
-                        createLink.addEventListener('click', function() {
-                            const createClientModal = new bootstrap.Modal(document.getElementById('createClientModal'));
-                            createClientModal.show();
-                        });
-                        noResults.appendChild(createLink);
-                        clientResults.appendChild(noResults);
-                    }
-                } catch (error) {
-                    console.error('Error fetching clients:', error);
-                    clientResults.innerHTML = '<div class="list-group-item">Error fetching clients. Please try again later.</div>';
-                }
-            } else {
-                clientResults.innerHTML = '';
-            }
-        });
+    async function fetchClients(query) {
+        try {
+            console.log(`Fetching clients with query: ${query}`);
+            const response = await fetch(`/clients/search?query=${query}`, { cache: 'no-store' });
+            console.log(`Response status: ${response.status}`);
+            if (!response.ok) throw new Error('Network response was not ok');
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching clients:', error);
+            return [];
+        }
     }
 
-    const createClientForm = document.getElementById('createClientForm');
-    if (createClientForm) {
-        createClientForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const formData = new FormData(createClientForm);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
+    function handleClientSearchInput() {
+        elements.clientSearchInput.addEventListener('input', async function() {
+            const query = elements.clientSearchInput.value.trim();
+            elements.clientResults.innerHTML = '';
 
-            try {
-                const response = await fetch('/clients', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'CSRF-Token': data._csrf
-                    },
-                    body: JSON.stringify(data)
+            if (query.length <= 2) return;
+
+            const clients = await fetchClients(query);
+            if (clients.success && clients.data.length > 0) {
+                clients.data.forEach(client => {
+                    const clientItem = createClientListItem(client);
+                    elements.clientResults.appendChild(clientItem);
                 });
-                if (!response.ok) throw new Error('Network response was not ok');
-                const newClient = await response.json();
-                if (newClient.success) {
-                    clientSearchInput.value = newClient.data.name;
-                    clientIdInput.value = newClient.data._id;
-                    clientNameInput.value = newClient.data.name; // Populate the hidden clientName field
-                    clientNamePreview.textContent = newClient.data.name;
-                    clientEmailPreview.textContent = newClient.data.email;
-                    clientPhonePreview.textContent = newClient.data.phoneNumber;
-                    clientAddressPreview.textContent = `${newClient.data.streetAddress}, ${newClient.data.city}, ${newClient.data.state}, ${newClient.data.zip}`;
-                    clientResults.innerHTML = '';
-                    clientPreview.classList.remove('d-none');
-                    const createClientModal = bootstrap.Modal.getInstance(document.getElementById('createClientModal'));
-                    createClientModal.hide();
-                } else {
-                    console.error('Failed to create client:', newClient.error);
-                    alert('Failed to create client. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error creating client:', error);
-                alert('Error creating client. Please try again.');
+            } else {
+                displayNoResultsMessage();
             }
         });
     }
 
-    if (removeClientBtn) {
-        removeClientBtn.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (confirm('Are you sure you want to remove this client from the quote?')) {
-                clientIdInput.value = '';
-                clientNameInput.value = ''; // Clear the hidden clientName field
-                clientSearchInput.value = '';
-                clientNamePreview.textContent = '';
-                clientEmailPreview.textContent = '';
-                clientPhonePreview.textContent = '';
-                clientAddressPreview.textContent = '';
-                clientPreview.classList.add('d-none');
+    function createClientListItem(client) {
+        const clientItem = document.createElement('a');
+        clientItem.href = '#';
+        clientItem.className = 'list-group-item list-group-item-action';
+        clientItem.textContent = client.name;
+        clientItem.dataset.client = JSON.stringify(client);
+        return clientItem;
+    }
+
+    function displayNoResultsMessage() {
+        const noResults = document.createElement('div');
+        noResults.className = 'list-group-item';
+        noResults.textContent = 'No clients found. Would you like to ';
+
+        const createLink = document.createElement('a');
+        createLink.href = '#';
+        createLink.textContent = 'create a new client?';
+        createLink.addEventListener('click', function() {
+            const createClientModal = new bootstrap.Modal(document.getElementById('createClientModal'));
+            createClientModal.show();
+        });
+
+        noResults.appendChild(createLink);
+        elements.clientResults.appendChild(noResults);
+    }
+
+    function handleClientResultsClick() {
+        elements.clientResults.addEventListener('click', function(event) {
+            if (event.target && event.target.matches('a.list-group-item-action')) {
+                event.preventDefault();
+                const client = JSON.parse(event.target.dataset.client);
+                populateClientDetails(client);
             }
         });
     }
 
-    if (editClientBtn) {
-        editClientBtn.addEventListener('click', async function(event) {
-            event.preventDefault();
-            const clientId = clientIdInput.value;
-            if (clientId) {
-                try {
-                    const response = await fetch(`/clients/${clientId}`, { cache: 'no-store' });
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    const client = await response.json();
-
-                    // Fill the edit form with client data
-                    document.getElementById('editClientId').value = client._id;
-                    document.getElementById('editClientName').value = client.name;
-                    document.getElementById('editClientEmail').value = client.email;
-                    document.getElementById('editClientPhoneNumber').value = client.phoneNumber;
-                    document.getElementById('editClientStreetAddress').value = client.streetAddress;
-                    document.getElementById('editClientCity').value = client.city;
-                    document.getElementById('editClientState').value = client.state;
-                    document.getElementById('editClientZip').value = client.zip;
-
-                    // Show the edit client modal
-                    const editClientModal = new bootstrap.Modal(document.getElementById('editClientModal'));
-                    editClientModal.show();
-                } catch (error) {
-                    console.error('Error fetching client for edit:', error);
-                    alert('Error fetching client data. Please try again.');
-                }
-            }
-        });
+    function populateClientDetails(client) {
+        elements.clientSearchInput.value = client.name;
+        elements.clientIdInput.value = client._id;
+        elements.clientNameInput.value = client.name;
+        elements.clientEmailInput.value = client.email;
+        elements.clientPhoneInput.value = client.phoneNumber;
+        elements.clientAddressInput.value = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
+        elements.clientNamePreview.textContent = client.name;
+        elements.clientEmailPreview.textContent = client.email;
+        elements.clientPhonePreview.textContent = client.phoneNumber;
+        elements.clientAddressPreview.textContent = `${client.streetAddress}, ${client.city}, ${client.state}, ${client.zip}`;
+        elements.clientPreview.classList.remove('d-none');
+        elements.clientResults.innerHTML = '';
     }
 
-    const editClientForm = document.getElementById('editClientForm');
-    if (editClientForm) {
-        editClientForm.addEventListener('submit', async function(event) {
+    function handleClientFormSubmit(form, successCallback) {
+        form.addEventListener('submit', async function(event) {
             event.preventDefault();
-            const formData = new FormData(editClientForm);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            // Format the phone number correctly
+            if (data.phoneNumber) {
+                data.phoneNumber = data.phoneNumber.replace(/\D/g, '');
+            }
+
+            // Remove clientId and _csrf from the data
+            delete data.clientId;
+            delete data._csrf;
 
             try {
-                const response = await fetch(`/clients/${data.clientId}`, {
+                const response = await fetch(`/clients/${elements.clientIdInput.value}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        'CSRF-Token': data._csrf
+                        'CSRF-Token': formData.get('_csrf')
                     },
                     body: JSON.stringify(data)
                 });
                 if (!response.ok) throw new Error('Network response was not ok');
-                const updatedClient = await response.json();
-                if (updatedClient.success) {
-                    clientSearchInput.value = updatedClient.data.name;
-                    clientIdInput.value = updatedClient.data._id;
-                    clientNameInput.value = updatedClient.data.name; // Populate the hidden clientName field
-                    clientNamePreview.textContent = updatedClient.data.name;
-                    clientEmailPreview.textContent = updatedClient.data.email;
-                    clientPhonePreview.textContent = updatedClient.data.phoneNumber;
-                    clientAddressPreview.textContent = `${updatedClient.data.streetAddress}, ${updatedClient.data.city}, ${updatedClient.data.state}, ${updatedClient.data.zip}`;
-                    clientResults.innerHTML = '';
-                    clientPreview.classList.remove('d-none');
-                    const editClientModal = bootstrap.Modal.getInstance(document.getElementById('editClientModal'));
-                    editClientModal.hide();
+
+                const result = await response.json();
+                if (result.success) {
+                    successCallback(result.data);
                 } else {
-                    console.error('Failed to update client:', updatedClient.error);
-                    alert('Failed to update client. Please try again.');
+                    console.error(`Failed to update client:`, result.error);
+                    alert(`Failed to update client. Please try again.`);
                 }
             } catch (error) {
-                console.error('Error updating client:', error);
-                alert('Error updating client. Please try again.');
+                console.error(error);
+                alert(`Error updating client. Please try again.`);
             }
         });
     }
+
+    function handleClientCreationSuccess(newClient) {
+        populateClientDetails(newClient);
+        const createClientModal = bootstrap.Modal.getInstance(document.getElementById('createClientModal'));
+        createClientModal.hide();
+    }
+
+    function handleClientUpdateSuccess(updatedClient) {
+        populateClientDetails(updatedClient);
+        const editClientModal = bootstrap.Modal.getInstance(document.getElementById('editClientModal'));
+        editClientModal.hide();
+    }
+
+    function handleRemoveClientButton() {
+        elements.removeClientBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm('Are you sure you want to remove this client from the quote?')) {
+                resetClientDetails();
+            }
+        });
+    }
+
+    function resetClientDetails() {
+        const inputs = [elements.clientIdInput, elements.clientNameInput, elements.clientEmailInput, elements.clientPhoneInput, elements.clientAddressInput, elements.clientSearchInput];
+        inputs.forEach(input => input.value = '');
+        const previews = [elements.clientNamePreview, elements.clientEmailPreview, elements.clientPhonePreview, elements.clientAddressPreview];
+        previews.forEach(preview => preview.textContent = '');
+        elements.clientPreview.classList.add('d-none');
+    }
+
+    function handleEditClientButton() {
+        elements.editClientBtn.addEventListener('click', async function(event) {
+            event.preventDefault();
+            const clientId = elements.clientIdInput.value;
+            if (!clientId) return alert('No client selected for editing.');
+
+            try {
+                const response = await fetch(`/clients/${clientId}`, { cache: 'no-store' });
+                if (!response.ok) throw new Error('Network response was not ok');
+
+                const client = await response.json();
+                populateEditClientForm(client.data);
+            } catch (error) {
+                console.error('Error fetching client for edit:', error);
+                alert('Error fetching client data. Please try again.');
+            }
+        });
+    }
+
+    function populateEditClientForm(client) {
+        document.getElementById('editClientId').value = client._id;
+        document.getElementById('editClientName').value = client.name;
+        document.getElementById('editClientEmail').value = client.email;
+        document.getElementById('editClientPhoneNumber').value = client.phoneNumber;
+        document.getElementById('editClientStreetAddress').value = client.streetAddress;
+        document.getElementById('editClientCity').value = client.city;
+        document.getElementById('editClientState').value = client.state;
+        document.getElementById('editClientZip').value = client.zip;
+
+        const editClientModal = new bootstrap.Modal(document.getElementById('editClientModal'));
+        editClientModal.show();
+    }
+
+    handleClientSearchInput();
+    handleClientResultsClick();
+    handleClientFormSubmit(elements.createClientForm, handleClientCreationSuccess);
+    handleClientFormSubmit(elements.editClientForm, handleClientUpdateSuccess);
+    handleRemoveClientButton();
+    handleEditClientButton();
 });

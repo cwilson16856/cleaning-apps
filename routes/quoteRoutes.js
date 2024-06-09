@@ -1,4 +1,3 @@
-// routes/quotes.js
 const express = require('express');
 const router = express.Router();
 const Quote = require('../models/quoteModel');
@@ -43,6 +42,10 @@ const storage = multer.diskStorage({
 // Initialize multer with storage configuration
 const upload = multer({ storage: storage });
 
+// Correct path for client routes
+const clientRoutes = require('../routes/clientRoutes');
+router.use('/clients', clientRoutes);
+
 // Function to calculate the subtotal
 const calculateSubtotal = (serviceItems) => {
   return serviceItems.reduce((sum, item) => sum + (item.customPrice || item.rate) * item.quantity, 0);
@@ -71,15 +74,17 @@ const processQuote = async (req, res) => {
   const calculatedTaxRate = parseFloat(taxRate) || 7.5;
   const total = subtotal + (subtotal * (calculatedTaxRate / 100));
 
-  const attachments = (req.files['attachments'] || []).map(file => ({
+  // Check and handle attachments
+  const attachments = req.files && req.files['attachments'] ? req.files['attachments'].map(file => ({
     savedFilename: file.filename,
     originalFilename: file.originalname
-  }));
+  })) : [];
 
-  const contracts = (req.files['contracts'] || []).map(file => ({
+  // Check and handle contracts
+  const contracts = req.files && req.files['contracts'] ? req.files['contracts'].map(file => ({
     savedFilename: file.filename,
     originalFilename: file.originalname
-  }));
+  })) : [];
 
   return new Quote({
     clientId,

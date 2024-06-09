@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 const { v4: uuidv4 } = require('uuid'); // for generating unique quote IDs
 
 const itemSchema = new mongoose.Schema({
-  description: String,
-  quantity: Number,
-  price: Number,
-  isService: Boolean, // true for service, false for product
+  description: { type: String, required: true },
+  quantity: { type: Number, required: true, min: 1 },
+  price: { type: Number, required: true, min: 0 },
+  isService: { type: Boolean, required: true }, // true for service, false for product
 }, { _id: false }); // Prevents Mongoose from creating an _id for sub-documents
 
 // New Schema for Service Items in a Quote
 const serviceItemSchema = new mongoose.Schema({
   serviceItemId: { type: mongoose.Schema.Types.ObjectId, ref: 'ServiceItem', required: true },
-  quantity: { type: Number, required: true },
-  customPrice: Number, // optional, if the user wants to override the price
+  quantity: { type: Number, required: true, min: 1 },
+  customPrice: { type: Number, min: 0 }, // optional, if the user wants to override the price
 }, { _id: false }); // Prevents Mongoose from creating an _id for sub-documents
 
 const attachmentSchema = new mongoose.Schema({
@@ -51,11 +51,11 @@ const quoteSchema = new mongoose.Schema({
   subtotal: { type: Number, default: 0 },
   taxRate: { type: Number, default: 7.5 },
   total: { type: Number, default: 0 },
-  totalPrice: Number,
+  totalPrice: { type: Number, default: 0, min: 0 },
   priceBreakdown: mongoose.Schema.Types.Mixed
 });
 
-quoteSchema.pre('save', async function(next) {
+quoteSchema.pre('save', async function (next) {
   try {
     console.log(`Saving quote with ID: ${this.quoteId}`);
     next();
@@ -65,7 +65,7 @@ quoteSchema.pre('save', async function(next) {
   }
 });
 
-quoteSchema.post('save', async function(doc, next) {
+quoteSchema.post('save', async function (doc, next) {
   try {
     console.log(`Quote ${doc.quoteId} saved to database`);
     next();

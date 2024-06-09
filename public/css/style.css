@@ -12,13 +12,13 @@
   }
 }
 
-/* Ensure the form and button are comfortably viewable without overlapping on smaller screens
+/* Ensure the form and button are comfortably viewable without overlapping on smaller screens */
 @media (max-width: 767px) {
   .btn-primary {
     width: 100%;
     margin-top: 20px;
   }
-} */
+}
 
 /* Style the line items section */
 .line-items-section {
@@ -30,7 +30,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
-  position: relative; /* Add relative positioning to line-item */
+  position: relative;
 }
 
 .line-item .form-group {
@@ -45,22 +45,35 @@
 .line-item .btn {
   margin-left: auto;
   align-self: center;
-  margin-top: 25px;
+  margin-top: 0;
+}
+
+/* Specific styles for the Edit and Delete buttons */
+.line-item .btn-edit,
+.line-item .btn-delete {
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+/* If they need to be displayed one after the other inline */
+.line-item .btn-wrapper {
+  display: flex;
+  gap: 10px;
 }
 
 .itemDropdown {
   position: absolute;
   background-color: white;
   z-index: 1000;
-  width: calc(100% - 20px); /* Adjust width to fit within the parent container */
+  width: calc(100% - 20px);
   max-height: 200px;
   overflow-y: auto;
-  margin-top: 2px; /* Add a small margin to avoid the grey line issue */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visibility */
+  margin-top: 2px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-item {
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -169,10 +182,10 @@
 .button-group .btn {
   padding: 10px;
   border-radius: 5px;
-  width: 100px; /* Set a fixed width for the buttons */
-  height: 40px; /* Set a fixed height for the buttons */
-  text-align: center; /* Ensure the text is centered */
-  font-size: 16px; /* Ensure font size is consistent */
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +206,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 40px; /* Add space between the content and the footer */
+  margin-bottom: 40px;
 }
 
 .pricing-details {
@@ -217,8 +230,8 @@ html, body {
 }
 
 .container {
-  min-height: calc(100vh - 60px); /* Adjust the height calculation as needed */
-  padding-bottom: 20px; /* Space for the footer */
+  min-height: calc(100vh - 60px);
+  padding-bottom: 20px;
 }
 
 .footer {
@@ -234,6 +247,36 @@ html, body {
 .card {
   margin-bottom: 20px;
 }
+
 textarea {
+  overflow: hidden;
   resize: vertical;
+  min-height: 50px;
+}
+
+/* Alignment for buttons in client profile */
+#editClientBtn, #deleteClientBtn {
+  margin-top: 10px;
+}
+
+/* Custom alignment for notes and buttons */
+/* Styles for note actions */
+.note-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.note-actions .btn {
+  margin: 0 2px;
+}
+
+.cancel-edit {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Ensure accessibility */
+button:focus, input[type="text"]:focus, textarea:focus {
+  outline-color: #007bff;
+  outline-width: 2px;
 }

@@ -88,9 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 descriptionInput.value = item.description || ''; // Set description if available
                 const itemIdInput = document.createElement('input'); // Create hidden input for serviceItemId
                 itemIdInput.type = 'hidden';
-                itemIdInput.name = 'serviceItemIds[]';
+                itemIdInput.name = 'serviceItemIds';
                 itemIdInput.value = item._id;
                 inputElement.closest('.line-item').appendChild(itemIdInput);
+
+                const itemNameInput = document.createElement('input'); // Create hidden input for serviceItemName
+                itemNameInput.type = 'hidden';
+                itemNameInput.name = 'serviceItemNames';
+                itemNameInput.value = item.name;
+                inputElement.closest('.line-item').appendChild(itemNameInput);
+
                 updatePricing();
                 hideDropdown(dropdown); // Hide the dropdown after selection
             });
@@ -131,22 +138,51 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
-        data.serviceItems = [];
-        let formValid = true;
 
+        // Manually construct the data object including serviceItems array
+        const data = {
+            _csrf: formData.get('_csrf'),
+            clientAddress: formData.get('clientAddress'),
+            clientEmail: formData.get('clientEmail'),
+            clientId: formData.get('clientId'),
+            clientName: formData.get('clientName'),
+            clientPhone: formData.get('clientPhone'),
+            clientSearch: formData.get('clientSearch'),
+            distance: formData.get('distance'),
+            frequency: formData.get('frequency'),
+            scopeOfWork: formData.get('scopeOfWork'),
+            serviceType: formData.get('serviceType'),
+            taxRate: formData.get('taxRate'),
+            title: formData.get('title'),
+            userAddress: formData.get('userAddress'),
+            attachments: [],
+            contracts: [],
+            serviceItems: []
+        };
+
+        // Handle file attachments
+        for (let file of formData.getAll('attachments')) {
+            data.attachments.push(file);
+        }
+        for (let file of formData.getAll('contracts')) {
+            data.contracts.push(file);
+        }
+
+        let formValid = true;
         document.querySelectorAll('.line-item').forEach(lineItem => {
             const itemSearch = lineItem.querySelector('.itemSearch').value.trim();
             const description = lineItem.querySelector('.description').value.trim();
             const quantity = parseFloat(lineItem.querySelector('.quantity').value) || 0;
             const rate = parseFloat(lineItem.querySelector('.rate').value) || 0;
-            const serviceItemId = lineItem.querySelector('input[name="serviceItemIds[]"]')?.value;
-            if (itemSearch && quantity && rate && serviceItemId) {
+            const serviceItemId = lineItem.querySelector('input[name="serviceItemIds"]')?.value;
+            const serviceItemName = lineItem.querySelector('input[name="serviceItemNames"]')?.value;
+            if (itemSearch && quantity && rate && serviceItemId && serviceItemName) {
                 data.serviceItems.push({
                     serviceItemId: serviceItemId,
+                    serviceItemName: serviceItemName,
                     description: description,
                     quantity: quantity,
-                    rate: rate
+                    customPrice: rate // Send rate as customPrice
                 });
             } else {
                 formValid = false;
@@ -192,10 +228,10 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(response) {
             console.log('Quote created successfully', response.data);
-            window.location.href = '/dashboard'; // Redirect to dashboard after successful creation
+            window.location.href = '/quotes'; // Redirect to dashboard after successful creation
         })
         .catch(function(error) {
-            console.error('Error creating quote', error.response.data, error.message, error.stack);
+            console.error('Error creating quote', error.response ? error.response.data : error.message);
             validationErrorsElement.innerHTML = 'Failed to create quote. Please try again.';
             validationErrorsElement.classList.remove('d-none');
         });
@@ -204,4 +240,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial line item row
     addLineItemRow();
 });
-

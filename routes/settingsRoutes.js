@@ -37,6 +37,27 @@ const upload = multer({
   fileFilter: fileFilter
 });
 
+// Fetch user helper function
+async function fetchUserById(req, res, next) {
+  try {
+    const userId = req.session.userId;
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+    req.user = user;
+    next();
+  } catch (error) {
+    logger.error(`Error fetching user information: ${error.message}`, {
+      method: req.method,
+      path: req.originalUrl,
+      sessionId: req.sessionID,
+      timestamp: new Date().toISOString()
+    });
+    res.status(500).json({ success: false, message: 'Error fetching user information.', error: error.message });
+  }
+}
+
 // POST route to handle password change
 router.post('/change-password', isAuthenticated, csrfProtection, async (req, res) => {
   const { currentPassword, newPassword, confirmNewPassword } = req.body;
@@ -84,35 +105,51 @@ router.post('/change-password', isAuthenticated, csrfProtection, async (req, res
   }
 });
 
-// GET settings page with authentication and CSRF protection
-router.get('/', isAuthenticated, csrfProtection, async (req, res) => {
+// GET user information route
+router.get('/user-info', isAuthenticated, async (req, res) => {
+  console.log('GET /settings/user-info route hit');
   try {
     const userId = req.session.userId;
     const user = await User.findById(userId);
 
     if (!user) {
-      return res.status(404).send('User not found');
+      console.log('User not found');
+      return res.status(404).json({ success: false, message: 'User not found' });
     }
 
-    res.render('settings', {
-      pageTitle: 'Settings',
-      csrfToken: req.csrfToken(),
-      user: user // Pass the user object to the template
-    });
+    res.json({ success: true, data: user });
   } catch (error) {
+    console.log(`Error fetching user information: ${error.message}`);
     logger.error(`Error fetching user information: ${error.message}`, {
       error: error,
       method: "GET",
-      path: "/settings",
+      path: "/settings/user-info",
       sessionId: req.sessionID,
       timestamp: new Date().toISOString()
     });
-    res.status(500).send('Error fetching user information.');
+    res.status(500).json({ success: false, message: 'Error fetching user information.', error: error.message });
   }
 });
 
-// POST route to handle form submission from the 'User Information' tab with CSRF protection
-router.post('/', isAuthenticated, csrfProtection, upload.single('businessLogo'), async (req, res) => {
+// GET settings page with authentication and CSRF protection
+router.get('/', isAuthenticated, csrfProtection, fetchUserById, (req, res) => {
+  res.render('settings', {
+    pageTitle: 'Settings',
+    csrfToken: req.csrfToken(),
+    user: req.user // Pass the user object to the template
+  });
+});
+
+router.post('/', isAuthenticated, csrfProtection, (req, res, next) => {
+  upload.single('businessLogo')(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
+      return res.status(400).json({ success: false, message: err.message });
+    } else if (err) {
+      return res.status(400).json({ success: false, message: err.message });
+    }
+    next();
+  });
+}, async (req, res) => {
   const { businessName, name, phoneNumber, email, streetAddress, city, state, zipCode, websiteURL, socialMediaLinks } = req.body;
   let hoursOfOperation = {};
   ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].forEach(day => {

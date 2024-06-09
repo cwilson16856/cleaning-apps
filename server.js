@@ -33,18 +33,19 @@ global.__basedir = __dirname;
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
+app.use(helmet.contentSecurityPolicy({
+  directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", 'https://cdn.jsdelivr.net'],
-      styleSrc: ["'self'", 'https://cdn.jsdelivr.net'],
-      imgSrc: ["'self'", 'data:'],
+      scriptSrc: [
+          "'self'",
+          "https://cdn.jsdelivr.net/npm/",
+          "'sha256-uuT0gw8AjGQ1a0zOLhAITttdWBpevKGZsPKs99imGAk='",
+          "'sha256-hqxns29lJA0fychNqXTmuwMc7Gy3RIuHNwFz/yCmBoA='",
+          (req, res) => `'nonce-${res.locals.nonce}'`
+      ],
+      styleSrc: ["'self'", "https://cdn.jsdelivr.net/npm/"],
+      imgSrc: ["'self'", "data:"],
       connectSrc: ["'self'"],
-      fontSrc: ["'self'", 'https://cdn.jsdelivr.net'],
-      objectSrc: ["'none'"],
-      upgradeInsecureRequests: []
-    }
   }
 }));
 

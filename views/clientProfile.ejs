@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Title -->
-  <title><%= pageTitle || 'Cleaning Tools' %></title>
-
-  <!-- Performance and Security Enhancements -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-..." crossorigin="anonymous">
+  <meta name="description" content="Client Profile for Cleaning Tools including quotes and notes.">
+  <title>Client Profile - Cleaning Tools</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/clientProfile.js" defer></script>
+  <meta name="_csrf" content="<%= csrfToken %>">
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Cleaning Tools</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -67,8 +63,10 @@
               <strong>Email:</strong> <%= client.email %><br>
               <strong>Address:</strong> <%= client.streetAddress %>, <%= client.city %>, <%= client.state %>, <%= client.zip %>
             </p>
-            <button id="editClientBtn" class="btn btn-primary">Edit</button>
-            <button id="deleteClientBtn" class="btn btn-danger">Delete</button>
+            <div class="d-flex">
+              <button id="editClientBtn" class="btn btn-primary me-2">Edit</button>
+              <button id="deleteClientBtn" class="btn btn-danger">Delete</button>
+            </div>
           </div>
         </div>
       </div>
@@ -98,7 +96,16 @@
       <ul id="notesList" class="list-group mb-3">
         <% if (client.notes.length) { %>
           <% client.notes.forEach(note => { %>
-            <li class="list-group-item"><%= note %></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" id="note-item-<%= note.id %>">
+              <span id="note-<%= note.id %>" style="white-space: pre-wrap;"><%= note.text %></span>
+              <textarea id="edit-note-<%= note.id %>" class="form-control d-none"><%= note.text %></textarea>
+              <div class="note-actions">
+                <button class="btn btn-sm btn-primary edit-note" data-note-id="<%= note.id %>">Edit</button>
+                <button class="btn btn-sm btn-success save-note d-none" data-note-id="<%= note.id %>">Save</button>
+                <button class="btn btn-sm btn-danger delete-note" data-note-id="<%= note.id %>">Delete</button>
+                <button class="btn btn-sm btn-secondary cancel-edit d-none" data-note-id="<%= note.id %>">Cancel</button>
+              </div>
+            </li>
           <% }) %>
         <% } else { %>
           <li class="list-group-item">No notes available.</li>
@@ -115,7 +122,5 @@
       <small>&copy; <%= new Date().getFullYear() %> cleaning-tools</small>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/clientProfile.js"></script>
 </body>
 </html>

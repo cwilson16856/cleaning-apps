@@ -12,7 +12,7 @@ router.get('/', isAuthenticated, csrfProtection, renderServiceItemsPage);
 
 // GET route to render the create item page
 router.get('/new', isAuthenticated, csrfProtection, (req, res) => {
-  res.render('createItem', { pageTitle: 'Create New Item '}, { csrfToken: req.csrfToken() });
+  res.render('createItem', { pageTitle: 'Create New Item', csrfToken: req.csrfToken() }); // Combined object
 });
 
 // POST route to create a new service item
@@ -29,7 +29,7 @@ router.post('/', isAuthenticated, csrfProtection, async (req, res) => {
 router.get('/:id/edit', isAuthenticated, csrfProtection, async (req, res) => {
   try {
     const item = await getServiceItemById(req.params.id);
-    res.render('editItem', { pageTitle: 'Edit Item' }, { item, csrfToken: req.csrfToken() });
+    res.render('editItem', { pageTitle: 'Edit Item', item, csrfToken: req.csrfToken() }); // Combined object
   } catch (error) {
     console.error(`Error fetching service item for editing: ${error.message}`, error);
     res.status(500).send('Error fetching service item for editing');
@@ -46,20 +46,20 @@ router.put('/:id', isAuthenticated, csrfProtection, async (req, res) => {
   }
 });
 
-// Delete a ServiceItem
-exports.deleteServiceItem = async (req, res) => {
+// DELETE route to delete a service item by ID
+router.delete('/:id', isAuthenticated, csrfProtection, async (req, res) => { // Added delete route
   try {
-    const serviceItem = await ServiceItem.findByIdAndDelete(req.params.id);
+    const serviceItem = await deleteServiceItem(req, res);
     if (!serviceItem) {
       console.log(`Service item not found with id: ${req.params.id}`);
-      return res.status(404).render('error', { message: 'ServiceItem not found' }); // Render an error page
+      return res.status(404).render('error', { message: 'ServiceItem not found' });
     }
     console.log(`Service item deleted: ${serviceItem.name}`);
-    res.redirect('/items'); // Redirect back to the items page after deletion
+    res.redirect('/items');
   } catch (error) {
     console.error(`Error deleting service item: ${error.message}`, error);
-    res.status(400).render('error', { message: error.message }); // Render an error page
+    res.status(400).render('error', { message: error.message });
   }
-};
+});
 
 module.exports = router;

@@ -354,3 +354,1040 @@
 {"level":"info","message":"Session accessed again at: 2024-06-07T01:12:49.849Z, Views: 152, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:12:49"}
 {"level":"info","message":"Session accessed again at: 2024-06-07T01:12:51.197Z, Views: 153, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:12:51"}
 {"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-06 21:13:12"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-06 21:23:49"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-06 21:23:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:23:50.183Z, Views: 154, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:23:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:23:50.313Z, Views: 155, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:23:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:24:09.576Z, Views: 156, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:24:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:24:14.459Z, Views: 157, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:24:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:28:25.114Z, Views: 158, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:28:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:28:26.071Z, Views: 159, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:28:26"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-06 21:40:37"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-06 21:41:24"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-06 21:41:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:41:26.076Z, Views: 160, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:41:26"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-06 21:42:00"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-06 21:42:53"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-06 21:42:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:44:33.675Z, Views: 161, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:44:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:44:33.716Z, Views: 162, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:44:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:44:33.722Z, Views: 163, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:44:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:44:33.771Z, Views: 164, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:44:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:30.142Z, Views: 165, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:30.212Z, Views: 166, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:30.218Z, Views: 167, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:30.224Z, Views: 168, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:39.075Z, Views: 169, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:39.140Z, Views: 170, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:39.143Z, Views: 171, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:49:39.148Z, Views: 172, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:49:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:19.432Z, Views: 173, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:19.500Z, Views: 174, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:19.508Z, Views: 175, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:19.509Z, Views: 175, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:23.648Z, Views: 176, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:23.706Z, Views: 177, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:24.495Z, Views: 178, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:24.584Z, Views: 179, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:24.587Z, Views: 180, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:52:24.591Z, Views: 181, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:52:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:24.745Z, Views: 182, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:24.786Z, Views: 183, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:26.767Z, Views: 184, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:26.846Z, Views: 185, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:26.847Z, Views: 185, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:53:26.858Z, Views: 186, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:53:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:41.269Z, Views: 187, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:41.308Z, Views: 188, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:42.110Z, Views: 189, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:42.205Z, Views: 190, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:42.206Z, Views: 190, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:42.210Z, Views: 191, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:49.656Z, Views: 192, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:49.717Z, Views: 193, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:49.722Z, Views: 194, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:54:49.725Z, Views: 195, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:54:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:56:11.770Z, Views: 196, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:56:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:56:11.838Z, Views: 197, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:56:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:56:11.840Z, Views: 198, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:56:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T01:56:11.844Z, Views: 199, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 21:56:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:08.907Z, Views: 200, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:08.945Z, Views: 201, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:09.578Z, Views: 202, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:09.660Z, Views: 203, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:09.683Z, Views: 204, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:05:09.685Z, Views: 204, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:05:09"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-06 22:07:38"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-06 22:07:40"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-06 22:07:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:45.100Z, Views: 205, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:45.158Z, Views: 206, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:50.172Z, Views: 207, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:50.256Z, Views: 208, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:50.266Z, Views: 209, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:07:50.289Z, Views: 210, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:07:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:08:23.117Z, Views: 211, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:08:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:08:23.163Z, Views: 212, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:08:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:09:43.230Z, Views: 213, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:09:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:09:43.310Z, Views: 214, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:09:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:17.511Z, Views: 215, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:17.593Z, Views: 216, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:17.610Z, Views: 217, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:35.150Z, Views: 218, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:35.197Z, Views: 219, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:46.785Z, Views: 220, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:46.874Z, Views: 221, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:11:46.911Z, Views: 222, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:11:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:21.472Z, Views: 223, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:21.522Z, Views: 224, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:24.049Z, Views: 225, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:24.052Z, Views: 226, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:25.289Z, Views: 227, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:14:25.342Z, Views: 228, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:14:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:49.767Z, Views: 229, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:49.846Z, Views: 230, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:49.847Z, Views: 230, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:55.194Z, Views: 231, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:55.240Z, Views: 232, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:56.880Z, Views: 233, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:56.986Z, Views: 234, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:56.987Z, Views: 234, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:58.316Z, Views: 235, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:58.384Z, Views: 236, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:59.726Z, Views: 237, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:59.834Z, Views: 238, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:15:59.858Z, Views: 239, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:15:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:38:37.425Z, Views: 240, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:38:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:38:37.471Z, Views: 241, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:38:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:38:37.500Z, Views: 242, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:38:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:38:37.534Z, Views: 243, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:38:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:40:48.006Z, Views: 244, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:40:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:40:48.053Z, Views: 245, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:40:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:40:48.089Z, Views: 246, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:40:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:40:48.112Z, Views: 247, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:40:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:41:00.085Z, Views: 248, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:41:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:41:00.141Z, Views: 249, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:41:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:41:07.007Z, Views: 250, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:41:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:41:07.037Z, Views: 251, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:41:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:47:42.212Z, Views: 252, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:47:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:47:42.295Z, Views: 253, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:47:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:47:42.296Z, Views: 253, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:47:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:47:45.524Z, Views: 254, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:47:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:47:45.573Z, Views: 255, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:47:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:49:56.014Z, Views: 256, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:49:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:49:56.103Z, Views: 257, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:49:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:49:56.115Z, Views: 258, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:49:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:20.584Z, Views: 259, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:20.675Z, Views: 260, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:20.677Z, Views: 261, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:20.681Z, Views: 262, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:20.684Z, Views: 263, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:30.537Z, Views: 264, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:30.584Z, Views: 265, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:30.627Z, Views: 266, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:30.661Z, Views: 267, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.146Z, Views: 268, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.195Z, Views: 269, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.237Z, Views: 270, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.239Z, Views: 270, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.242Z, Views: 271, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:51:32.244Z, Views: 272, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:51:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:58:46.821Z, Views: 273, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:58:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:58:46.902Z, Views: 274, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:58:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T02:58:46.904Z, Views: 274, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 22:58:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:02:03.593Z, Views: 275, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:02:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:02:03.666Z, Views: 276, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:02:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:02:03.674Z, Views: 277, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:02:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:04:46.126Z, Views: 278, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:04:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:04:46.216Z, Views: 279, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:04:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:04:46.228Z, Views: 280, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:04:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:12:31.906Z, Views: 281, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:12:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:12:31.980Z, Views: 282, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:12:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:12:31.981Z, Views: 282, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:12:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:15:16.656Z, Views: 283, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:15:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:15:16.732Z, Views: 284, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:15:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:15:16.733Z, Views: 284, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:15:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:00.236Z, Views: 285, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:00.283Z, Views: 286, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:00.324Z, Views: 287, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:00.325Z, Views: 287, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:01.975Z, Views: 288, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:02.023Z, Views: 289, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:02.053Z, Views: 290, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:02.067Z, Views: 291, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:40:19.066Z, Views: 292, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:40:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:43:27.644Z, Views: 293, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:43:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:43:27.716Z, Views: 294, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:43:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:43:27.717Z, Views: 294, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:43:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:43:40.499Z, Views: 295, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:43:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:43:46.319Z, Views: 296, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:43:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:03.511Z, Views: 297, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:03.576Z, Views: 298, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:03.606Z, Views: 299, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:03.611Z, Views: 300, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:06.489Z, Views: 301, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:06.541Z, Views: 302, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:06.586Z, Views: 303, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:06.587Z, Views: 304, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:52:10.514Z, Views: 305, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:52:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:21.779Z, Views: 306, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:21.860Z, Views: 307, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:21.869Z, Views: 308, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:24.528Z, Views: 309, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:28.512Z, Views: 310, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T03:57:45.460Z, Views: 311, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-06 23:57:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:15.313Z, Views: 312, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:15.439Z, Views: 313, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:15.440Z, Views: 313, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:20.229Z, Views: 314, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:20.317Z, Views: 315, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:20.318Z, Views: 315, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:38.188Z, Views: 316, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T04:07:42.349Z, Views: 317, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 00:07:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:42:08.259Z, Views: 318, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:42:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:42:08.390Z, Views: 319, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:42:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:42:08.391Z, Views: 319, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:42:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:42:25.639Z, Views: 320, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:42:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:43:25.807Z, Views: 321, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:43:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:43:25.876Z, Views: 322, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:43:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:43:25.876Z, Views: 322, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:43:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:43:28.491Z, Views: 323, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:43:28"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 08:53:11"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 08:56:35"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 08:56:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T12:56:41.391Z, Views: 324, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 08:56:41"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 10:14:54"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 10:14:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:14:58.280Z, Views: 325, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:14:58"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 10:16:51"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 10:16:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:53.580Z, Views: 326, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:53.602Z, Views: 327, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:55.377Z, Views: 328, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:55.435Z, Views: 329, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:55.499Z, Views: 330, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:16:55.504Z, Views: 331, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:16:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T14:17:00.646Z, Views: 332, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 10:17:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:02:40.631Z, Views: 333, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:02:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:02:40.754Z, Views: 334, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:02:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:02:40.756Z, Views: 334, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:02:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:02:47.546Z, Views: 335, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:02:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:02:56.989Z, Views: 336, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:02:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:03:06.637Z, Views: 337, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:03:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:03:10.657Z, Views: 338, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:03:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:03:10.759Z, Views: 339, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:03:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:03:10.760Z, Views: 339, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:03:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:03:16.237Z, Views: 340, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:03:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:04:10.462Z, Views: 341, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:04:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:04:54.970Z, Views: 342, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:04:54"}
+{"error":{"path":"C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs"},"level":"error","message":"Unhandled application error: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs:51\n    49|                             <td><%= quote.quoteId %></td>\r\n    50|                             <td><%= quote.status %></td>\r\n >> 51|                             <td>$<%= quote.totalPrice.toFixed(2) %></td>\r\n    52|                             <td>\r\n    53|                                 <a href=\"/quotes/<%= quote._id %>\" class=\"btn btn-primary\">View</a>\r\n    54|                                 <a href=\"/quotes/<%= quote._id %>/edit\" class=\"btn btn-warning\">Edit</a>\r\n\nCannot read properties of undefined (reading 'toFixed')","service":"user-service","sessionId":"CCWhc3y_dmbk5fn2wSk3J95B2XXMQ7ca","stack":"TypeError: C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\views\\dashboard.ejs:51\n    49|                             <td><%= quote.quoteId %></td>\r\n    50|                             <td><%= quote.status %></td>\r\n >> 51|                             <td>$<%= quote.totalPrice.toFixed(2) %></td>\r\n    52|                             <td>\r\n    53|                                 <a href=\"/quotes/<%= quote._id %>\" class=\"btn btn-primary\">View</a>\r\n    54|                                 <a href=\"/quotes/<%= quote._id %>/edit\" class=\"btn btn-warning\">Edit</a>\r\n\nCannot read properties of undefined (reading 'toFixed')\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\dashboard.ejs\":36:43)\n    at Array.forEach (<anonymous>)\n    at eval (\"C:\\\\Users\\\\Chris\\\\Documents\\\\Code\\\\gpt-pilot\\\\workspace\\\\cleaning-tools\\\\views\\\\dashboard.ejs\":21:15)\n    at dashboard (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:703:17)\n    at tryHandleCache (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:274:36)\n    at exports.renderFile [as engine] (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\ejs\\lib\\ejs.js:491:10)\n    at View.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:657:10)\n    at Function.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\application.js:609:3)\n    at ServerResponse.render (C:\\Users\\Chris\\Documents\\Code\\gpt-pilot\\workspace\\cleaning-tools\\node_modules\\express\\lib\\response.js:1048:7)","timestamp":"2024-06-07 12:04:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:04:55.108Z, Views: 343, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:04:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:04:56.525Z, Views: 344, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:04:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:04.664Z, Views: 345, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:04.754Z, Views: 346, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:04.758Z, Views: 347, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:06.940Z, Views: 348, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:07.007Z, Views: 349, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:07.027Z, Views: 350, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:07.038Z, Views: 351, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:17.692Z, Views: 352, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:23.293Z, Views: 353, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:26.839Z, Views: 354, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:29.476Z, Views: 355, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:29.523Z, Views: 356, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:29.559Z, Views: 357, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:29.561Z, Views: 358, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:32.488Z, Views: 359, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:32.548Z, Views: 360, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:32.570Z, Views: 361, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:32.578Z, Views: 362, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:05:34.665Z, Views: 363, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:05:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:37.819Z, Views: 364, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:44.319Z, Views: 365, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:46.422Z, Views: 366, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:46.538Z, Views: 367, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:46.539Z, Views: 367, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:14:48.629Z, Views: 368, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:14:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:22.460Z, Views: 369, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:22.546Z, Views: 370, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:22.547Z, Views: 370, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:43.399Z, Views: 371, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:49.400Z, Views: 372, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:49.473Z, Views: 373, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:22:49.479Z, Views: 374, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:22:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:29:37.039Z, Views: 375, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:29:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:29:37.127Z, Views: 376, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:29:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:29:37.129Z, Views: 377, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:29:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:30:24.102Z, Views: 378, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:30:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:30:24.187Z, Views: 379, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:30:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:30:24.189Z, Views: 380, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:30:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:30.296Z, Views: 381, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:30.368Z, Views: 382, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:30.387Z, Views: 383, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:31.405Z, Views: 384, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:31.458Z, Views: 385, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:33.635Z, Views: 386, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:33.744Z, Views: 387, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:33.804Z, Views: 388, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.038Z, Views: 389, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.248Z, Views: 390, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.355Z, Views: 391, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.458Z, Views: 392, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.562Z, Views: 393, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.655Z, Views: 394, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:35:35.720Z, Views: 395, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:35:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:38:15.754Z, Views: 396, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:38:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:38:56.938Z, Views: 397, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:38:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:38:57.012Z, Views: 398, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:38:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:39:13.416Z, Views: 399, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:39:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:39:13.465Z, Views: 400, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:39:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:02.110Z, Views: 401, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:02.197Z, Views: 402, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:02.199Z, Views: 403, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:04.749Z, Views: 404, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:04.810Z, Views: 405, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:42:04.968Z, Views: 406, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:42:04"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 12:56:55"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 12:58:36"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 12:58:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:58:41.157Z, Views: 407, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:58:41.264Z, Views: 408, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:58:41.272Z, Views: 409, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T16:58:41.280Z, Views: 410, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 12:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:00:54.778Z, Views: 411, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:00:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:00:54.861Z, Views: 412, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:00:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:00:54.872Z, Views: 413, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:00:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:00:54.877Z, Views: 414, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:00:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:02.614Z, Views: 415, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:02.703Z, Views: 416, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:02.707Z, Views: 417, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:02.708Z, Views: 418, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:33.883Z, Views: 419, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:34.032Z, Views: 420, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:34.128Z, Views: 421, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:58.504Z, Views: 422, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:12:59.004Z, Views: 423, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:12:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:13:00.016Z, Views: 424, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:13:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:13:00.124Z, Views: 425, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:13:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:13:00.215Z, Views: 426, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:13:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:41.010Z, Views: 427, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:41.128Z, Views: 428, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:41.129Z, Views: 428, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:41.139Z, Views: 429, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:43.587Z, Views: 430, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:43.671Z, Views: 431, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:43.680Z, Views: 432, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:43.685Z, Views: 433, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:49.415Z, Views: 434, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:49.529Z, Views: 435, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:19:49.588Z, Views: 436, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:19:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:54.019Z, Views: 437, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:54.136Z, Views: 438, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:54.137Z, Views: 438, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:54.148Z, Views: 439, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:57.592Z, Views: 440, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:57.684Z, Views: 441, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:57.694Z, Views: 442, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:22:57.696Z, Views: 443, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:22:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:23:01.330Z, Views: 444, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:23:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:23:01.455Z, Views: 445, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:23:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:23:01.517Z, Views: 446, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:23:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:13.905Z, Views: 447, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:14.024Z, Views: 448, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:14.036Z, Views: 449, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:14.044Z, Views: 450, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:17.057Z, Views: 451, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:17.154Z, Views: 452, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:17.164Z, Views: 453, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:28:17.165Z, Views: 453, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:28:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:33:59.042Z, Views: 454, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:33:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:33:59.138Z, Views: 455, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:33:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:33:59.224Z, Views: 456, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:33:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:46:15.454Z, Views: 457, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:46:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:46:15.551Z, Views: 458, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:46:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:46:15.552Z, Views: 458, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:46:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:46:15.560Z, Views: 459, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:46:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:07.725Z, Views: 460, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:07.827Z, Views: 461, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:07.853Z, Views: 462, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:07.854Z, Views: 462, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:11.172Z, Views: 463, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:12.040Z, Views: 464, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:12.187Z, Views: 465, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:12.285Z, Views: 466, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:13.702Z, Views: 467, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.229Z, Views: 468, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.418Z, Views: 469, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.529Z, Views: 470, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.598Z, Views: 471, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.724Z, Views: 472, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:47:14.807Z, Views: 473, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:47:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:48:59.115Z, Views: 474, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:48:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:48:59.206Z, Views: 475, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:48:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:48:59.207Z, Views: 476, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:48:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:48:59.221Z, Views: 477, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:48:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:49:01.861Z, Views: 478, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:49:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:49:01.987Z, Views: 479, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:49:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:49:02.058Z, Views: 480, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:49:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:49:46.893Z, Views: 481, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:49:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:20.950Z, Views: 482, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:21.050Z, Views: 483, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:21.051Z, Views: 483, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:21.058Z, Views: 484, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:22.888Z, Views: 485, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:23.018Z, Views: 486, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:23.108Z, Views: 487, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T17:52:51.599Z, Views: 488, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 13:52:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:43.196Z, Views: 489, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:43.310Z, Views: 490, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:43.311Z, Views: 490, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:43.318Z, Views: 491, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:45.889Z, Views: 492, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:45.983Z, Views: 493, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:40:46.082Z, Views: 494, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:40:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:41:20.568Z, Views: 495, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:41:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:18.545Z, Views: 496, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:21.008Z, Views: 497, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:21.138Z, Views: 498, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:21.164Z, Views: 499, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:21.177Z, Views: 500, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:47.761Z, Views: 501, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:47.925Z, Views: 502, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:47.928Z, Views: 503, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:47.940Z, Views: 504, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:51.779Z, Views: 505, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:51.901Z, Views: 506, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:46:51.983Z, Views: 507, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:46:51"}
+{"error":{"code":"EBADCSRFTOKEN","message":"invalid csrf token"},"level":"error","message":"CSRF token error: invalid csrf token","method":"POST","path":"/clients/search","service":"user-service","sessionId":"6ZYhM5602LnTGp2tqCXTozuUdSaFWuaP","timestamp":"2024-06-07 14:48:22"}
+{"level":"info","message":"Session created at: 2024-06-07T18:48:46.324Z","service":"user-service","timestamp":"2024-06-07 14:48:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:36.448Z, Views: 508, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:36.563Z, Views: 509, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:36.564Z, Views: 509, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:36.575Z, Views: 510, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:47.315Z, Views: 511, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:50:47.409Z, Views: 512, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:50:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:51:09.380Z, Views: 513, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:51:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:51:20.154Z, Views: 514, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:51:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:54:56.258Z, Views: 2, User ID: (unauthenticated)","service":"user-service","timestamp":"2024-06-07 14:54:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:54.065Z, Views: 515, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:54.087Z, Views: 516, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:54.105Z, Views: 517, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:58.661Z, Views: 518, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:58.741Z, Views: 519, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:58.750Z, Views: 520, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:58:58.753Z, Views: 521, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:58:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:59:01.368Z, Views: 522, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:59:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:59:01.497Z, Views: 523, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:59:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T18:59:01.589Z, Views: 524, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 14:59:01"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 15:06:39"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 15:06:41"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 15:06:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:45.221Z, Views: 525, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:45.361Z, Views: 526, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:45.365Z, Views: 527, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:45.372Z, Views: 528, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:47.559Z, Views: 529, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:47.669Z, Views: 530, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T19:06:47.757Z, Views: 531, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 15:06:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:41:52.595Z, Views: 532, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:41:52.724Z, Views: 533, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:41:52.725Z, Views: 533, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:41:52.734Z, Views: 534, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:41:56.699Z, Views: 535, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:41:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:51:18.842Z, Views: 536, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:51:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:51:18.953Z, Views: 537, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:51:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:51:18.966Z, Views: 538, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:51:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:51:18.977Z, Views: 539, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:51:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:51:22.105Z, Views: 540, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:51:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:01.180Z, Views: 541, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:01.278Z, Views: 542, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:01.300Z, Views: 543, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:01.301Z, Views: 543, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:56.361Z, Views: 544, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:56.465Z, Views: 545, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:56.466Z, Views: 545, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T20:52:56.474Z, Views: 546, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 16:52:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:05.031Z, Views: 547, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:05.129Z, Views: 548, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:05.130Z, Views: 548, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:05.146Z, Views: 549, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:07.575Z, Views: 550, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:07.710Z, Views: 551, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:03:07.770Z, Views: 552, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:03:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:04:44.003Z, Views: 553, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:04:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:04:44.153Z, Views: 554, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:04:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:04:44.153Z, Views: 554, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:04:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:04:44.167Z, Views: 555, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:04:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:04:48.395Z, Views: 556, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:04:48"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 17:06:25"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 17:09:02"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 17:09:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:09:06.656Z, Views: 557, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:09:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:09:06.802Z, Views: 558, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:09:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:09:06.806Z, Views: 559, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:09:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:09:06.814Z, Views: 560, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:09:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:09:10.084Z, Views: 561, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:09:10"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 17:22:18"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 17:22:21"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 17:22:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:25.236Z, Views: 562, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:25.365Z, Views: 563, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:25.369Z, Views: 564, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:25.412Z, Views: 565, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:27.525Z, Views: 566, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:27.639Z, Views: 567, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-07T21:22:27.719Z, Views: 568, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 17:22:27"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:44.912Z, Views: 569, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:45.091Z, Views: 570, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:45.092Z, Views: 570, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:45.104Z, Views: 571, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:48.052Z, Views: 572, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:48.139Z, Views: 573, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:48.227Z, Views: 574, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:55.268Z, Views: 575, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:55.395Z, Views: 576, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:55.408Z, Views: 577, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:55.410Z, Views: 578, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:56.940Z, Views: 579, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:57.046Z, Views: 580, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:12:57.134Z, Views: 581, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:12:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:33.981Z, Views: 582, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:34.097Z, Views: 583, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:34.099Z, Views: 583, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:34.107Z, Views: 584, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:36.749Z, Views: 585, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:36.859Z, Views: 586, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:36.960Z, Views: 587, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:39.895Z, Views: 588, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:40.395Z, Views: 589, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:41.424Z, Views: 590, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:41.514Z, Views: 591, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:42.350Z, Views: 592, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:44.057Z, Views: 593, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:44.113Z, Views: 594, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:44.286Z, Views: 595, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:44.862Z, Views: 596, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:45.362Z, Views: 597, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:45.972Z, Views: 598, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:46.031Z, Views: 599, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:15:46.656Z, Views: 600, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:15:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:20:16.608Z, Views: 601, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:20:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:20:16.713Z, Views: 602, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:20:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:20:16.714Z, Views: 602, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:20:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:20:16.724Z, Views: 603, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:20:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:21:32.200Z, Views: 604, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:21:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:22:54.883Z, Views: 3, User ID: (unauthenticated)","service":"user-service","timestamp":"2024-06-07 20:22:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:25:57.320Z, Views: 605, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:25:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:25:57.493Z, Views: 606, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:25:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:25:57.494Z, Views: 606, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:25:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:25:57.498Z, Views: 607, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:25:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:26:04.698Z, Views: 608, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:26:04"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 20:27:13"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 20:27:16"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 20:27:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:27:22.216Z, Views: 609, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:27:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:27:22.361Z, Views: 610, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:27:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:27:22.366Z, Views: 611, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:27:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:27:22.368Z, Views: 611, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:27:22"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:27:25.843Z, Views: 612, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:27:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:39.917Z, Views: 613, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:40.052Z, Views: 614, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:40.056Z, Views: 615, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:40.061Z, Views: 616, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:42.800Z, Views: 617, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:42.947Z, Views: 618, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:43.052Z, Views: 619, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:49.951Z, Views: 620, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:50.077Z, Views: 621, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:50.168Z, Views: 622, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:29:52.273Z, Views: 623, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:29:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:13.798Z, Views: 624, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:13.910Z, Views: 625, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:13.953Z, Views: 626, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:13.963Z, Views: 627, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:15.954Z, Views: 628, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:16.070Z, Views: 629, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:16.168Z, Views: 630, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:33:18.789Z, Views: 631, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:33:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:19.109Z, Views: 632, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:19.252Z, Views: 633, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:19.253Z, Views: 633, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:19.258Z, Views: 634, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:20.771Z, Views: 635, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:20.944Z, Views: 636, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:21.090Z, Views: 637, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:25.509Z, Views: 638, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:25.510Z, Views: 638, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:25"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T00:37:32.172Z, Views: 639, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 20:37:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:35:59.813Z, Views: 640, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:35:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:35:59.978Z, Views: 641, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:35:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:35:59.979Z, Views: 641, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:35:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:35:59.990Z, Views: 642, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:35:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:36:02.941Z, Views: 643, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:36:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:36:03.136Z, Views: 644, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:36:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:36:06.524Z, Views: 645, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:36:06"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 23:38:24"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 23:38:28"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 23:38:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:30.368Z, Views: 646, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:30.490Z, Views: 647, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:30.494Z, Views: 648, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:30.500Z, Views: 649, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:32.256Z, Views: 650, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:32.353Z, Views: 651, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:32.460Z, Views: 652, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:34.621Z, Views: 653, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:38:39.415Z, Views: 654, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:38:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:40:57.888Z, Views: 655, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:40:57"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:40:58.022Z, Views: 656, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:40:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:40:58.023Z, Views: 656, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:40:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:40:58.053Z, Views: 657, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:40:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:00.895Z, Views: 658, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:02.362Z, Views: 659, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:05.517Z, Views: 660, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:05"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 23:41:09"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 23:41:12"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 23:41:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:14.882Z, Views: 661, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:15.006Z, Views: 662, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:15.039Z, Views: 663, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:15.043Z, Views: 664, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:17.386Z, Views: 665, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:17.484Z, Views: 666, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:17.601Z, Views: 667, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:19.678Z, Views: 668, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:41:23.121Z, Views: 669, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:41:23"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 23:42:36"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 23:42:39"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 23:42:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:41.117Z, Views: 670, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:41.262Z, Views: 671, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:41.266Z, Views: 672, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:41.349Z, Views: 673, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:44.064Z, Views: 674, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:44.155Z, Views: 675, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:44.287Z, Views: 676, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:46.748Z, Views: 677, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:42:50.027Z, Views: 678, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:42:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:42.222Z, Views: 679, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:42.329Z, Views: 680, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:42.331Z, Views: 680, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:42.376Z, Views: 681, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:43.911Z, Views: 682, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:44.048Z, Views: 683, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:44.155Z, Views: 684, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:46.639Z, Views: 685, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:46"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:44:50.066Z, Views: 686, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:44:50"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 23:45:15"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 23:45:18"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 23:45:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:21.786Z, Views: 687, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:21.972Z, Views: 688, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:21.980Z, Views: 689, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:21.987Z, Views: 690, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:24.319Z, Views: 691, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:24.413Z, Views: 692, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:24.514Z, Views: 693, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:24"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:26.708Z, Views: 694, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:45:30.151Z, Views: 695, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:45:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:46:36.722Z, Views: 696, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:46:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:46:43.490Z, Views: 697, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:46:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:47:33.429Z, Views: 698, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:47:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:05.785Z, Views: 699, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:05.933Z, Views: 700, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:05.938Z, Views: 701, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:05.942Z, Views: 702, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:07.565Z, Views: 703, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:07.682Z, Views: 704, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:07.793Z, Views: 705, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:10.645Z, Views: 706, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:10"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:49:21.218Z, Views: 707, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:49:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:40.933Z, Views: 708, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:41.161Z, Views: 709, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:41.164Z, Views: 710, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:41.175Z, Views: 711, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:42.637Z, Views: 712, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:42.779Z, Views: 713, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:42.868Z, Views: 714, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:45.645Z, Views: 715, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:51:56.004Z, Views: 716, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:51:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:37.095Z, Views: 717, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:37.251Z, Views: 718, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:37.305Z, Views: 719, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:37.313Z, Views: 720, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:42.823Z, Views: 721, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:42.966Z, Views: 722, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:43.069Z, Views: 723, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:45.796Z, Views: 724, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:52:50.474Z, Views: 725, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:52:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:53:16.735Z, Views: 726, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:53:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:53:16.791Z, Views: 727, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:53:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:53:16.938Z, Views: 728, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:53:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:53:17.135Z, Views: 729, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:53:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:53:17.300Z, Views: 730, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:53:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:09.579Z, Views: 731, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:09.750Z, Views: 732, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:09.751Z, Views: 732, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:09.756Z, Views: 733, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:09"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-07 23:56:12"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-07 23:56:14"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-07 23:56:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:15.824Z, Views: 734, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:15.916Z, Views: 735, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:15.921Z, Views: 736, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:15.925Z, Views: 737, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:15"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:19.124Z, Views: 738, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:19.232Z, Views: 739, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:19.363Z, Views: 740, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:54.538Z, Views: 741, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:54.769Z, Views: 742, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:54.944Z, Views: 743, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:56:55.068Z, Views: 744, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:56:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:57:05.498Z, Views: 745, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:57:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:41.834Z, Views: 746, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:41.968Z, Views: 747, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:41.972Z, Views: 748, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:41.977Z, Views: 749, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:44.974Z, Views: 750, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:45.081Z, Views: 751, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:45.161Z, Views: 752, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:53.259Z, Views: 753, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:53.422Z, Views: 754, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:53.583Z, Views: 755, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T03:58:53.656Z, Views: 756, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-07 23:58:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:56.427Z, Views: 757, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:56.549Z, Views: 758, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:56.550Z, Views: 758, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:56.559Z, Views: 759, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:59.311Z, Views: 760, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:59.401Z, Views: 761, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:04:59.496Z, Views: 762, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:04:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:05:08.894Z, Views: 763, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:05:08"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:05:09.070Z, Views: 764, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:05:09.208Z, Views: 765, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:05:09.316Z, Views: 766, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:05:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:05:23.716Z, Views: 767, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:05:23"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 00:13:35"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 00:13:38"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 00:13:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:42.001Z, Views: 768, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:42.094Z, Views: 769, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:42.101Z, Views: 770, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:42.128Z, Views: 771, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:43.655Z, Views: 772, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:43.762Z, Views: 773, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:43.854Z, Views: 774, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:52.968Z, Views: 775, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:13:53.052Z, Views: 776, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:13:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:14:02.532Z, Views: 777, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:14:02"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 00:20:32"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 00:20:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:35.036Z, Views: 778, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:35"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 00:20:44"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 00:20:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:45.532Z, Views: 779, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:45.680Z, Views: 780, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:45.686Z, Views: 781, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:45.695Z, Views: 782, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:47.536Z, Views: 783, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:47.661Z, Views: 784, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:20:47.735Z, Views: 785, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:20:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:21:13.619Z, Views: 786, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:21:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:21:13.621Z, Views: 786, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:21:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:21:31.191Z, Views: 787, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:21:31"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 00:23:21"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 00:23:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:23.388Z, Views: 788, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:23.575Z, Views: 789, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:23.579Z, Views: 790, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:23.594Z, Views: 791, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:26.968Z, Views: 792, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:26"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:36.669Z, Views: 793, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:36.688Z, Views: 794, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:23:48.620Z, Views: 795, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:23:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:36.914Z, Views: 796, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:37.053Z, Views: 797, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:37.054Z, Views: 797, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:37.070Z, Views: 798, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:37"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:38.755Z, Views: 799, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:38.863Z, Views: 800, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:38.961Z, Views: 801, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:48.879Z, Views: 802, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:25:48.880Z, Views: 802, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:25:48"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:00.975Z, Views: 803, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:00"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 00:26:30"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 00:26:33"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 00:26:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:36.512Z, Views: 804, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:39.498Z, Views: 805, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:39.650Z, Views: 806, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:39.664Z, Views: 807, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:39.700Z, Views: 808, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:42.433Z, Views: 809, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:26:53.419Z, Views: 810, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:26:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:05.303Z, Views: 811, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:47.103Z, Views: 812, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:47.229Z, Views: 813, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:47.259Z, Views: 814, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:47.277Z, Views: 815, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T04:27:50.595Z, Views: 816, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 00:27:50"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 14:52:52"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 14:52:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:52:53.846Z, Views: 817, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:52:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:52:54.097Z, Views: 818, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:52:54"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:55:51.712Z, Views: 819, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:55:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:55:51.817Z, Views: 820, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:55:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:55:51.917Z, Views: 821, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:55:51"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:56:02.144Z, Views: 822, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:56:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:56:02.327Z, Views: 823, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:56:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:56:02.453Z, Views: 824, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:56:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:56:02.544Z, Views: 825, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:56:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:56:16.554Z, Views: 826, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:56:16"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:18.878Z, Views: 827, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:19.129Z, Views: 828, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:19.312Z, Views: 829, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:19.370Z, Views: 830, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:28.655Z, Views: 831, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:28.659Z, Views: 832, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T18:57:28.697Z, Views: 833, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 14:57:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:09.857Z, Views: 834, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:09"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:42.849Z, Views: 835, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:42"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:43.032Z, Views: 836, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:43.099Z, Views: 837, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:45.500Z, Views: 838, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:00:50.792Z, Views: 839, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:00:50"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 15:12:30"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 15:12:32"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 15:12:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:35.681Z, Views: 840, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:35.784Z, Views: 841, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:35.789Z, Views: 842, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:35.791Z, Views: 843, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:38.267Z, Views: 844, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:38.367Z, Views: 845, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:38.442Z, Views: 846, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:49.672Z, Views: 847, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:49.827Z, Views: 848, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:49.970Z, Views: 849, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:50.039Z, Views: 850, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:12:59.068Z, Views: 851, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:12:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:13:18.232Z, Views: 852, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:13:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:31.195Z, Views: 853, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:31.299Z, Views: 854, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:31.300Z, Views: 854, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:31.305Z, Views: 855, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:34.598Z, Views: 856, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:34.683Z, Views: 857, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:34.774Z, Views: 858, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:43.494Z, Views: 859, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:15:51.900Z, Views: 860, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:15:51"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 15:15:56"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 15:15:59"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 15:15:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:01.401Z, Views: 861, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:01.499Z, Views: 862, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:01.504Z, Views: 863, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:01.509Z, Views: 864, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:03.441Z, Views: 865, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:03.549Z, Views: 866, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:03.649Z, Views: 867, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:40.684Z, Views: 868, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:40"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:16:51.490Z, Views: 869, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:16:51"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 15:20:30"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 15:20:32"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 15:20:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:34.746Z, Views: 870, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:34.852Z, Views: 871, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:34.867Z, Views: 872, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:34.872Z, Views: 873, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:36.427Z, Views: 874, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:36.517Z, Views: 875, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:36.637Z, Views: 876, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:36"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:44.047Z, Views: 877, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:44.107Z, Views: 878, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:20:54.027Z, Views: 879, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:20:54"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 15:31:46"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 15:31:47"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 15:31:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:50.067Z, Views: 880, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:50.167Z, Views: 881, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:50.173Z, Views: 882, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:50.183Z, Views: 883, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:52.998Z, Views: 884, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:53.120Z, Views: 885, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:31:53.246Z, Views: 886, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:31:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:32:00.781Z, Views: 887, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:32:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:32:00.838Z, Views: 888, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:32:00"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T19:32:05.856Z, Views: 889, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 15:32:05"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 16:28:59"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 16:29:01"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 16:29:01"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:02.321Z, Views: 890, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:02.442Z, Views: 891, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:02.450Z, Views: 892, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:02.454Z, Views: 893, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:04.372Z, Views: 894, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:04.473Z, Views: 895, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:04.562Z, Views: 896, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:12.245Z, Views: 897, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:29:18.543Z, Views: 898, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:29:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:31:21.329Z, Views: 899, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:31:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:31:21.389Z, Views: 900, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:31:21"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:31:29.535Z, Views: 901, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:31:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:31:29.546Z, Views: 902, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:31:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:31:33.288Z, Views: 903, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:31:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:06.596Z, Views: 904, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:06.700Z, Views: 905, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:06.701Z, Views: 905, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:06.707Z, Views: 906, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:13.646Z, Views: 907, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:13.697Z, Views: 908, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:13"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:31.139Z, Views: 909, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:31.175Z, Views: 910, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:32.623Z, Views: 911, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:33.958Z, Views: 912, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:34.080Z, Views: 913, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:34.157Z, Views: 914, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:34"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:41.945Z, Views: 915, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:32:41.984Z, Views: 916, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:32:41"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:33:11.241Z, Views: 917, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:33:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:33:13.581Z, Views: 918, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:33:13"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 16:34:33"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 16:34:35"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 16:34:35"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:38.169Z, Views: 919, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:38.283Z, Views: 920, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:38.287Z, Views: 921, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:38.297Z, Views: 922, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:43.150Z, Views: 923, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:52.405Z, Views: 924, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:34:52.461Z, Views: 925, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:34:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:35:19.240Z, Views: 926, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:35:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:02.040Z, Views: 927, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:02"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 16:37:15"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 16:37:18"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 16:37:18"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:19.070Z, Views: 928, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:19.189Z, Views: 929, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:19.197Z, Views: 930, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:19.213Z, Views: 931, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:19"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:23.628Z, Views: 932, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:23.742Z, Views: 933, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:23"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:30.794Z, Views: 934, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:30"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:37:34.551Z, Views: 935, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:37:34"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 16:41:42"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 16:41:45"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 16:41:45"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:49.519Z, Views: 936, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:49.619Z, Views: 937, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:49.632Z, Views: 938, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:49.641Z, Views: 939, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:52.046Z, Views: 940, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:52.255Z, Views: 941, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:52"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:58.984Z, Views: 942, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:41:59.026Z, Views: 943, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:41:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-08T20:42:04.616Z, Views: 944, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 16:42:04"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:05.365Z, Views: 945, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:05.474Z, Views: 946, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:11.098Z, Views: 947, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:11.178Z, Views: 948, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:11.182Z, Views: 949, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:11.190Z, Views: 950, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:11"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:17.485Z, Views: 951, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T01:34:17.804Z, Views: 952, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 21:34:17"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:01:50"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 22:01:53"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 22:01:53"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:01:56.401Z, Views: 953, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:01:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:01:56.522Z, Views: 954, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:01:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:01:56.526Z, Views: 955, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:01:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:01:56.536Z, Views: 956, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:01:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:01:58.682Z, Views: 957, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:01:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:02:05.628Z, Views: 958, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:02:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:02:23.280Z, Views: 959, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:02:23"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:16:40"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 22:16:43"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 22:16:43"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:47.051Z, Views: 960, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:47.231Z, Views: 961, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:47.236Z, Views: 962, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:47.244Z, Views: 963, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:47"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:49.594Z, Views: 964, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:49.898Z, Views: 965, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:58.303Z, Views: 966, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:16:58.363Z, Views: 967, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:16:58"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:17:03.849Z, Views: 968, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:17:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:17:20.138Z, Views: 969, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:17:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:23:56.435Z, Views: 970, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:23:56"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:24:00"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 22:24:02"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 22:24:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:02.968Z, Views: 971, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:03.117Z, Views: 972, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:03.121Z, Views: 973, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:03.133Z, Views: 974, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:03"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:05.337Z, Views: 975, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:05.384Z, Views: 976, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:06.739Z, Views: 977, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:06"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:07.930Z, Views: 978, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:07"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:20.412Z, Views: 979, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:20.624Z, Views: 980, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:20"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:33.481Z, Views: 981, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:33.510Z, Views: 982, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:24:33.619Z, Views: 983, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:24:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:25:02.438Z, Views: 984, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:25:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:25:02.547Z, Views: 985, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:25:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:25:31.435Z, Views: 986, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:25:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:25:50.485Z, Views: 987, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:25:50"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:25:59.703Z, Views: 988, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:25:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:26:02.111Z, Views: 989, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:26:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:26:02.179Z, Views: 990, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:26:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:26:02.183Z, Views: 991, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:26:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:26:02.188Z, Views: 992, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:26:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:26:05.056Z, Views: 993, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:26:05"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:31:12.847Z, Views: 994, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:31:12"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:31:14.936Z, Views: 995, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:31:14"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:31:17.968Z, Views: 996, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:31:17"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:31:29.091Z, Views: 997, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:31:29"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:31:31.681Z, Views: 998, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:31:31"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:32:20.370Z, Views: 999, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:32:20"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:32:31"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 22:32:33"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 22:32:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:32:34.595Z, Views: 1000, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:32:34"}
+{"level":"info","message":"HTTP server closed","service":"user-service","timestamp":"2024-06-08 22:32:39"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:33:30"}
+{"level":"info","message":"Server running at http://localhost:3002","service":"user-service","timestamp":"2024-06-08 22:33:33"}
+{"level":"info","message":"Database connected successfully","service":"user-service","timestamp":"2024-06-08 22:33:33"}
+{"level":"info","message":"HTTP server closed","service":"user-service","timestamp":"2024-06-08 22:33:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:38.984Z, Views: 1001, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:39.079Z, Views: 1002, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:39.088Z, Views: 1003, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:39"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:44.734Z, Views: 1004, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:44.815Z, Views: 1005, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:44"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:56.746Z, Views: 1006, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:56.838Z, Views: 1007, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:56.844Z, Views: 1008, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:56.849Z, Views: 1009, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:56"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:33:59.323Z, Views: 1010, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:33:59"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:02.104Z, Views: 1011, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:02.183Z, Views: 1012, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:02.188Z, Views: 1013, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:02"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:49.413Z, Views: 1014, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:49.500Z, Views: 1015, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:49.501Z, Views: 1015, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:49"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:34:55.825Z, Views: 1016, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:34:55"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:36:32.792Z, Views: 1017, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:36:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:36:32.864Z, Views: 1018, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:36:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:36:32.866Z, Views: 1018, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:36:32"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:28.588Z, Views: 1019, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:28.682Z, Views: 1020, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:28.684Z, Views: 1021, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:28"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:33.553Z, Views: 1022, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:33.579Z, Views: 1023, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:33.653Z, Views: 1024, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:33.656Z, Views: 1025, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:33"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:38.507Z, Views: 1026, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:38.567Z, Views: 1027, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:38"}
+{"level":"info","message":"Session accessed again at: 2024-06-09T02:39:38.576Z, Views: 1028, User ID: 6657d3019f23b9cc6af24e9d","service":"user-service","timestamp":"2024-06-08 22:39:38"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","service":"user-service","timestamp":"2024-06-08 22:42:42"}
